@@ -8,6 +8,11 @@ export default <Config>{
   theme: {
     extend: {
       colors: {
+        primary: {
+          DEFAULT: '#EC8F8D',
+          hover: '#e27b79',
+          light: '#fdeeed'
+        },
         dark: {
           DEFAULT: '#171717',
           card: '#262626',

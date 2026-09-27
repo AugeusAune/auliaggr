@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-white text-dark font-sans antialiased;
+    @apply bg-white text-dark font-sans antialiased selection:bg-primary/25;
     letter-spacing: -0.02em;
   }
 
