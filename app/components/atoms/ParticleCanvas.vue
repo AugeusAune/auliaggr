@@ -54,8 +54,10 @@ const updateParticle = (p: Particle, width: number, height: number) => {
 const drawConnections = (ctx: CanvasRenderingContext2D, width: number, height: number) => {
   for (let i = 0; i < particles.length; i++) {
     const p1 = particles[i]
+    if (!p1) continue
     for (let j = i + 1; j < particles.length; j++) {
       const p2 = particles[j]
+      if (!p2) continue
       const dx = p1.x - p2.x
       const dy = p1.y - p2.y
       const dist = Math.sqrt(dx * dx + dy * dy)
