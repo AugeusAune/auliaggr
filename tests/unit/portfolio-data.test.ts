@@ -21,10 +21,11 @@ describe('Portfolio Data', () => {
     expect(portfolioData.awards[0].title).toContain('Switchfest')
   })
 
-  it('contains tools with percentages', () => {
+  it('contains tools with categories and icons', () => {
     expect(portfolioData.tools.length).toBeGreaterThanOrEqual(6)
     const figma = portfolioData.tools.find(t => t.name === 'Figma')
-    expect(figma?.percentage).toBe('90%')
+    expect(figma?.category).toBe('UI/UX Design')
+    expect(figma?.iconUrl).toContain('/images/framer/')
   })
 
   it('contains certifications', () => {

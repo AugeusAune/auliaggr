@@ -8,6 +8,7 @@ export interface Project {
   date?: string
   externalUrl?: string
   imageUrl?: string
+  coverImage?: string
   tags?: string[]
 }
 
@@ -27,14 +28,15 @@ export interface Award {
 export interface ToolSkill {
   name: string
   description: string
-  percentage: string
-  icon?: string
+  category?: string
+  iconUrl?: string
 }
 
 export interface Certification {
   title: string
   issuer: string
   credentialUrl?: string
+  imageUrl?: string
 }
 
 export interface SocialLink {
@@ -56,5 +58,7 @@ export interface PortfolioProfile {
   email: string
   phone: string
   copyright: string
+  avatarUrl?: string
+  portraitUrl?: string
   socialLinks: SocialLink[]
 }

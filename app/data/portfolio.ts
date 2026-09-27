@@ -20,6 +20,8 @@ export const profileData: PortfolioProfile = {
   email: 'auliaggrr@gmail.com',
   phone: '(+62) 895330188539',
   copyright: '© Copyright 2026. All rights Reserved.',
+  avatarUrl: '/images/framer/b9b0uWvMTsgD4uE1e7oWavando0.png',
+  portraitUrl: '/images/framer/ukCxeFXctWLPk9NuHWUUv8R9G1A.png',
   socialLinks: [
     { name: 'LinkedIn', url: 'https://www.linkedin.com/in/auliaggr/', icon: 'linkedin' },
     { name: 'Behance', url: 'https://www.behance.net/auliaggr', icon: 'behance' },
@@ -38,6 +40,7 @@ export const projectsData: Project[] = [
     category: 'UI/UX, App, Graphic Design',
     date: 'Jun 23, 2025',
     externalUrl: 'https://www.behance.net/gallery/244060707/RORO-JONGGRANG-AR-INTERACTIVE-FOLKLORE-LEARNING',
+    coverImage: '/images/framer/J1RSxjBcZXhjk8eXpBlTksoQ1Qs.png',
     tags: ['Augmented Reality', 'Education', 'Mobile App', 'Gamification']
   },
   {
@@ -49,6 +52,7 @@ export const projectsData: Project[] = [
     category: 'UI/UX, Mobile App',
     date: '2025',
     externalUrl: 'https://www.behance.net/auliaggr',
+    coverImage: '/images/framer/SvUL8y3GjBTTxO4Chz8etdB30.jpg',
     tags: ['Healthcare', 'Mobile App', 'UI/UX']
   },
   {
@@ -60,6 +64,7 @@ export const projectsData: Project[] = [
     category: 'UI/UX, 3D AR Design',
     date: '2025',
     externalUrl: 'https://www.behance.net/auliaggr',
+    coverImage: '/images/framer/mUDibeSoFeRO5bfxVSFwyVHcxk.jpg',
     tags: ['3D', 'AR', 'Campus Map', 'Interactive']
   },
   {
@@ -71,6 +76,7 @@ export const projectsData: Project[] = [
     category: 'UI/UX, AI Product Design',
     date: '2024',
     externalUrl: 'https://www.behance.net/auliaggr',
+    coverImage: '/images/framer/PiXLGIkyiEyimV1YtLdttZu8.jpg',
     tags: ['AI', 'Nutrition', 'Mobile App']
   },
   {
@@ -82,6 +88,7 @@ export const projectsData: Project[] = [
     category: 'UI/UX, E-Commerce',
     date: '2024',
     externalUrl: 'https://www.behance.net/auliaggr',
+    coverImage: '/images/framer/18LrDGuzV3e49jjmxkXiOW0IH6w.jpg',
     tags: ['Marketplace', 'Auction', 'E-commerce']
   },
   {
@@ -93,6 +100,7 @@ export const projectsData: Project[] = [
     category: 'UI/UX, Web & Mobile',
     date: '2024',
     externalUrl: 'https://www.behance.net/auliaggr',
+    coverImage: '/images/framer/czQ394H7zsdd5hChTcm1wMUvxM.jpg',
     tags: ['Booking', 'Esports', 'Platform']
   },
   {
@@ -104,6 +112,7 @@ export const projectsData: Project[] = [
     category: 'UI/UX, Food Delivery',
     date: '2024',
     externalUrl: 'https://www.behance.net/auliaggr',
+    coverImage: '/images/framer/aV9wztX6XkvhjtYLOFTpQxgGE.jpg',
     tags: ['Food Delivery', 'Mobile App']
   },
   {
@@ -115,6 +124,7 @@ export const projectsData: Project[] = [
     category: 'UI/UX, AI Utility',
     date: '2024',
     externalUrl: 'https://www.behance.net/auliaggr',
+    coverImage: '/images/framer/ZtSlD4Zhsvv7KWwEkhnA95Rw5s.jpg',
     tags: ['Sustainability', 'Computer Vision']
   },
   {
@@ -126,6 +136,7 @@ export const projectsData: Project[] = [
     category: 'UI/UX, Fashion App',
     date: '2024',
     externalUrl: 'https://www.behance.net/auliaggr',
+    coverImage: '/images/framer/1dZDmxHTLSUHNz27QnbE4w1M.jpg',
     tags: ['Fashion', 'Discovery']
   },
   {
@@ -137,6 +148,7 @@ export const projectsData: Project[] = [
     category: 'UI/UX, Healthcare',
     date: '2024',
     externalUrl: 'https://www.behance.net/auliaggr',
+    coverImage: '/images/framer/5sZZHqytGiyTVwVO5obJvw7nGg.jpg',
     tags: ['Telehealth', 'Mental Health']
   },
   {
@@ -148,6 +160,7 @@ export const projectsData: Project[] = [
     category: 'UI/UX, E-Commerce',
     date: '2023',
     externalUrl: 'https://www.behance.net/auliaggr',
+    coverImage: '/images/framer/XJ8TttsY9AJ1Qw7EoY1jBtp9jxw.jpg',
     tags: ['E-commerce', 'Minimalist']
   },
   {
@@ -159,6 +172,7 @@ export const projectsData: Project[] = [
     category: 'UI/UX, Fintech',
     date: '2023',
     externalUrl: 'https://www.behance.net/auliaggr',
+    coverImage: '/images/framer/D91itc5JxPsqQ4k9vpuKLkCKoM.jpg',
     tags: ['Fintech', 'Mobile Wallet']
   },
   {
@@ -170,6 +184,7 @@ export const projectsData: Project[] = [
     category: 'UI/UX, Travel',
     date: '2023',
     externalUrl: 'https://www.behance.net/auliaggr',
+    coverImage: '/images/framer/CNaGt3Vd0iF2uoYcdFoQl8Hvws.jpg',
     tags: ['Travel', 'Booking']
   },
   {
@@ -181,6 +196,7 @@ export const projectsData: Project[] = [
     category: 'UI/UX, Dashboard',
     date: '2023',
     externalUrl: 'https://www.behance.net/auliaggr',
+    coverImage: '/images/framer/ahVGoaitWDMxyo3pnM8jMNwOMc.jpg',
     tags: ['B2B', 'SaaS', 'Dashboard']
   }
 ]
@@ -207,12 +223,42 @@ export const awardsData: Award[] = [
 ]
 
 export const toolsData: ToolSkill[] = [
-  { name: 'Figma', description: 'Leading design tool', percentage: '90%' },
-  { name: 'Adobe Photoshop', description: 'Raster graphic editor', percentage: '80%' },
-  { name: 'Adobe Illustrator', description: 'Vector design & illustration tool', percentage: '80%' },
-  { name: 'Adobe After Effect', description: 'Motion graphics & visual effects', percentage: '70%' },
-  { name: 'Canva', description: 'Raster graphics editor', percentage: '70%' },
-  { name: 'Framer', description: 'No-code website builder', percentage: '50%' }
+  {
+    name: 'Figma',
+    description: 'Leading design tool for UI/UX & systems',
+    category: 'UI/UX Design',
+    iconUrl: '/images/framer/HPbAOefqTKNJ0RaNwYD2M2LRsI.svg'
+  },
+  {
+    name: 'Framer',
+    description: 'Interactive responsive website builder',
+    category: 'No-Code & Motion',
+    iconUrl: '/images/framer/ySapg2uTxrZTtNT0Q3seiqK7Ws.svg'
+  },
+  {
+    name: 'Adobe Photoshop',
+    description: 'Raster graphics & photo manipulation',
+    category: 'Visual Design',
+    iconUrl: '/images/framer/d415nCGSohpGjeGP5mpZV9p9EU.svg'
+  },
+  {
+    name: 'Adobe Illustrator',
+    description: 'Vector design & brand identity systems',
+    category: 'Graphic Design',
+    iconUrl: '/images/framer/QQhTOClhfQfJVVVgNKNpiNHNAQ.svg'
+  },
+  {
+    name: 'Blender',
+    description: '3D modeling & spatial environments',
+    category: '3D & AR',
+    iconUrl: '/images/framer/Q7kGC7ssDlHnhgm8b8T5XImyR0.svg'
+  },
+  {
+    name: 'Webflow',
+    description: 'Responsive web layout engineering',
+    category: 'Web Design',
+    iconUrl: '/images/framer/b1nONhD7ssDJtMjxVYP3pzQ5oY.svg'
+  }
 ]
 
 export const certificationsData: Certification[] = [
