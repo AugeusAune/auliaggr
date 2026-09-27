@@ -18,7 +18,7 @@ defineProps<Props>()
         <!-- Profile Column -->
         <div class="lg:col-span-5 flex flex-col gap-6">
           <div class="flex items-center gap-4">
-            <div class="w-14 h-14 rounded-2xl bg-neutral-900 flex items-center justify-center text-white font-bold text-xl flex-shrink-0">
+            <div class="w-14 h-14 rounded-2xl bg-primary/20 border border-primary/30 flex items-center justify-center text-dark font-bold text-xl flex-shrink-0">
               AA
             </div>
             <div class="flex flex-col">
@@ -82,8 +82,13 @@ defineProps<Props>()
       <!-- Copyright Bar -->
       <div class="pt-8 border-t border-neutral-200 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-500 font-mono">
         <p>{{ profile.copyright }}</p>
-        <div class="flex items-center gap-2">
-          <span>Crafted with Nuxt 4 & Atomic Design</span>
+        <div class="flex items-center gap-4">
+          <a
+            href="#hero"
+            class="hover:text-dark transition-colors"
+          >
+            Back to top ↑
+          </a>
         </div>
       </div>
     </div>

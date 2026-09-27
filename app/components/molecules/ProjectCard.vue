@@ -27,7 +27,7 @@ defineProps<Props>()
         <span class="text-xs font-mono uppercase tracking-widest text-neutral-400">
           {{ project.category }}
         </span>
-        <h3 class="text-xl sm:text-2xl font-bold tracking-tight text-white group-hover:text-accent-cyan transition-colors">
+        <h3 class="text-xl sm:text-2xl font-bold tracking-tight text-white group-hover:text-primary transition-colors">
           {{ project.title }}
         </h3>
       </div>
@@ -41,7 +41,7 @@ defineProps<Props>()
     </div>
 
     <!-- Metadata Content -->
-    <div class="p-5 sm:p-6 flex flex-col gap-1.5 bg-white">
+    <div class="p-5 sm:p-6 flex flex-col gap-1.5 bg-light">
       <div class="flex items-center justify-between gap-2">
         <h4 class="font-bold text-dark text-lg group-hover:text-black transition-colors">
           {{ project.title }}

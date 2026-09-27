@@ -31,7 +31,7 @@ defineProps<Props>()
     <!-- Progress track -->
     <div class="w-full h-1.5 rounded-full bg-neutral-200 overflow-hidden">
       <div
-        class="h-full bg-dark rounded-full transition-all duration-500"
+        class="h-full bg-primary rounded-full transition-all duration-500"
         :style="{ width: tool.percentage }"
       />
     </div>

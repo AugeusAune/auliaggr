@@ -40,7 +40,7 @@ const handleSubmit = async () => {
     class="flex flex-col gap-4 w-full"
     @submit.prevent="handleSubmit"
   >
-    <div v-if="submitted" class="p-4 rounded-2xl bg-neutral-900 text-white text-sm font-medium">
+    <div v-if="submitted" class="p-4 rounded-2xl bg-primary/20 border border-primary/40 text-neutral-900 text-sm font-medium">
       Thank you for reaching out! I'll get back to you within 24 hours.
     </div>
 
