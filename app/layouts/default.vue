@@ -3,7 +3,7 @@ import NavPill from '../components/molecules/NavPill.vue'
 </script>
 
 <template>
-  <div class="min-h-screen bg-white text-dark flex flex-col relative selection:bg-accent-cyan/30">
+  <div class="min-h-screen bg-white text-dark flex flex-col relative selection:bg-primary/25">
     <!-- Floating Navigation Pill (Desktop & Mobile accessible) -->
     <header class="fixed top-5 left-1/2 -translate-x-1/2 z-50 pointer-events-auto">
       <NavPill />

@@ -102,24 +102,23 @@ useSeoMeta({
       </div>
 
       <!-- Feature Visual Presentation Showcase -->
-      <div class="w-full aspect-[16/9] rounded-3xl bg-neutral-900 border border-neutral-800 flex items-center justify-center p-8 sm:p-12 relative overflow-hidden text-center text-white shadow-xl">
-        <div class="absolute inset-0 bg-gradient-to-tr from-black/90 via-neutral-900/60 to-neutral-800/40" />
+      <div class="w-full aspect-[16/9] rounded-3xl bg-light border border-neutral-200 flex items-center justify-center p-8 sm:p-12 relative overflow-hidden text-center text-dark shadow-sm">
         <div class="relative z-10 flex flex-col items-center gap-4 max-w-xl">
-          <span class="text-xs font-mono uppercase tracking-widest text-accent-cyan">
+          <span class="text-xs font-mono uppercase tracking-widest text-primary font-semibold">
             Interactive Showcase
           </span>
-          <h2 class="text-2xl sm:text-4xl font-bold tracking-tight">
+          <h2 class="text-2xl sm:text-4xl font-bold tracking-tight text-dark">
             {{ project.title }}
           </h2>
-          <p class="text-sm sm:text-base text-neutral-300">
+          <p class="text-sm sm:text-base text-neutral-600">
             Designed with high-fidelity components, user-centric wireframes, and tested interactive prototypes.
           </p>
           <AppButton
             v-if="project.externalUrl"
             :href="project.externalUrl"
             :external="true"
-            variant="secondary"
-            class="mt-2 !bg-white !text-dark hover:!bg-neutral-100"
+            variant="primary"
+            class="mt-2 !px-6 !py-3 font-semibold"
           >
             Explore Case Study on Behance
           </AppButton>

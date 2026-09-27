@@ -65,7 +65,7 @@ const filteredProjects = computed(() => {
             :class="[
               'px-4 py-1.5 rounded-full text-xs font-mono font-medium transition-all min-h-[36px] flex items-center',
               selectedCategory === cat
-                ? 'bg-dark text-white shadow-2xs'
+                ? 'bg-primary text-dark font-semibold shadow-2xs'
                 : 'bg-light text-neutral-600 hover:bg-neutral-200'
             ]"
           >
