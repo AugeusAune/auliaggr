@@ -23,6 +23,12 @@ export interface Award {
   title: string
   date: string
   organization?: string
+  logoUrl?: string
+}
+
+export interface BrandPartner {
+  name: string
+  logoUrl: string
 }
 
 export interface ToolSkill {
