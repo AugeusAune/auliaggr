@@ -41,6 +41,8 @@ export const projectsData: Project[] = [
     category: 'UI/UX, App, Graphic Design',
     date: 'Jun 23, 2025',
     externalUrl: 'https://www.behance.net/gallery/244060707/RORO-JONGGRANG-AR-INTERACTIVE-FOLKLORE-LEARNING',
+    behanceUrl: 'https://www.behance.net/gallery/244060707/RORO-JONGGRANG-AR-INTERACTIVE-FOLKLORE-LEARNING',
+    prototypeUrl: 'https://www.figma.com/@auliaggr',
     coverImage: '/images/framer/rorojongrang.png',
     tags: ['Augmented Reality', 'Education', 'Mobile App', 'Gamification']
   },
@@ -53,6 +55,8 @@ export const projectsData: Project[] = [
     category: 'UI/UX, Mobile App',
     date: '2025',
     externalUrl: 'https://www.behance.net/auliaggr',
+    behanceUrl: 'https://www.behance.net/auliaggr',
+    prototypeUrl: 'https://www.figma.com/@auliaggr',
     coverImage: '/images/framer/hperaid.png',
     tags: ['Healthcare', 'Mobile App', 'UI/UX']
   },
@@ -65,6 +69,8 @@ export const projectsData: Project[] = [
     category: 'UI/UX, 3D AR Design',
     date: '2025',
     externalUrl: 'https://www.behance.net/auliaggr',
+    behanceUrl: 'https://www.behance.net/auliaggr',
+    prototypeUrl: 'https://www.figma.com/@auliaggr',
     coverImage: '/images/framer/voxplore.png',
     tags: ['3D', 'AR', 'Campus Map', 'Interactive']
   },
@@ -77,6 +83,8 @@ export const projectsData: Project[] = [
     category: 'UI/UX, AI Product Design',
     date: '2024',
     externalUrl: 'https://www.behance.net/auliaggr',
+    behanceUrl: 'https://www.behance.net/auliaggr',
+    prototypeUrl: 'https://www.figma.com/@auliaggr',
     coverImage: '/images/framer/foody.png',
     tags: ['AI', 'Nutrition', 'Mobile App']
   },
@@ -89,6 +97,8 @@ export const projectsData: Project[] = [
     category: 'UI/UX, E-Commerce',
     date: '2024',
     externalUrl: 'https://www.behance.net/auliaggr',
+    behanceUrl: 'https://www.behance.net/auliaggr',
+    prototypeUrl: 'https://www.figma.com/@auliaggr',
     coverImage: '/images/framer/birthrift.jpg',
     tags: ['Marketplace', 'Auction', 'E-commerce']
   },
@@ -101,6 +111,8 @@ export const projectsData: Project[] = [
     category: 'UI/UX, Web & Mobile',
     date: '2024',
     externalUrl: 'https://www.behance.net/auliaggr',
+    behanceUrl: 'https://www.behance.net/auliaggr',
+    prototypeUrl: 'https://www.figma.com/@auliaggr',
     coverImage: '/images/framer/gamebuddy.png',
     tags: ['Booking', 'Esports', 'Platform']
   },
@@ -113,6 +125,8 @@ export const projectsData: Project[] = [
     category: 'UI/UX, Food Delivery',
     date: '2024',
     externalUrl: 'https://www.behance.net/auliaggr',
+    behanceUrl: 'https://www.behance.net/auliaggr',
+    prototypeUrl: 'https://www.figma.com/@auliaggr',
     coverImage: '/images/framer/ndrey_kitchen.png',
     tags: ['Food Delivery', 'Mobile App']
   },
@@ -125,6 +139,8 @@ export const projectsData: Project[] = [
     category: 'UI/UX, AI Utility',
     date: '2024',
     externalUrl: 'https://www.behance.net/auliaggr',
+    behanceUrl: 'https://www.behance.net/auliaggr',
+    prototypeUrl: 'https://www.figma.com/@auliaggr',
     coverImage: '/images/framer/transporter.png',
     tags: ['Sustainability', 'Computer Vision']
   },
@@ -137,6 +153,8 @@ export const projectsData: Project[] = [
     category: 'UI/UX, Fashion App',
     date: '2024',
     externalUrl: 'https://www.behance.net/auliaggr',
+    behanceUrl: 'https://www.behance.net/auliaggr',
+    prototypeUrl: 'https://www.figma.com/@auliaggr',
     coverImage: '/images/framer/dreeze_logo.png',
     tags: ['Fashion', 'Discovery']
   },
@@ -149,6 +167,8 @@ export const projectsData: Project[] = [
     category: 'UI/UX, Healthcare',
     date: '2024',
     externalUrl: 'https://www.behance.net/auliaggr',
+    behanceUrl: 'https://www.behance.net/auliaggr',
+    prototypeUrl: 'https://www.figma.com/@auliaggr',
     coverImage: '/images/framer/mentalup.png',
     tags: ['Telehealth', 'Mental Health']
   },
@@ -161,6 +181,8 @@ export const projectsData: Project[] = [
     category: 'UI/UX, E-Commerce',
     date: '2023',
     externalUrl: 'https://www.behance.net/auliaggr',
+    behanceUrl: 'https://www.behance.net/auliaggr',
+    prototypeUrl: 'https://www.figma.com/@auliaggr',
     coverImage: '/images/framer/clotie.png',
     tags: ['E-commerce', 'Minimalist']
   },
@@ -173,6 +195,8 @@ export const projectsData: Project[] = [
     category: 'UI/UX, Fintech',
     date: '2023',
     externalUrl: 'https://www.behance.net/auliaggr',
+    behanceUrl: 'https://www.behance.net/auliaggr',
+    prototypeUrl: 'https://www.figma.com/@auliaggr',
     coverImage: '/images/framer/ousean_pay.png',
     tags: ['Fintech', 'Mobile Wallet']
   },
@@ -185,6 +209,8 @@ export const projectsData: Project[] = [
     category: 'UI/UX, Travel',
     date: '2023',
     externalUrl: 'https://www.behance.net/auliaggr',
+    behanceUrl: 'https://www.behance.net/auliaggr',
+    prototypeUrl: 'https://www.figma.com/@auliaggr',
     coverImage: '/images/framer/ontravel.png',
     tags: ['Travel', 'Booking']
   },
@@ -197,6 +223,8 @@ export const projectsData: Project[] = [
     category: 'UI/UX, Dashboard',
     date: '2023',
     externalUrl: 'https://www.behance.net/auliaggr',
+    behanceUrl: 'https://www.behance.net/auliaggr',
+    prototypeUrl: 'https://www.figma.com/@auliaggr',
     coverImage: '/images/framer/morker.png',
     tags: ['B2B', 'SaaS', 'Dashboard']
   }

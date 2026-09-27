@@ -7,6 +7,8 @@ export interface Project {
   category: string
   date?: string
   externalUrl?: string
+  behanceUrl?: string
+  prototypeUrl?: string
   imageUrl?: string
   coverImage?: string
   tags?: string[]
