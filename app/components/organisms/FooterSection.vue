@@ -72,13 +72,24 @@ const scrollToTop = () => {
 
         <!-- Contact Form Column -->
         <div class="lg:col-span-7 flex flex-col gap-6">
-          <div class="flex flex-col gap-2">
-            <AppHeading as="h2" size="xl">
-              Contact
-            </AppHeading>
-            <p class="text-neutral-600 text-sm font-medium">
-              Fill out the form, or reach out directly. I’ll respond within 24 hours.
-            </p>
+          <div class="flex items-center gap-4">
+            <div class="relative w-16 h-16 sm:w-20 sm:h-20 rounded-2xl overflow-hidden bg-light border-2 border-primary/30 flex-shrink-0 shadow-sm">
+              <img
+                src="/images/framer/aulia.png"
+                alt="Aulia Anggraeni"
+                class="w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="flex flex-col gap-1">
+              <AppHeading as="h2" size="xl">
+                Contact
+              </AppHeading>
+              <p class="text-neutral-600 text-sm font-medium">
+                Fill out the form, or reach out directly. I’ll respond within 24 hours.
+              </p>
+            </div>
           </div>
 
           <ContactForm />
