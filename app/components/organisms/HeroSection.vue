@@ -3,6 +3,7 @@ import type { PortfolioProfile } from '../../types/portfolio'
 import AppButton from '../atoms/AppButton.vue'
 import AppSocialIcon from '../atoms/AppSocialIcon.vue'
 import AppHeading from '../atoms/AppHeading.vue'
+import ParticleCanvas from '../atoms/ParticleCanvas.vue'
 
 interface Props {
   profile: PortfolioProfile
@@ -12,8 +13,11 @@ defineProps<Props>()
 </script>
 
 <template>
-  <header class="w-full pt-10 sm:pt-16 pb-12 sm:pb-20 border-b border-neutral-200">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col gap-10 sm:gap-14">
+  <header class="relative overflow-hidden w-full pt-10 sm:pt-16 pb-12 sm:pb-20 border-b border-neutral-200">
+    <ClientOnly>
+      <ParticleCanvas />
+    </ClientOnly>
+    <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 flex flex-col gap-10 sm:gap-14">
       <!-- Top Profile Row -->
       <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-6">
         <div class="flex items-center gap-4">
