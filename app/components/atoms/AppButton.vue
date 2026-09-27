@@ -19,14 +19,14 @@ const props = withDefaults(defineProps<Props>(), {
 const variantClasses = computed(() => {
   switch (props.variant) {
     case 'secondary':
-      return 'bg-light hover:bg-neutral-200 text-dark border border-light-border'
+      return 'bg-light hover:bg-neutral-200 text-dark border border-neutral-200'
     case 'outline':
-      return 'bg-transparent text-dark border border-neutral-300 hover:border-dark'
+      return 'bg-transparent text-dark border border-neutral-300 hover:border-primary'
     case 'ghost':
       return 'bg-transparent hover:bg-neutral-100 text-dark'
     case 'primary':
     default:
-      return 'bg-dark hover:bg-black text-white'
+      return 'bg-primary hover:bg-[#e27b79] text-dark shadow-2xs font-semibold'
   }
 })
 </script>

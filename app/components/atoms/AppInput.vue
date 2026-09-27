@@ -26,7 +26,7 @@ defineEmits<{
 }>()
 
 const inputClasses = computed(() => [
-  'w-full px-4 py-3 rounded-2xl bg-light text-dark placeholder-neutral-400 text-sm border transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-dark focus:bg-white',
+  'w-full px-4 py-3 rounded-2xl bg-light text-dark placeholder-neutral-400 text-sm border transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:bg-white',
   props.error ? 'border-red-500' : 'border-neutral-200 hover:border-neutral-300'
 ])
 </script>

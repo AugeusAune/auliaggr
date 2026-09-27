@@ -14,7 +14,7 @@ defineProps<Props>()
     target="_blank"
     rel="noopener noreferrer"
     :aria-label="label || `Link to ${name}`"
-    class="w-10 h-10 rounded-full flex items-center justify-center text-dark hover:text-black bg-light hover:bg-neutral-200 transition-all duration-200 focus-visible:outline-2 focus-visible:outline-dark"
+    class="w-10 h-10 rounded-full flex items-center justify-center text-dark hover:text-dark bg-light hover:bg-primary/20 transition-all duration-200 focus-visible:outline-2 focus-visible:outline-primary"
   >
     <!-- LinkedIn -->
     <svg
