@@ -26,7 +26,7 @@ const variantClasses = computed(() => {
       return 'bg-transparent hover:bg-neutral-100 text-dark'
     case 'primary':
     default:
-      return 'bg-primary hover:bg-[#e27b79] text-dark shadow-2xs font-semibold'
+      return 'bg-primary hover:bg-[#e27b79] text-white shadow-sm font-semibold'
   }
 })
 </script>

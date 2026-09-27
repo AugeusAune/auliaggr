@@ -9,6 +9,12 @@ interface Props {
 }
 
 defineProps<Props>()
+
+const scrollToTop = () => {
+  if (typeof window !== 'undefined') {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+}
 </script>
 
 <template>
@@ -83,12 +89,15 @@ defineProps<Props>()
       <div class="pt-8 border-t border-neutral-200 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-500 font-mono">
         <p>{{ profile.copyright }}</p>
         <div class="flex items-center gap-4">
-          <a
-            href="#hero"
-            class="hover:text-dark transition-colors"
+          <button
+            type="button"
+            @click="scrollToTop"
+            class="inline-flex items-center gap-1.5 text-xs font-mono text-neutral-500 hover:text-dark transition-colors cursor-pointer group"
+            aria-label="Scroll back to top of page"
           >
-            Back to top ↑
-          </a>
+            <span>Back to top</span>
+            <span class="transition-transform group-hover:-translate-y-0.5">↑</span>
+          </button>
         </div>
       </div>
     </div>
