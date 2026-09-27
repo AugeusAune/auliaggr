@@ -43,17 +43,26 @@ withDefaults(defineProps<Props>(), {
         </div>
       </div>
 
-      <!-- Artistic Portrait / Graphic Card -->
-      <div class="relative w-full max-w-sm aspect-[4/3] rounded-3xl bg-light border border-neutral-200 overflow-hidden flex items-center justify-center p-6 shadow-sm">
-        <div class="relative z-10 flex flex-col items-center text-center gap-3">
-          <span class="w-12 h-12 rounded-full bg-primary/20 text-neutral-900 flex items-center justify-center border border-primary/40">
-            ✦
+      <!-- Artistic Portrait / Graphic Card with Authentic Framer Background -->
+      <div class="group relative w-full max-w-md aspect-[4/3] rounded-3xl bg-neutral-900 border border-neutral-200 overflow-hidden flex items-end p-6 sm:p-8 shadow-xs">
+        <img
+          src="/images/framer/showcase_bg.png"
+          alt="Curated Visuals & Graphic Design Showcase"
+          class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+          loading="lazy"
+          decoding="async"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+
+        <div class="relative z-10 flex flex-col items-start text-left gap-2 text-white">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/20 backdrop-blur-md text-xs font-mono tracking-wider uppercase text-white border border-white/30">
+            ✦ Curated Visuals
           </span>
-          <span class="text-xs font-mono tracking-widest text-neutral-500 uppercase">
-            Curated Visuals
-          </span>
-          <span class="text-lg font-bold text-dark tracking-tight">
+          <span class="text-xl font-bold tracking-tight text-white">
             Brand Identities & Editorial Art
+          </span>
+          <span class="text-xs text-white/80 font-medium">
+            Explore 15+ editorial illustrations, branding kits & campaign designs.
           </span>
         </div>
       </div>
