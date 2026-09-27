@@ -13,7 +13,7 @@ defineProps<Props>()
 <template>
   <NuxtLink
     :to="`/projects/${project.slug}`"
-    class="group block relative overflow-hidden rounded-3xl bg-light border border-neutral-200 transition-all duration-300 hover:border-neutral-400 hover:shadow-lg focus-visible:outline-2 focus-visible:outline-dark"
+    class="group block relative overflow-hidden rounded-3xl bg-light border border-neutral-200 transition-all duration-300 hover:border-neutral-400 hover:bg-neutral-50/50 focus-visible:outline-2 focus-visible:outline-dark"
   >
     <!-- Visual Image / Cover from Framer -->
     <div
@@ -25,6 +25,7 @@ defineProps<Props>()
         :alt="project.title"
         class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
         loading="lazy"
+        decoding="async"
       />
       <div
         v-else

@@ -35,3 +35,15 @@
 .animate-marquee:hover {
   animation-play-state: paused;
 }
+
+/* Nuxt Page Transitions & Fade-in Animations */
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.25s ease-out, transform 0.25s ease-out;
+}
+
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+  transform: translateY(6px);
+}

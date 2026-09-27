@@ -42,7 +42,18 @@ useSeoMeta({
     </div>
 
     <!-- Project Header & Meta -->
-    <article class="max-w-6xl mx-auto px-4 sm:px-6 py-10 sm:py-16 w-full flex flex-col gap-12 sm:gap-16">
+    <article class="max-w-6xl mx-auto px-4 sm:px-6 py-10 sm:py-16 w-full flex flex-col gap-10 sm:gap-14">
+      <!-- Project Cover Image -->
+      <div v-if="project.coverImage" class="w-full aspect-[16/9] max-h-[520px] rounded-3xl overflow-hidden bg-light border border-neutral-200">
+        <img
+          :src="project.coverImage"
+          :alt="project.title"
+          class="w-full h-full object-cover"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
         <!-- Sidebar Metadata -->
         <aside class="lg:col-span-4 p-6 sm:p-8 rounded-3xl bg-light border border-neutral-200 flex flex-col gap-6">
