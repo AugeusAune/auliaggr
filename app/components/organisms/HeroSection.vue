@@ -1,25 +1,31 @@
 <script setup lang="ts">
-import type { PortfolioProfile } from '../../types/portfolio'
-import AppButton from '../atoms/AppButton.vue'
-import AppSocialIcon from '../atoms/AppSocialIcon.vue'
-import AppHeading from '../atoms/AppHeading.vue'
-import ParticleCanvas from '../atoms/ParticleCanvas.vue'
+  import type { PortfolioProfile } from '../../types/portfolio';
+  import AppButton from '../atoms/AppButton.vue';
+  import AppSocialIcon from '../atoms/AppSocialIcon.vue';
+  import AppHeading from '../atoms/AppHeading.vue';
+  import ParticleCanvas from '../atoms/ParticleCanvas.vue';
 
-interface Props {
-  profile: PortfolioProfile
-}
+  interface Props {
+    profile: PortfolioProfile;
+  }
 
-defineProps<Props>()
+  defineProps<Props>();
 </script>
 
 <template>
-  <header class="relative overflow-hidden w-full pt-10 sm:pt-16 pb-12 sm:pb-20 border-b border-neutral-200">
+  <header
+    class="relative overflow-hidden w-full pt-10 sm:pt-16 pb-12 sm:pb-20 border-b border-neutral-200"
+  >
     <ClientOnly>
       <ParticleCanvas />
     </ClientOnly>
-    <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 flex flex-col gap-10 sm:gap-14">
+    <div
+      class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 flex flex-col gap-10 sm:gap-14"
+    >
       <!-- Top Profile Row -->
-      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-6">
+      <div
+        class="flex flex-col sm:flex-row sm:items-center justify-between gap-6"
+      >
         <div class="flex items-center gap-4">
           <img
             v-if="profile.portraitUrl || profile.avatarUrl"
@@ -50,7 +56,9 @@ defineProps<Props>()
 
       <!-- Main Headline & Subtitle -->
       <div class="flex flex-col gap-6">
-        <div class="text-sm font-mono uppercase tracking-widest text-neutral-500">
+        <div
+          class="text-sm font-mono uppercase tracking-widest text-neutral-500"
+        >
           {{ profile.subheadline }}
         </div>
 
@@ -65,12 +73,18 @@ defineProps<Props>()
       </div>
 
       <!-- Action Row & Pitch -->
-      <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-8 pt-4">
+      <div
+        class="flex flex-col lg:flex-row lg:items-end justify-between gap-8 pt-4"
+      >
         <div class="flex flex-col gap-2 max-w-xl">
-          <span class="text-xs font-mono font-semibold uppercase tracking-wider text-neutral-500">
+          <span
+            class="text-xs font-mono font-semibold uppercase tracking-wider text-neutral-500"
+          >
             20+ projects
           </span>
-          <p class="text-lg sm:text-xl text-neutral-700 font-medium leading-relaxed">
+          <p
+            class="text-lg sm:text-xl text-neutral-700 font-medium leading-relaxed"
+          >
             Visuals that stop the scroll. Interfaces that keep them there.
           </p>
         </div>
@@ -97,7 +111,9 @@ defineProps<Props>()
       </div>
 
       <!-- Availability / Location Banner -->
-      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-4 sm:p-5 rounded-2xl bg-light border border-neutral-200">
+      <div
+        class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-4 sm:p-5 rounded-2xl bg-light border border-neutral-200"
+      >
         <div class="flex items-center gap-3">
           <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
           <span class="text-sm font-medium text-neutral-700">
