@@ -31,6 +31,9 @@
             v-if="profile.portraitUrl || profile.avatarUrl"
             :src="profile.portraitUrl || profile.avatarUrl"
             :alt="profile.name"
+            width="64"
+            height="64"
+            fetchpriority="high"
             class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl object-cover border border-neutral-200 shadow-sm flex-shrink-0"
           />
           <div class="flex flex-col gap-0.5">

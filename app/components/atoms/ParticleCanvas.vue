@@ -16,9 +16,23 @@ let particles: Particle[] = []
 let mouse = { x: -1000, y: -1000, active: false }
 
 const PARTICLE_COLOR = '236, 143, 141'
-const MAX_PARTICLES = 40
 const CONNECTION_DISTANCE = 90
 const MOUSE_RADIUS = 100
+
+const getParticleCount = (): number => {
+  if (typeof window === 'undefined') return 40
+  return window.innerWidth < 768 ? 20 : 40
+}
+
+const isTouchDevice = (): boolean => {
+  if (typeof window === 'undefined') return false
+  return 'ontouchstart' in window || navigator.maxTouchPoints > 0
+}
+
+const prefersReducedMotion = (): boolean => {
+  if (typeof window === 'undefined') return false
+  return window.matchMedia('(prefers-reduced-motion: reduce)').matches
+}
 
 const createParticle = (width: number, height: number): Particle => {
   return {
@@ -51,7 +65,7 @@ const updateParticle = (p: Particle, width: number, height: number) => {
   }
 }
 
-const drawConnections = (ctx: CanvasRenderingContext2D, width: number, height: number) => {
+const drawConnections = (ctx: CanvasRenderingContext2D) => {
   for (let i = 0; i < particles.length; i++) {
     const p1 = particles[i]
     if (!p1) continue
@@ -88,8 +102,19 @@ const renderFrame = (ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement) =
     ctx.fill()
   }
 
-  drawConnections(ctx, width, height)
+  drawConnections(ctx)
   animationFrameId = requestAnimationFrame(() => renderFrame(ctx, canvas))
+}
+
+const drawStaticParticles = (ctx: CanvasRenderingContext2D) => {
+  ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height)
+  for (const p of particles) {
+    ctx.fillStyle = `rgba(${PARTICLE_COLOR}, ${p.baseAlpha})`
+    ctx.beginPath()
+    ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2)
+    ctx.fill()
+  }
+  drawConnections(ctx)
 }
 
 const handleResize = () => {
@@ -120,13 +145,23 @@ onMounted(() => {
   if (!ctx) return
 
   handleResize()
-  particles = Array.from({ length: MAX_PARTICLES }, () =>
+
+  const count = getParticleCount()
+  particles = Array.from({ length: count }, () =>
     createParticle(canvas.width, canvas.height)
   )
 
+  if (prefersReducedMotion()) {
+    drawStaticParticles(ctx)
+    return
+  }
+
   window.addEventListener('resize', handleResize)
-  window.addEventListener('mousemove', handleMouseMove, { passive: true })
-  document.addEventListener('mouseleave', handleMouseLeave)
+
+  if (!isTouchDevice()) {
+    window.addEventListener('mousemove', handleMouseMove, { passive: true })
+    document.addEventListener('mouseleave', handleMouseLeave)
+  }
 
   animationFrameId = requestAnimationFrame(() => renderFrame(ctx, canvas))
 })
@@ -151,3 +186,4 @@ onUnmounted(() => {
     aria-hidden="true"
   />
 </template>
+

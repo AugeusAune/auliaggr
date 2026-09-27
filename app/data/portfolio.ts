@@ -21,8 +21,8 @@ export const profileData: PortfolioProfile = {
   email: 'auliaggrr@gmail.com',
   phone: '(+62) 895330188539',
   copyright: '© Copyright 2026. All rights Reserved.',
-  avatarUrl: '/images/framer/aulia.png',
-  portraitUrl: '/images/framer/aulia.png',
+  avatarUrl: '/images/framer/aulia.webp',
+  portraitUrl: '/images/framer/aulia.webp',
   socialLinks: [
     { name: 'LinkedIn', url: 'https://www.linkedin.com/in/auliaggr/', icon: 'linkedin' },
     { name: 'Behance', url: 'https://www.behance.net/auliaggr', icon: 'behance' },
@@ -43,7 +43,7 @@ export const projectsData: Project[] = [
     externalUrl: 'https://www.behance.net/gallery/244060707/RORO-JONGGRANG-AR-INTERACTIVE-FOLKLORE-LEARNING',
     behanceUrl: 'https://www.behance.net/gallery/244060707/RORO-JONGGRANG-AR-INTERACTIVE-FOLKLORE-LEARNING',
     prototypeUrl: 'https://www.figma.com/@auliaggr',
-    coverImage: '/images/framer/rorojongrang.png',
+    coverImage: '/images/framer/rorojongrang.webp',
     tags: ['Augmented Reality', 'Education', 'Mobile App', 'Gamification']
   },
   {
@@ -57,7 +57,7 @@ export const projectsData: Project[] = [
     externalUrl: 'https://www.behance.net/auliaggr',
     behanceUrl: 'https://www.behance.net/auliaggr',
     prototypeUrl: 'https://www.figma.com/@auliaggr',
-    coverImage: '/images/framer/hperaid.png',
+    coverImage: '/images/framer/hperaid.webp',
     tags: ['Healthcare', 'Mobile App', 'UI/UX']
   },
   {
@@ -71,7 +71,7 @@ export const projectsData: Project[] = [
     externalUrl: 'https://www.behance.net/auliaggr',
     behanceUrl: 'https://www.behance.net/auliaggr',
     prototypeUrl: 'https://www.figma.com/@auliaggr',
-    coverImage: '/images/framer/voxplore.png',
+    coverImage: '/images/framer/voxplore.webp',
     tags: ['3D', 'AR', 'Campus Map', 'Interactive']
   },
   {
@@ -85,7 +85,7 @@ export const projectsData: Project[] = [
     externalUrl: 'https://www.behance.net/auliaggr',
     behanceUrl: 'https://www.behance.net/auliaggr',
     prototypeUrl: 'https://www.figma.com/@auliaggr',
-    coverImage: '/images/framer/foody.png',
+    coverImage: '/images/framer/foody.webp',
     tags: ['AI', 'Nutrition', 'Mobile App']
   },
   {
@@ -99,7 +99,7 @@ export const projectsData: Project[] = [
     externalUrl: 'https://www.behance.net/auliaggr',
     behanceUrl: 'https://www.behance.net/auliaggr',
     prototypeUrl: 'https://www.figma.com/@auliaggr',
-    coverImage: '/images/framer/birthrift.jpg',
+    coverImage: '/images/framer/birthrift.webp',
     tags: ['Marketplace', 'Auction', 'E-commerce']
   },
   {
@@ -113,7 +113,7 @@ export const projectsData: Project[] = [
     externalUrl: 'https://www.behance.net/auliaggr',
     behanceUrl: 'https://www.behance.net/auliaggr',
     prototypeUrl: 'https://www.figma.com/@auliaggr',
-    coverImage: '/images/framer/gamebuddy.png',
+    coverImage: '/images/framer/gamebuddy.webp',
     tags: ['Booking', 'Esports', 'Platform']
   },
   {
@@ -127,7 +127,7 @@ export const projectsData: Project[] = [
     externalUrl: 'https://www.behance.net/auliaggr',
     behanceUrl: 'https://www.behance.net/auliaggr',
     prototypeUrl: 'https://www.figma.com/@auliaggr',
-    coverImage: '/images/framer/ndrey_kitchen.png',
+    coverImage: '/images/framer/ndrey_kitchen.webp',
     tags: ['Food Delivery', 'Mobile App']
   },
   {
@@ -141,7 +141,7 @@ export const projectsData: Project[] = [
     externalUrl: 'https://www.behance.net/auliaggr',
     behanceUrl: 'https://www.behance.net/auliaggr',
     prototypeUrl: 'https://www.figma.com/@auliaggr',
-    coverImage: '/images/framer/transporter.png',
+    coverImage: '/images/framer/transporter.webp',
     tags: ['Sustainability', 'Computer Vision']
   },
   {
@@ -155,7 +155,7 @@ export const projectsData: Project[] = [
     externalUrl: 'https://www.behance.net/auliaggr',
     behanceUrl: 'https://www.behance.net/auliaggr',
     prototypeUrl: 'https://www.figma.com/@auliaggr',
-    coverImage: '/images/framer/dreeze_logo.png',
+    coverImage: '/images/framer/dreeze_logo.webp',
     tags: ['Fashion', 'Discovery']
   },
   {
@@ -169,7 +169,7 @@ export const projectsData: Project[] = [
     externalUrl: 'https://www.behance.net/auliaggr',
     behanceUrl: 'https://www.behance.net/auliaggr',
     prototypeUrl: 'https://www.figma.com/@auliaggr',
-    coverImage: '/images/framer/mentalup.png',
+    coverImage: '/images/framer/mentalup.webp',
     tags: ['Telehealth', 'Mental Health']
   },
   {
@@ -183,7 +183,7 @@ export const projectsData: Project[] = [
     externalUrl: 'https://www.behance.net/auliaggr',
     behanceUrl: 'https://www.behance.net/auliaggr',
     prototypeUrl: 'https://www.figma.com/@auliaggr',
-    coverImage: '/images/framer/clotie.png',
+    coverImage: '/images/framer/clotie.webp',
     tags: ['E-commerce', 'Minimalist']
   },
   {
@@ -197,7 +197,7 @@ export const projectsData: Project[] = [
     externalUrl: 'https://www.behance.net/auliaggr',
     behanceUrl: 'https://www.behance.net/auliaggr',
     prototypeUrl: 'https://www.figma.com/@auliaggr',
-    coverImage: '/images/framer/ousean_pay.png',
+    coverImage: '/images/framer/ousean_pay.webp',
     tags: ['Fintech', 'Mobile Wallet']
   },
   {
@@ -211,7 +211,7 @@ export const projectsData: Project[] = [
     externalUrl: 'https://www.behance.net/auliaggr',
     behanceUrl: 'https://www.behance.net/auliaggr',
     prototypeUrl: 'https://www.figma.com/@auliaggr',
-    coverImage: '/images/framer/ontravel.png',
+    coverImage: '/images/framer/ontravel.webp',
     tags: ['Travel', 'Booking']
   },
   {
@@ -225,7 +225,7 @@ export const projectsData: Project[] = [
     externalUrl: 'https://www.behance.net/auliaggr',
     behanceUrl: 'https://www.behance.net/auliaggr',
     prototypeUrl: 'https://www.figma.com/@auliaggr',
-    coverImage: '/images/framer/morker.png',
+    coverImage: '/images/framer/morker.webp',
     tags: ['B2B', 'SaaS', 'Dashboard']
   }
 ]
@@ -243,13 +243,13 @@ export const awardsData: Award[] = [
     title: '1st Place Winner in UI/UX Design at Switchfest',
     date: 'Sep 9, 2024',
     organization: 'UIN Walisongo',
-    logoUrl: '/images/framer/logo_walisongo.png'
+    logoUrl: '/images/framer/logo_walisongo.webp'
   },
   {
     title: '3rd Place Winner in UI/UX Design at Techsprint',
     date: 'Mar 3, 2024',
     organization: 'Reclas Technology',
-    logoUrl: '/images/framer/reclas_logo.jpg'
+    logoUrl: '/images/framer/reclas_logo.webp'
   }
 ]
 
@@ -288,7 +288,7 @@ export const toolsData: ToolSkill[] = [
     name: 'Canva',
     description: 'Visual presentations & quick assets',
     category: 'Graphic Design',
-    iconUrl: '/images/framer/canva.png'
+    iconUrl: '/images/framer/canva.webp'
   }
 ]
 
@@ -296,89 +296,89 @@ export const certificationsData: Certification[] = [
   {
     title: '1st Place Winner in UI/UX Design',
     issuer: 'Switchfest, UIN Walisongo',
-    imageUrl: '/images/framer/certificate_walisongo.jpg'
+    imageUrl: '/images/framer/certificate_walisongo.webp'
   },
   {
     title: '3rd Place Winner in UI/UX Design',
     issuer: 'Techsprint, Reclas Technology',
-    imageUrl: '/images/framer/certificate_reclas.jpg'
+    imageUrl: '/images/framer/certificate_reclas.webp'
   },
   {
     title: 'UI/UX Design Mastery',
     issuer: 'Skilvul',
-    imageUrl: '/images/framer/certificated_skilvul.jpg'
+    imageUrl: '/images/framer/certificated_skilvul.webp'
   },
   {
     title: 'Complete UI Designer',
     issuer: 'BuildWithAngga',
-    imageUrl: '/images/framer/certificate_bwa.jpg'
+    imageUrl: '/images/framer/certificate_bwa.webp'
   },
   {
     title: 'Software Engineer',
     issuer: 'LSP Vokasi IPB (BNSP)',
-    imageUrl: '/images/framer/bnsp_ipb.jpg'
+    imageUrl: '/images/framer/bnsp_ipb.webp'
   },
   {
     title: 'Computer Programming',
     issuer: 'BNSP / LSP SMK Negeri 12 Jakarta',
-    imageUrl: '/images/framer/certificate_bnsp_smk.jpg'
+    imageUrl: '/images/framer/certificate_bnsp_smk.webp'
   },
   {
     title: 'Software & Game Development',
     issuer: 'PLN Icon Plus (Internship)',
-    imageUrl: '/images/framer/certificate_iconplus.jpg'
+    imageUrl: '/images/framer/certificate_iconplus.webp'
   },
   {
     title: 'Software Engineering',
     issuer: 'IPB University',
-    imageUrl: '/images/framer/skl.jpg'
+    imageUrl: '/images/framer/skl.webp'
   },
   {
     title: 'Design, Documentation & Branding',
     issuer: 'MPKMB 60, Sekolah Vokasi IPB',
-    imageUrl: '/images/framer/certificate_mpkmb_ddb.jpg'
+    imageUrl: '/images/framer/certificate_mpkmb_ddb.webp'
   },
   {
     title: 'UI/UX Designer Web COMPRO',
     issuer: 'PT Buatin Creative Group',
-    imageUrl: '/images/framer/certificate_buatin_kamu.jpg'
+    imageUrl: '/images/framer/certificate_buatin_kamu.webp'
   },
   {
     title: 'Mentor Poster Prestasi Goes To You',
     issuer: 'IPB University / Ditmawa',
-    imageUrl: '/images/framer/mentor_poster.jpg'
+    imageUrl: '/images/framer/mentor_poster.webp'
   },
   {
     title: 'Design, Decoration & Branding',
     issuer: 'Scholarship for Reach a Dream',
-    imageUrl: '/images/framer/certificate_srd.jpg'
+    imageUrl: '/images/framer/certificate_srd.webp'
   },
   {
     title: 'Front End Web Development',
     issuer: 'Udemy',
-    imageUrl: '/images/framer/certificate_udemy.jpg'
+    imageUrl: '/images/framer/certificate_udemy.webp'
   },
   {
     title: 'Pemrograman Dengan Python',
     issuer: 'Dicoding Academy',
-    imageUrl: '/images/framer/certificate_py_dicoding.jpg'
+    imageUrl: '/images/framer/certificate_py_dicoding.webp'
   },
   {
     title: 'MPKMB (Student Orientation)',
     issuer: 'IPB University',
-    imageUrl: '/images/framer/certificate_mpkmb.jpg'
+    imageUrl: '/images/framer/certificate_mpkmb.webp'
   },
   {
     title: 'Field Work Practice (PKL)',
     issuer: 'Korpolairud Baharkam Polri',
-    imageUrl: '/images/framer/certificaye_korpolairud.jpg'
+    imageUrl: '/images/framer/certificaye_korpolairud.webp'
   }
 ]
 
 export const brandPartners: BrandPartner[] = [
   { name: 'Birthrift', logoUrl: '/images/framer/birthrift_logo.png' },
   { name: 'Clotie', logoUrl: '/images/framer/clotie_logo.png' },
-  { name: 'Dreeze', logoUrl: '/images/framer/dreeze_logo.png' },
+  { name: 'Dreeze', logoUrl: '/images/framer/dreeze_logo.webp' },
   { name: 'Foody', logoUrl: '/images/framer/foody_logo.png' },
   { name: 'Gamebuddy', logoUrl: '/images/framer/gamebuddy_logo.png' },
   { name: 'HyperAid', logoUrl: '/images/framer/hyperaid_logo.png' },
@@ -386,8 +386,8 @@ export const brandPartners: BrandPartner[] = [
   { name: 'Ndrey Kitchen', logoUrl: '/images/framer/ndrey_kitchen_logo.png' },
   { name: 'Ontravel', logoUrl: '/images/framer/ontravel_logo.png' },
   { name: 'Ousean Pay', logoUrl: '/images/framer/ousenpay_logo.png' },
-  { name: 'Reclas', logoUrl: '/images/framer/reclas_logo.jpg' },
-  { name: 'Roro Jonggrang', logoUrl: '/images/framer/rorojongrang_logo.png' },
+  { name: 'Reclas', logoUrl: '/images/framer/reclas_logo.webp' },
+  { name: 'Roro Jonggrang', logoUrl: '/images/framer/rorojongrang_logo.webp' },
   { name: 'Traspotter', logoUrl: '/images/framer/traspoter_logo.png' },
   { name: 'Voxplore', logoUrl: '/images/framer/voxplore_logo.png' }
 ]

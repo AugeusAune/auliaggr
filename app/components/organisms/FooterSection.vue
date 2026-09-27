@@ -30,7 +30,7 @@
               class="w-14 h-14 rounded-2xl overflow-hidden bg-light border border-neutral-200 flex-shrink-0 shadow-2xs"
             >
               <img
-                src="/images/framer/aulia.png"
+                src="/images/framer/aulia.webp"
                 alt="Aulia Anggraeni"
                 class="w-full h-full object-cover"
                 loading="lazy"

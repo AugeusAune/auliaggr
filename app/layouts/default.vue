@@ -1,5 +1,4 @@
 <script setup lang="ts">
-  import ParticleCanvas from '~/components/atoms/ParticleCanvas.vue';
   import NavPill from '../components/molecules/NavPill.vue';
 </script>
 
@@ -16,10 +15,8 @@
 
     <!-- Main Content -->
     <main class="flex-grow pt-16 sm:pt-20">
-      <ClientOnly>
-        <ParticleCanvas />
-      </ClientOnly>
       <slot />
     </main>
   </div>
 </template>
+

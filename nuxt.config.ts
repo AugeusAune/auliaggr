@@ -4,6 +4,18 @@ export default defineNuxtConfig({
   devtools: { enabled: false },
   modules: ['@nuxtjs/tailwindcss'],
   css: ['~/assets/css/main.css'],
+
+  nitro: {
+    compressPublicAssets: {
+      brotli: true,
+      gzip: true
+    },
+    routeRules: {
+      '/images/**': { headers: { 'cache-control': 'public, max-age=31536000, immutable' } },
+      '/_nuxt/**': { headers: { 'cache-control': 'public, max-age=31536000, immutable' } }
+    }
+  },
+
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
     head: {
@@ -34,8 +46,15 @@ export default defineNuxtConfig({
         {
           rel: 'stylesheet',
           href: 'https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap'
+        },
+        {
+          rel: 'preload',
+          as: 'image',
+          type: 'image/webp',
+          href: '/images/framer/aulia.webp'
         }
       ]
     }
   }
 })
+

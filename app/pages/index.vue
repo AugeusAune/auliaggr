@@ -2,13 +2,6 @@
 import { portfolioData } from '../data/portfolio'
 import HeroSection from '../components/organisms/HeroSection.vue'
 import BrandCarousel from '../components/organisms/BrandCarousel.vue'
-import JourneySection from '../components/organisms/JourneySection.vue'
-import AwardsSection from '../components/organisms/AwardsSection.vue'
-import ProjectsSection from '../components/organisms/ProjectsSection.vue'
-import ToolsSection from '../components/organisms/ToolsSection.vue'
-import StoriesSection from '../components/organisms/StoriesSection.vue'
-import CertificationsSection from '../components/organisms/CertificationsSection.vue'
-import FooterSection from '../components/organisms/FooterSection.vue'
 
 useSeoMeta({
   title: 'Portfolio - Aulia Anggraeni',
@@ -23,31 +16,20 @@ useSeoMeta({
 
 <template>
   <div class="w-full flex flex-col">
-    <!-- Hero Section -->
+    <!-- Hero Section (above fold — eager) -->
     <HeroSection :profile="portfolioData.profile" />
 
-    <!-- Brands Carousel -->
+    <!-- Brands Carousel (above fold — eager) -->
     <BrandCarousel :brands="portfolioData.brands" />
 
-    <!-- Career Timeline / Journey -->
-    <JourneySection :milestones="portfolioData.journey" />
-
-    <!-- Awards Section -->
-    <AwardsSection :awards="portfolioData.awards" />
-
-    <!-- Projects Section -->
-    <ProjectsSection :projects="portfolioData.projects" :limit="6" />
-
-    <!-- Tools Section -->
-    <ToolsSection :tools="portfolioData.tools" />
-
-    <!-- Stories / Behance Section -->
-    <StoriesSection :behance-url="portfolioData.profile.behanceUrl" />
-
-    <!-- Certifications Section -->
-    <CertificationsSection :certifications="portfolioData.certifications" />
-
-    <!-- Footer Section & Contact Form -->
-    <FooterSection :profile="portfolioData.profile" />
+    <!-- Below-fold sections use Nuxt lazy auto-imports for code splitting -->
+    <LazyJourneySection :milestones="portfolioData.journey" />
+    <LazyAwardsSection :awards="portfolioData.awards" />
+    <LazyProjectsSection :projects="portfolioData.projects" :limit="6" />
+    <LazyToolsSection :tools="portfolioData.tools" />
+    <LazyStoriesSection :behance-url="portfolioData.profile.behanceUrl" />
+    <LazyCertificationsSection :certifications="portfolioData.certifications" />
+    <LazyFooterSection :profile="portfolioData.profile" />
   </div>
 </template>
+
