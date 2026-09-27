@@ -16,13 +16,21 @@ defineProps<Props>()
     <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col gap-10 sm:gap-14">
       <!-- Top Profile Row -->
       <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-6">
-        <div class="flex flex-col gap-1">
-          <h2 class="text-xl sm:text-2xl font-bold text-dark">
-            {{ profile.name }}
-          </h2>
-          <p class="text-neutral-500 font-medium text-sm sm:text-base">
-            {{ profile.headline }}
-          </p>
+        <div class="flex items-center gap-4">
+          <img
+            v-if="profile.portraitUrl || profile.avatarUrl"
+            :src="profile.portraitUrl || profile.avatarUrl"
+            :alt="profile.name"
+            class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl object-cover border border-neutral-200 shadow-sm flex-shrink-0"
+          />
+          <div class="flex flex-col gap-0.5">
+            <h2 class="text-xl sm:text-2xl font-bold text-dark">
+              {{ profile.name }}
+            </h2>
+            <p class="text-neutral-500 font-medium text-sm sm:text-base">
+              {{ profile.headline }}
+            </p>
+          </div>
         </div>
 
         <div class="flex items-center gap-2">

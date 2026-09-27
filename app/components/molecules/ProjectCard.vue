@@ -15,26 +15,27 @@ defineProps<Props>()
     :to="`/projects/${project.slug}`"
     class="group block relative overflow-hidden rounded-3xl bg-light border border-neutral-200 transition-all duration-300 hover:border-neutral-400 hover:shadow-lg focus-visible:outline-2 focus-visible:outline-dark"
   >
-    <!-- Visual Image / Cover Placeholder matching Framer aesthetic -->
+    <!-- Visual Image / Cover from Framer -->
     <div
-      class="relative aspect-[4/3] w-full overflow-hidden bg-neutral-900 flex items-center justify-center p-6 text-white"
+      class="relative aspect-[4/3] w-full overflow-hidden bg-neutral-100 flex items-center justify-center text-white"
     >
+      <img
+        v-if="project.coverImage"
+        :src="project.coverImage"
+        :alt="project.title"
+        class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+        loading="lazy"
+      />
       <div
+        v-else
         class="absolute inset-0 bg-gradient-to-tr from-black/80 via-neutral-900/60 to-neutral-800 transition-transform duration-500 group-hover:scale-105"
       />
 
-      <div class="relative z-10 flex flex-col items-center text-center gap-2">
-        <span class="text-xs font-mono uppercase tracking-widest text-neutral-400">
-          {{ project.category }}
-        </span>
-        <h3 class="text-xl sm:text-2xl font-bold tracking-tight text-white group-hover:text-primary transition-colors">
-          {{ project.title }}
-        </h3>
-      </div>
+      <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-80 group-hover:opacity-60 transition-opacity" />
 
       <!-- Category Badge Top-Right -->
       <div class="absolute top-4 right-4 z-10">
-        <AppBadge variant="default" class="!bg-black/60 !text-white !border-white/20 backdrop-blur-sm">
+        <AppBadge variant="default" class="!bg-black/60 !text-white !border-white/20 backdrop-blur-sm shadow-sm">
           {{ project.category.split(',')[0] }}
         </AppBadge>
       </div>
