@@ -3,6 +3,7 @@ import type { Certification } from '../../types/portfolio'
 import AppHeading from '../atoms/AppHeading.vue'
 import AppButton from '../atoms/AppButton.vue'
 import CertificateItem from '../molecules/CertificateItem.vue'
+import CertificateModal from '../molecules/CertificateModal.vue'
 
 interface Props {
   certifications: Certification[]
@@ -11,6 +12,7 @@ interface Props {
 const props = defineProps<Props>()
 
 const isExpanded = ref(false)
+const selectedCertIndex = ref<number | null>(null)
 
 const visibleCertifications = computed(() => {
   if (isExpanded.value) {
@@ -21,6 +23,11 @@ const visibleCertifications = computed(() => {
 
 const toggleExpand = () => {
   isExpanded.value = !isExpanded.value
+}
+
+const handleOpenModal = (cert: Certification) => {
+  const index = props.certifications.findIndex(c => c.title === cert.title)
+  selectedCertIndex.value = index !== -1 ? index : 0
 }
 </script>
 
@@ -44,6 +51,7 @@ const toggleExpand = () => {
           v-for="(cert, index) in visibleCertifications"
           :key="`${cert.title}-${index}`"
           :cert="cert"
+          @click="handleOpenModal(cert)"
         />
       </div>
 
@@ -59,5 +67,14 @@ const toggleExpand = () => {
         </AppButton>
       </div>
     </div>
+
+    <!-- Certificate Image Preview Modal with Navigation -->
+    <CertificateModal
+      :is-open="selectedCertIndex !== null"
+      :current-index="selectedCertIndex ?? 0"
+      :certifications="certifications"
+      @close="selectedCertIndex = null"
+      @select="(idx) => selectedCertIndex = idx"
+    />
   </section>
 </template>

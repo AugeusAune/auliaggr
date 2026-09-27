@@ -6,11 +6,19 @@ interface Props {
 }
 
 defineProps<Props>()
+defineEmits<{
+  (e: 'click'): void
+}>()
 </script>
 
 <template>
   <div
-    class="flex items-center justify-between p-3.5 sm:p-4 rounded-2xl bg-white border border-neutral-200 transition-all duration-300 hover:border-primary/40 hover:bg-neutral-50/40 group shadow-2xs"
+    class="flex items-center justify-between p-3.5 sm:p-4 rounded-2xl bg-white border border-neutral-200 transition-all duration-300 hover:border-primary/60 hover:bg-neutral-50/60 hover:shadow-sm group shadow-2xs cursor-pointer select-none"
+    role="button"
+    tabindex="0"
+    @click="$emit('click')"
+    @keydown.enter="$emit('click')"
+    @keydown.space.prevent="$emit('click')"
   >
     <div class="flex items-center gap-3 sm:gap-4 overflow-hidden">
       <!-- Certificate Image Thumbnail -->
