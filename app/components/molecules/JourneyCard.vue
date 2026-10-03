@@ -10,15 +10,25 @@ defineProps<Props>()
 </script>
 
 <template>
-  <div class="relative flex flex-col sm:flex-row sm:items-start justify-between gap-4 p-5 sm:p-6 rounded-2xl bg-light border border-neutral-200 transition-all duration-300 hover:border-primary/40 hover:bg-white group shadow-2xs">
-    <!-- Milestone indicator dot placed on the timeline vertical line -->
+  <div class="relative flex flex-col sm:flex-row sm:items-start justify-between gap-4 p-5 sm:p-6 rounded-2xl bg-light border border-neutral-200 transition-all duration-300 hover:border-primary/50 hover:bg-white group shadow-2xs">
+    <!-- Horizontal connector branch from vertical spine to card -->
     <span
-      class="absolute -left-[33px] sm:-left-[41px] top-6 w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-full bg-white border-2 border-primary group-hover:scale-125 group-hover:bg-primary transition-all duration-300 shadow-xs"
+      class="absolute -left-8 sm:-left-10 top-7 w-8 sm:w-10 h-[2px] bg-neutral-200 group-hover:bg-primary/50 transition-colors pointer-events-none"
     />
+
+    <!-- Concentric milestone node anchor centered on the timeline spine -->
+    <div
+      class="absolute -left-[42px] sm:-left-[50px] top-[18px] w-5 h-5 rounded-full bg-white border-2 border-neutral-300 group-hover:border-primary group-hover:scale-115 flex items-center justify-center shadow-xs transition-all duration-300 z-10"
+      aria-hidden="true"
+    >
+      <span
+        class="w-2 h-2 rounded-full bg-neutral-400 group-hover:bg-primary transition-colors duration-300"
+      />
+    </div>
 
     <div class="flex items-start gap-3.5 sm:gap-4 flex-grow">
       <!-- Company Logo / Initials Badge -->
-      <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-white border border-neutral-200 flex items-center justify-center p-2 flex-shrink-0 shadow-2xs overflow-hidden">
+      <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-white border border-neutral-200 flex items-center justify-center p-2 flex-shrink-0 shadow-2xs overflow-hidden group-hover:border-primary/30 transition-colors">
         <img
           v-if="milestone.logoUrl"
           :src="milestone.logoUrl"
@@ -57,7 +67,7 @@ defineProps<Props>()
 
     <!-- Desktop Year Badge -->
     <div class="hidden sm:flex items-center flex-shrink-0 ml-4">
-      <AppBadge variant="default" class="font-sans font-semibold text-xs sm:text-sm !px-3 !py-1 !bg-white !border-neutral-200 group-hover:!border-primary/30 transition-colors">
+      <AppBadge variant="default" class="font-sans font-semibold text-xs sm:text-sm !px-3 !py-1 !bg-white !border-neutral-200 group-hover:!border-primary/40 group-hover:!text-primary transition-colors">
         {{ milestone.year }}
       </AppBadge>
     </div>

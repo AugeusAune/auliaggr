@@ -352,37 +352,37 @@ export const toolsData: ToolSkill[] = [
     name: 'Laravel',
     description: 'Robust PHP framework for scalable backends & RESTful APIs',
     category: 'Backend & Dev',
-    iconUrl: ''
+    iconUrl: '/images/tools/laravel.svg'
   },
   {
     name: 'Vue.js & Nuxt',
     description: 'Component architecture, SSR, & reactive web applications',
     category: 'Frontend & Dev',
-    iconUrl: ''
+    iconUrl: '/images/tools/vue.svg'
   },
   {
     name: 'Tailwind CSS',
     description: 'Utility-first modern design system styling & micro-animations',
     category: 'Frontend & Dev',
-    iconUrl: ''
+    iconUrl: '/images/tools/tailwind.svg'
   },
   {
     name: 'TypeScript',
     description: 'Type-safe robust frontend & fullstack codebases',
     category: 'Frontend & Dev',
-    iconUrl: ''
+    iconUrl: '/images/tools/typescript.svg'
   },
   {
     name: 'REST API & MySQL',
     description: 'Database modeling, secure endpoints & data architecture',
     category: 'Backend & Dev',
-    iconUrl: ''
+    iconUrl: '/images/tools/mysql.svg'
   },
   {
     name: 'Git & GitHub',
     description: 'Version control, team workflows & seamless CI/CD releases',
     category: 'Tools & DevOps',
-    iconUrl: ''
+    iconUrl: '/images/tools/git.svg'
   }
 ]
 

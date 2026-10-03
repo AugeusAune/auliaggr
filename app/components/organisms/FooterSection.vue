@@ -18,9 +18,7 @@
 </script>
 
 <template>
-  <footer
-    class="w-full bg-white pt-16 sm:pt-24 pb-28 border-t border-neutral-200"
-  >
+  <footer class="w-full bg-white pt-16 sm:pt-24 border-t border-neutral-200">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col gap-16">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 sm:gap-16">
         <!-- Profile Column -->

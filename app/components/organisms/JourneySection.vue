@@ -54,16 +54,22 @@ onUnmounted(() => {
         </p>
       </div>
 
-      <!-- Connected Timeline with Scroll Animated Line -->
+      <!-- Connected Timeline with Scroll Animated Line & Origin Cap -->
       <div
         ref="timelineRef"
         class="relative pl-8 sm:pl-10 space-y-6 sm:space-y-8 ml-2 sm:ml-4"
       >
+        <!-- Origin Node Cap at Top of Timeline -->
+        <div class="absolute -left-[5px] top-1 w-3.5 h-3.5 rounded-full bg-white border-2 border-primary/40 shadow-xs z-10 flex items-center justify-center">
+          <span class="w-1.5 h-1.5 rounded-full bg-primary" />
+        </div>
+
         <!-- Static background track line -->
-        <div class="absolute left-0 top-6 bottom-6 w-0.5 bg-neutral-200 rounded-full" />
-        <!-- Scroll-driven illuminated active fill line -->
+        <div class="absolute left-0 top-3 bottom-6 w-[3px] bg-neutral-200 rounded-full" />
+
+        <!-- Scroll-driven illuminated active fill line with radiant glow -->
         <div
-          class="absolute left-0 top-6 w-0.5 bg-primary rounded-full transition-all duration-150 ease-out shadow-xs"
+          class="absolute left-0 top-3 w-[3px] bg-gradient-to-b from-primary via-primary to-primary-hover rounded-full transition-all duration-150 ease-out shadow-[0_0_10px_rgba(235,94,85,0.4)]"
           :style="{ height: `${scrollProgress}%` }"
         />
 
