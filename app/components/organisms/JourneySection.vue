@@ -11,20 +11,39 @@ interface Props {
 defineProps<Props>()
 
 const timelineRef = ref<HTMLElement | null>(null)
+const cardEls = ref<HTMLElement[]>([])
+const currentScrollPx = ref(0)
 const scrollProgress = ref(0)
+
+const setCardRef = (el: any, index: number) => {
+  if (!el) return
+  cardEls.value[index] = el.$el || el
+}
+
+const isMilestoneActive = (index: number): boolean => {
+  const card = cardEls.value[index]
+  if (!card) return false
+  // Dot is positioned at top ~20px inside the card
+  const dotTop = card.offsetTop + 20
+  return currentScrollPx.value >= dotTop
+}
 
 const calculateScrollProgress = () => {
   if (!timelineRef.value) return
   const rect = timelineRef.value.getBoundingClientRect()
   const windowHeight = window.innerHeight
-  // Start line animation when top of timeline reaches middle of viewport
+  // Trigger line animation as user scrolls into the timeline
   const triggerPoint = windowHeight * 0.75
   const currentScroll = triggerPoint - rect.top
-  const totalHeight = rect.height - 40
+  const totalHeight = rect.height - 30
+
   if (currentScroll <= 0) {
+    currentScrollPx.value = 0
     scrollProgress.value = 0
     return
   }
+
+  currentScrollPx.value = currentScroll
   const percentage = Math.min(100, Math.max(0, (currentScroll / totalHeight) * 100))
   scrollProgress.value = percentage
 }
@@ -60,7 +79,7 @@ onUnmounted(() => {
         class="relative pl-8 sm:pl-10 space-y-6 sm:space-y-8 ml-2 sm:ml-4"
       >
         <!-- Origin Node Cap at Top of Timeline -->
-        <div class="absolute -left-[5px] top-1 w-3.5 h-3.5 rounded-full bg-white border-2 border-primary/40 shadow-xs z-10 flex items-center justify-center">
+        <div class="absolute -left-[5px] top-1 w-3.5 h-3.5 rounded-full bg-white border-2 border-primary shadow-xs z-10 flex items-center justify-center">
           <span class="w-1.5 h-1.5 rounded-full bg-primary" />
         </div>
 
@@ -74,9 +93,11 @@ onUnmounted(() => {
         />
 
         <JourneyCard
-          v-for="item in milestones"
+          v-for="(item, idx) in milestones"
           :key="`${item.company}-${item.year}`"
+          :ref="(el) => setCardRef(el, idx)"
           :milestone="item"
+          :is-active="isMilestoneActive(idx)"
         />
       </div>
     </div>

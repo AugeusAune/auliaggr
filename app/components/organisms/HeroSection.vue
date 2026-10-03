@@ -13,7 +13,7 @@
 
 <template>
   <header
-    class="relative overflow-hidden w-full pt-2 sm:pt-4 pb-8 sm:pb-12 border-b border-neutral-200 bg-white"
+    class="relative overflow-hidden w-full pb-8 sm:pb-12 border-b border-neutral-200 bg-white"
   >
     <ClientOnly>
       <ParticleCanvas />
@@ -159,7 +159,9 @@
           class="pt-3 border-t border-neutral-100 flex items-center justify-between gap-2 text-[11px] sm:text-xs text-neutral-600"
         >
           <div class="flex items-center gap-1.5 font-medium truncate">
-            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse flex-shrink-0" />
+            <span
+              class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse flex-shrink-0"
+            />
             <span class="truncate">{{ profile.location }}</span>
           </div>
 
@@ -178,30 +180,30 @@
 </template>
 
 <style scoped>
-.hero-card-entrance {
-  animation: heroDropFlip 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  transform-origin: top center;
-  perspective: 1000px;
-  will-change: transform, opacity;
-}
+  .hero-card-entrance {
+    animation: heroDropFlip 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    transform-origin: top center;
+    perspective: 1000px;
+    will-change: transform, opacity;
+  }
 
-@keyframes heroDropFlip {
-  0% {
-    opacity: 0;
-    transform: translateY(-75px) rotateX(40deg) scale(0.92);
+  @keyframes heroDropFlip {
+    0% {
+      opacity: 0;
+      transform: translateY(-75px) rotateX(40deg) scale(0.92);
+    }
+    50% {
+      opacity: 1;
+    }
+    75% {
+      transform: translateY(5px) rotateX(-6deg) scale(1.006);
+    }
+    90% {
+      transform: translateY(-2px) rotateX(2deg) scale(0.998);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) rotateX(0deg) scale(1);
+    }
   }
-  50% {
-    opacity: 1;
-  }
-  75% {
-    transform: translateY(5px) rotateX(-6deg) scale(1.006);
-  }
-  90% {
-    transform: translateY(-2px) rotateX(2deg) scale(0.998);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0) rotateX(0deg) scale(1);
-  }
-}
 </style>

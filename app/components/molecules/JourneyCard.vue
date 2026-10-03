@@ -4,31 +4,49 @@ import AppBadge from '../atoms/AppBadge.vue'
 
 interface Props {
   milestone: Milestone
+  isActive?: boolean
 }
 
-defineProps<Props>()
+withDefaults(defineProps<Props>(), {
+  isActive: false
+})
 </script>
 
 <template>
-  <div class="relative flex flex-col sm:flex-row sm:items-start justify-between gap-4 p-5 sm:p-6 rounded-2xl bg-light border border-neutral-200 transition-all duration-300 hover:border-primary/50 hover:bg-white group shadow-2xs">
-    <!-- Horizontal connector branch from vertical spine to card -->
-    <span
-      class="absolute -left-8 sm:-left-10 top-7 w-8 sm:w-10 h-[2px] bg-neutral-200 group-hover:bg-primary/50 transition-colors pointer-events-none"
-    />
-
+  <div
+    class="relative flex flex-col sm:flex-row sm:items-start justify-between gap-4 p-5 sm:p-6 rounded-2xl bg-light border transition-all duration-300 group shadow-2xs"
+    :class="[
+      isActive
+        ? 'border-neutral-300 bg-white shadow-xs'
+        : 'border-neutral-200 hover:border-primary/40 hover:bg-white'
+    ]"
+  >
     <!-- Concentric milestone node anchor centered on the timeline spine -->
     <div
-      class="absolute -left-[42px] sm:-left-[50px] top-[18px] w-5 h-5 rounded-full bg-white border-2 border-neutral-300 group-hover:border-primary group-hover:scale-115 flex items-center justify-center shadow-xs transition-all duration-300 z-10"
+      class="absolute -left-[42px] sm:-left-[50px] top-[18px] w-5 h-5 rounded-full bg-white border-2 flex items-center justify-center shadow-xs transition-all duration-300 z-10"
+      :class="[
+        isActive
+          ? 'border-primary shadow-[0_0_10px_rgba(235,94,85,0.35)] scale-110'
+          : 'border-neutral-300 group-hover:border-primary group-hover:scale-110'
+      ]"
       aria-hidden="true"
     >
       <span
-        class="w-2 h-2 rounded-full bg-neutral-400 group-hover:bg-primary transition-colors duration-300"
+        class="w-2 h-2 rounded-full transition-all duration-300"
+        :class="[
+          isActive
+            ? 'bg-primary'
+            : 'bg-neutral-300 group-hover:bg-primary'
+        ]"
       />
     </div>
 
     <div class="flex items-start gap-3.5 sm:gap-4 flex-grow">
       <!-- Company Logo / Initials Badge -->
-      <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-white border border-neutral-200 flex items-center justify-center p-2 flex-shrink-0 shadow-2xs overflow-hidden group-hover:border-primary/30 transition-colors">
+      <div
+        class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-white border flex items-center justify-center p-2 flex-shrink-0 shadow-2xs overflow-hidden transition-colors"
+        :class="isActive ? 'border-primary/30' : 'border-neutral-200 group-hover:border-primary/30'"
+      >
         <img
           v-if="milestone.logoUrl"
           :src="milestone.logoUrl"
@@ -67,7 +85,11 @@ defineProps<Props>()
 
     <!-- Desktop Year Badge -->
     <div class="hidden sm:flex items-center flex-shrink-0 ml-4">
-      <AppBadge variant="default" class="font-sans font-semibold text-xs sm:text-sm !px-3 !py-1 !bg-white !border-neutral-200 group-hover:!border-primary/40 group-hover:!text-primary transition-colors">
+      <AppBadge
+        variant="default"
+        class="font-sans font-semibold text-xs sm:text-sm !px-3 !py-1 !bg-white border transition-colors"
+        :class="isActive ? '!border-primary/40 !text-primary' : '!border-neutral-200 group-hover:!border-primary/30'"
+      >
         {{ milestone.year }}
       </AppBadge>
     </div>
