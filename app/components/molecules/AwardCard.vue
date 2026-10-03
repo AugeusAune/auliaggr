@@ -6,19 +6,27 @@ interface Props {
 }
 
 defineProps<Props>()
+defineEmits<{
+  (e: 'click'): void
+}>()
 </script>
 
 <template>
   <div
-    class="flex items-center justify-between p-5 sm:p-6 rounded-2xl bg-light border border-neutral-200 transition-all duration-300 hover:border-primary/40 hover:bg-white shadow-2xs group"
+    class="flex items-center justify-between p-5 sm:p-6 rounded-2xl bg-light border border-neutral-200 transition-all duration-300 hover:border-primary/40 hover:bg-white shadow-2xs group cursor-pointer select-none"
+    role="button"
+    tabindex="0"
+    @click="$emit('click')"
+    @keydown.enter="$emit('click')"
+    @keydown.space.prevent="$emit('click')"
   >
     <div class="flex items-start gap-4">
-      <div class="w-12 h-12 rounded-2xl bg-white flex items-center justify-center border border-neutral-200 text-dark flex-shrink-0 p-1.5 overflow-hidden shadow-2xs">
+      <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center border border-neutral-200 text-dark flex-shrink-0 p-1.5 overflow-hidden shadow-2xs">
         <img
           v-if="award.logoUrl"
           :src="award.logoUrl"
           :alt="award.organization || award.title"
-          class="w-full h-full object-contain"
+          class="w-full h-full object-contain rounded-full"
           loading="lazy"
           decoding="async"
         />
@@ -37,7 +45,7 @@ defineProps<Props>()
       </div>
     </div>
 
-    <span class="text-xs sm:text-sm font-mono text-neutral-500 flex-shrink-0 ml-4 font-medium">
+    <span class="text-xs sm:text-sm font-sans text-neutral-500 flex-shrink-0 ml-4 font-medium">
       {{ award.date }}
     </span>
   </div>

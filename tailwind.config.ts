@@ -32,7 +32,6 @@ export default <Config>{
       fontFamily: {
         sans: ['Manrope', 'Inter', 'sans-serif'],
         manrope: ['Manrope', 'sans-serif'],
-        mono: ['Fragment Mono', 'monospace'],
         inter: ['Inter', 'sans-serif']
       }
     }

@@ -35,7 +35,7 @@ useSeoMeta({
     <div class="max-w-6xl mx-auto px-4 sm:px-6 pt-6 sm:pt-10 w-full">
       <NuxtLink
         to="/projects"
-        class="inline-flex items-center gap-2 text-xs font-mono font-medium text-neutral-500 hover:text-dark transition-colors"
+        class="inline-flex items-center gap-2 text-xs font-sans font-medium text-neutral-500 hover:text-dark transition-colors"
       >
         ← Back to all projects
       </NuxtLink>
@@ -58,18 +58,18 @@ useSeoMeta({
         <!-- Sidebar Metadata -->
         <aside class="lg:col-span-4 p-6 sm:p-8 rounded-3xl bg-light border border-neutral-200 flex flex-col gap-6">
           <div class="flex flex-col gap-1">
-            <span class="text-xs font-mono text-neutral-500 uppercase tracking-wider">Client</span>
+            <span class="text-xs font-sans font-semibold text-neutral-400 uppercase tracking-wider">Client</span>
             <span class="font-bold text-dark text-base sm:text-lg">{{ project.client || 'Personal Project' }}</span>
           </div>
 
           <div class="flex flex-col gap-1">
-            <span class="text-xs font-mono text-neutral-500 uppercase tracking-wider">Category</span>
+            <span class="text-xs font-sans font-semibold text-neutral-400 uppercase tracking-wider">Category</span>
             <span class="font-medium text-dark text-sm sm:text-base">{{ project.category }}</span>
           </div>
 
           <div class="flex flex-col gap-1">
-            <span class="text-xs font-mono text-neutral-500 uppercase tracking-wider">Date</span>
-            <span class="font-medium text-neutral-700 text-sm font-mono">{{ project.date || '2024' }}</span>
+            <span class="text-xs font-sans font-semibold text-neutral-400 uppercase tracking-wider">Date</span>
+            <span class="font-medium text-neutral-700 text-sm font-sans">{{ project.date || '2024' }}</span>
           </div>
 
           <div v-if="project.externalUrl" class="pt-2">
@@ -115,7 +115,7 @@ useSeoMeta({
       <!-- Feature Visual Presentation Showcase -->
       <div class="w-full aspect-[16/9] rounded-3xl bg-light border border-neutral-200 flex items-center justify-center p-8 sm:p-12 relative overflow-hidden text-center text-dark shadow-sm">
         <div class="relative z-10 flex flex-col items-center gap-4 max-w-xl">
-          <span class="text-xs font-mono uppercase tracking-widest text-primary font-semibold">
+          <span class="text-xs font-sans uppercase tracking-widest text-primary font-semibold">
             Interactive Showcase
           </span>
           <h2 class="text-2xl sm:text-4xl font-bold tracking-tight text-dark">

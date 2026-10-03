@@ -14,7 +14,7 @@
 
 <template>
   <nav
-    class="inline-flex items-center gap-2 sm:gap-4 px-3 sm:px-4 py-2 rounded-full bg-white/90 backdrop-blur-md border border-neutral-200 shadow-sm transition-all duration-300 hover:shadow-md"
+    class="inline-flex items-center gap-2 sm:gap-4 px-3 sm:px-4 py-2 rounded-full bg-white/75 backdrop-blur-xl border border-neutral-200/80 shadow-md transition-all duration-300 hover:shadow-lg hover:bg-white/85"
     aria-label="Main Navigation"
   >
     <!-- Logo / Home Link -->

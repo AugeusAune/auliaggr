@@ -36,7 +36,7 @@ const inputClasses = computed(() => [
     <label
       v-if="label"
       :for="id"
-      class="text-xs font-medium text-neutral-600 tracking-wide uppercase font-mono"
+      class="text-xs font-semibold text-neutral-600 tracking-wide uppercase font-sans"
     >
       {{ label }}
     </label>

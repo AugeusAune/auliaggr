@@ -21,12 +21,12 @@
     >
       <div class="flex flex-col gap-4 max-w-xl">
         <span
-          class="text-xs font-mono font-semibold uppercase tracking-wider text-primary"
+          class="text-xs font-sans font-semibold uppercase tracking-wider text-primary"
         >
           Creative Showcase
         </span>
 
-        <AppHeading as="h2" size="2xl" :spaced="true">
+        <AppHeading as="h2" size="2xl">
           More Designs. More Stories.
         </AppHeading>
 
@@ -68,7 +68,7 @@
           class="relative z-10 flex flex-col items-start text-left gap-2 text-white"
         >
           <span
-            class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/20 backdrop-blur-md text-xs font-mono tracking-wider uppercase text-white border border-white/30"
+            class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/20 backdrop-blur-md text-xs font-sans font-medium tracking-wider uppercase text-white border border-white/30"
           >
             Curated Visuals
           </span>

@@ -35,7 +35,7 @@ const handleOpenModal = (cert: Certification) => {
   <section class="w-full py-16 sm:py-24 border-b border-neutral-200 bg-white">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col gap-10">
       <div class="flex flex-col gap-3 max-w-2xl">
-        <span class="text-xs font-mono font-semibold uppercase tracking-wider text-primary">
+        <span class="text-xs font-sans font-semibold uppercase tracking-wider text-primary">
           Credentials
         </span>
         <AppHeading as="h2" size="2xl">

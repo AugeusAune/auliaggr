@@ -28,7 +28,7 @@ const displayedProjects = computed(() => {
     <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col gap-10 sm:gap-14">
       <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-6">
         <div class="flex flex-col gap-3 max-w-2xl">
-          <span class="text-xs font-mono font-semibold uppercase tracking-wider text-neutral-400">
+          <span class="text-xs font-sans font-semibold uppercase tracking-wider text-neutral-400">
             Portfolio
           </span>
           <AppHeading as="h2" size="2xl">
@@ -38,15 +38,6 @@ const displayedProjects = computed(() => {
             Check out some of my favorite & most recent projects.
           </p>
         </div>
-
-        <AppButton
-          v-if="showViewAll"
-          to="/projects"
-          variant="secondary"
-          class="self-start sm:self-auto"
-        >
-          View All Projects →
-        </AppButton>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">

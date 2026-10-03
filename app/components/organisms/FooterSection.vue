@@ -59,7 +59,7 @@
 
           <div class="flex flex-col gap-2 pt-4 text-sm text-neutral-600">
             <div
-              class="font-medium text-dark font-mono text-xs uppercase tracking-wider"
+              class="font-semibold text-dark font-sans text-xs uppercase tracking-wider"
             >
               Let's chat!
             </div>
@@ -100,14 +100,14 @@
 
       <!-- Copyright Bar -->
       <div
-        class="pt-8 border-t border-neutral-200 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-500 font-mono"
+        class="pt-8 border-t border-neutral-200 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-500 font-sans font-medium"
       >
         <p>{{ profile.copyright }}</p>
         <div class="flex items-center gap-4">
           <button
             type="button"
             @click="scrollToTop"
-            class="inline-flex items-center gap-1.5 text-xs font-mono text-neutral-500 hover:text-dark transition-colors cursor-pointer group"
+            class="inline-flex items-center gap-1.5 text-xs font-sans font-medium text-neutral-500 hover:text-dark transition-colors cursor-pointer group"
             aria-label="Scroll back to top of page"
           >
             <span>Back to top</span>

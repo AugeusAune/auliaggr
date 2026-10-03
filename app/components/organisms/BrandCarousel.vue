@@ -16,13 +16,13 @@
 
 <template>
   <section
-    class="w-full py-8 sm:py-10 border-b border-neutral-200 bg-white overflow-hidden"
+    class="w-full py-4 sm:py-6 border-b border-neutral-200 bg-white overflow-hidden"
   >
     <div
-      class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row sm:items-center gap-6"
+      class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6"
     >
       <span
-        class="text-xs font-mono font-semibold uppercase tracking-wider text-neutral-500 flex-shrink-0"
+        class="text-xs font-sans font-semibold uppercase tracking-wider text-neutral-400 flex-shrink-0"
       >
         Proudly worked with:
       </span>

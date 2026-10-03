@@ -11,6 +11,8 @@ export interface Project {
   prototypeUrl?: string
   imageUrl?: string
   coverImage?: string
+  previewVideoUrl?: string
+  previewGifUrl?: string
   tags?: string[]
 }
 
@@ -19,6 +21,7 @@ export interface Milestone {
   company: string
   year: string
   description?: string
+  logoUrl?: string
 }
 
 export interface Award {
@@ -26,6 +29,7 @@ export interface Award {
   date: string
   organization?: string
   logoUrl?: string
+  imageUrl?: string
 }
 
 export interface BrandPartner {

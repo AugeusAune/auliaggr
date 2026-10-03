@@ -75,7 +75,7 @@ onUnmounted(() => {
         <!-- Top Navigation / Info Bar -->
         <div class="flex items-center justify-between px-5 py-4 border-b border-neutral-100 bg-neutral-50/70">
           <div class="flex items-center gap-3 min-w-0 pr-4">
-            <span class="px-2.5 py-1 rounded-full bg-primary/15 text-primary text-xs font-mono font-bold flex-shrink-0">
+            <span class="px-2.5 py-1 rounded-full bg-primary/15 text-primary text-xs font-sans font-bold flex-shrink-0">
               {{ currentIndex + 1 }} / {{ certifications.length }}
             </span>
             <div class="flex flex-col min-w-0">

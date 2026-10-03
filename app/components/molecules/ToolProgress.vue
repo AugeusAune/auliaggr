@@ -21,7 +21,7 @@ defineProps<Props>()
           :alt="`${tool.name} icon`"
           class="w-full h-full object-contain"
         />
-        <span v-else class="text-sm font-bold text-dark font-mono">
+        <span v-else class="text-sm font-bold text-dark font-sans">
           {{ tool.name.substring(0, 2) }}
         </span>
       </div>
@@ -29,7 +29,7 @@ defineProps<Props>()
       <AppBadge
         v-if="tool.category"
         variant="primary"
-        class="text-[11px] font-mono"
+        class="text-[11px] font-sans"
       >
         {{ tool.category }}
       </AppBadge>

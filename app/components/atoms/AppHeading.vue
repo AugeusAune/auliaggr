@@ -39,7 +39,7 @@ const sizeClasses = computed(() => {
     :class="[
       'text-dark font-sans',
       sizeClasses,
-      spaced ? 'tracking-[0.16em] uppercase' : 'tracking-tight'
+      spaced ? 'tracking-wider uppercase' : 'tracking-tight'
     ]"
   >
     <slot />

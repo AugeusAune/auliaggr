@@ -47,7 +47,7 @@ defineEmits<{
       </div>
     </div>
 
-    <span class="text-xs font-mono text-neutral-400 flex-shrink-0 ml-2">
+    <span class="text-xs font-sans font-medium text-neutral-400 flex-shrink-0 ml-2">
       Verified
     </span>
   </div>

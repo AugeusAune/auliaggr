@@ -227,15 +227,71 @@ export const projectsData: Project[] = [
     prototypeUrl: 'https://www.figma.com/@auliaggr',
     coverImage: '/images/framer/morker.webp',
     tags: ['B2B', 'SaaS', 'Dashboard']
+  },
+  {
+    slug: 'nuansart-branding',
+    title: 'Nuansart Brand Identity',
+    subtitle: 'Visual identity system & custom packaging design',
+    description: 'A comprehensive branding identity kit including custom logo marks, typography pairings, packaging concepts, and product illustration guidelines.',
+    client: 'Nuansart Studio',
+    category: 'Graphic Design, Branding',
+    date: '2024',
+    externalUrl: 'https://www.behance.net/auliaggr',
+    behanceUrl: 'https://www.behance.net/auliaggr',
+    coverImage: '/images/framer/showcase_bg.webp',
+    tags: ['Graphic Design', 'Branding', 'Visual Identity', 'Packaging']
+  },
+  {
+    slug: 'aiti-media-campaign',
+    title: 'Aiti Media Social Campaign',
+    subtitle: 'Editorial graphics & digital marketing design',
+    description: 'Creative social media campaign visual kit designed to boost engagement and brand awareness across digital marketing channels.',
+    client: 'Aiti Media',
+    category: 'Graphic Design, Marketing',
+    date: '2025',
+    externalUrl: 'https://www.behance.net/auliaggr',
+    behanceUrl: 'https://www.behance.net/auliaggr',
+    coverImage: '/images/framer/clotie_hp.webp',
+    tags: ['Graphic Design', 'Social Media', 'Marketing', 'Editorial']
   }
 ]
 
 export const journeyData: Milestone[] = [
-  { role: 'Graphic Designer Intern', company: 'Aiti Media', year: '2026' },
-  { role: 'UI/UX Designer Mentor', company: 'Ousean School', year: '2026' },
-  { role: 'Fullstack Developer', company: 'PLN Icon Plus', year: '2025' },
-  { role: 'Graphic Designer', company: 'Nuansart.Keychain', year: '2024' },
-  { role: 'UI/UX Designer', company: 'Polairud', year: '2021' }
+  {
+    role: 'Graphic Designer Intern',
+    company: 'Aiti Media',
+    year: '2026',
+    logoUrl: '/images/framer/logo.png',
+    description: 'Designed promotional graphics, social media campaigns, and brand visuals that elevated content reach and viewer engagement.'
+  },
+  {
+    role: 'UI/UX Designer Mentor',
+    company: 'Ousean School',
+    year: '2026',
+    logoUrl: '/images/framer/ousenpay_logo.png',
+    description: 'Guided 40+ students through foundational design thinking, user research, wireframing, and Figma prototyping.'
+  },
+  {
+    role: 'Fullstack Developer',
+    company: 'PLN Icon Plus',
+    year: '2025',
+    logoUrl: '/images/framer/certificate_iconplus.webp',
+    description: 'Developed internal web features and interactive dashboards using modern JavaScript frameworks and integrated backend services.'
+  },
+  {
+    role: 'Graphic Designer',
+    company: 'Nuansart.Keychain',
+    year: '2024',
+    logoUrl: '/images/framer/showcase_bg.webp',
+    description: 'Produced creative merchandise design, brand identity guidelines, and high-converting marketing collateral.'
+  },
+  {
+    role: 'UI/UX Designer',
+    company: 'Polairud',
+    year: '2021',
+    logoUrl: '/images/framer/certificaye_korpolairud.webp',
+    description: 'Designed user-friendly internal administration interfaces and tested information architectures for operational efficiency.'
+  }
 ]
 
 export const awardsData: Award[] = [
@@ -243,13 +299,15 @@ export const awardsData: Award[] = [
     title: '1st Place Winner in UI/UX Design at Switchfest',
     date: 'Sep 9, 2024',
     organization: 'UIN Walisongo',
-    logoUrl: '/images/framer/logo_walisongo.webp'
+    logoUrl: '/images/framer/logo_walisongo.webp',
+    imageUrl: '/images/framer/certificate_walisongo.webp'
   },
   {
     title: '3rd Place Winner in UI/UX Design at Techsprint',
     date: 'Mar 3, 2024',
     organization: 'Reclas Technology',
-    logoUrl: '/images/framer/reclas_logo.webp'
+    logoUrl: '/images/framer/reclas_logo.webp',
+    imageUrl: '/images/framer/certificate_reclas.webp'
   }
 ]
 
@@ -289,6 +347,42 @@ export const toolsData: ToolSkill[] = [
     description: 'Visual presentations & quick assets',
     category: 'Graphic Design',
     iconUrl: '/images/framer/canva.webp'
+  },
+  {
+    name: 'Laravel',
+    description: 'Robust PHP framework for scalable backends & RESTful APIs',
+    category: 'Backend & Dev',
+    iconUrl: ''
+  },
+  {
+    name: 'Vue.js & Nuxt',
+    description: 'Component architecture, SSR, & reactive web applications',
+    category: 'Frontend & Dev',
+    iconUrl: ''
+  },
+  {
+    name: 'Tailwind CSS',
+    description: 'Utility-first modern design system styling & micro-animations',
+    category: 'Frontend & Dev',
+    iconUrl: ''
+  },
+  {
+    name: 'TypeScript',
+    description: 'Type-safe robust frontend & fullstack codebases',
+    category: 'Frontend & Dev',
+    iconUrl: ''
+  },
+  {
+    name: 'REST API & MySQL',
+    description: 'Database modeling, secure endpoints & data architecture',
+    category: 'Backend & Dev',
+    iconUrl: ''
+  },
+  {
+    name: 'Git & GitHub',
+    description: 'Version control, team workflows & seamless CI/CD releases',
+    category: 'Tools & DevOps',
+    iconUrl: ''
   }
 ]
 
