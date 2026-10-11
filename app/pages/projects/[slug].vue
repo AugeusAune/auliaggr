@@ -32,7 +32,7 @@ useSeoMeta({
 <template>
   <div v-if="project" class="w-full flex flex-col">
     <!-- Breadcrumb & Back -->
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 pt-6 sm:pt-10 w-full">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 pt-20 sm:pt-24 w-full">
       <NuxtLink
         to="/projects"
         class="inline-flex items-center gap-2 text-xs font-sans font-medium text-neutral-500 hover:text-dark transition-colors"

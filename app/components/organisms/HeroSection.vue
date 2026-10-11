@@ -13,14 +13,14 @@
 
 <template>
   <header
-    class="relative overflow-hidden w-full pb-8 sm:pb-12 border-b border-neutral-200 bg-white"
+    class="relative overflow-hidden w-full pt-16 sm:pt-20 pb-12 sm:pb-16 border-b border-neutral-200 bg-white"
   >
     <ClientOnly>
       <ParticleCanvas />
     </ClientOnly>
 
     <div
-      class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 flex flex-col items-center"
+      class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 flex flex-col items-center w-full"
     >
       <!-- ID Card Lanyard Strap & Clip Hanging from Top -->
       <div class="flex flex-col items-center select-none w-full">
@@ -41,9 +41,9 @@
         </div>
       </div>
 
-      <!-- Main ID Card Container with 3D Flip-Drop Entrance -->
+      <!-- Main ID Card Container with 3D Flip-Drop Entrance (Lengthened on Mobile) -->
       <div
-        class="hero-card-entrance relative w-full max-w-[400px] sm:max-w-[400px] mx-auto -mt-3 pt-4 pb-5 sm:pb-6 px-5 sm:px-7 bg-white rounded-[32px] sm:rounded-[40px] border border-neutral-200/90 shadow-xl flex flex-col gap-4 sm:gap-5 transition-all duration-300"
+        class="hero-card-entrance relative w-full max-w-[370px] sm:max-w-[400px] mx-auto -mt-3 pt-6 pb-7 sm:pt-5 sm:pb-6 px-5 sm:px-7 bg-white rounded-[32px] sm:rounded-[40px] border border-neutral-200/90 shadow-xl flex flex-col justify-between min-h-[540px] sm:min-h-0 gap-5 sm:gap-5 transition-all duration-300"
       >
         <!-- Card Cutout Hole for Lanyard Clip -->
         <div

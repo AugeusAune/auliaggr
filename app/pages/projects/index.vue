@@ -91,7 +91,7 @@
   <div class="w-full flex flex-col">
     <!-- Header -->
     <header
-      class="w-full pt-8 sm:pt-16 pb-12 sm:pb-16 border-b border-neutral-200"
+      class="w-full pt-20 sm:pt-24 pb-12 sm:pb-16 border-b border-neutral-200"
     >
       <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col gap-6">
         <NuxtLink

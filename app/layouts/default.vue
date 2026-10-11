@@ -11,9 +11,9 @@
       <slot />
     </main>
 
-    <!-- Floating Navigation Pill Fixed at Bottom -->
+    <!-- Floating Navigation Pill Fixed at Top -->
     <header
-      class="fixed bottom-5 sm:bottom-6 left-1/2 -translate-x-1/2 z-50 pointer-events-auto"
+      class="fixed top-3.5 sm:top-5 left-1/2 -translate-x-1/2 z-50 pointer-events-auto"
     >
       <NavPill />
     </header>
