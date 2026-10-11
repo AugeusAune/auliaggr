@@ -176,7 +176,7 @@
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
               fill="currentColor"
-              class="w-3.5 h-3.5 transition-transform duration-200 ease-out group-hover:translate-x-1"
+              class="w-3.5 h-3.5 transition-transform duration-200 ease-out group-hover:translate-x-1 group-hover:-rotate-45"
               aria-hidden="true"
             >
               <path
