@@ -10,6 +10,12 @@
   });
 
   const route = useRoute();
+
+  const handleHomeClick = (event: MouseEvent) => {
+    if (route.path !== '/') return;
+    event.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 </script>
 
 <template>
@@ -20,8 +26,9 @@
     <!-- Logo / Home Link -->
     <NuxtLink
       to="/"
-      aria-label="Go to homepage"
-      class="w-8 h-8 rounded-full flex items-center justify-center bg-primary text-white hover:bg-primary-hover transition-colors"
+      aria-label="Go to homepage or scroll to top"
+      class="w-8 h-8 rounded-full flex items-center justify-center bg-primary text-white hover:bg-primary-hover active:scale-90 transition-all cursor-pointer"
+      @click="handleHomeClick"
     >
       <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
         <path d="M12 3l9 8h-3v10h-4v-6h-4v6H6V11H3z" />

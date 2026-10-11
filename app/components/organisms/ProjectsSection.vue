@@ -42,9 +42,10 @@ const displayedProjects = computed(() => {
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
         <ProjectCard
-          v-for="project in displayedProjects"
+          v-for="(project, idx) in displayedProjects"
           :key="project.slug"
           :project="project"
+          :class="idx >= 3 ? 'hidden md:block' : ''"
         />
       </div>
 
