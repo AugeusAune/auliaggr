@@ -113,15 +113,31 @@ useSeoMeta({
       </div>
 
       <!-- Feature Visual Presentation Showcase -->
-      <div class="w-full aspect-[16/9] rounded-3xl bg-light border border-neutral-200 flex items-center justify-center p-8 sm:p-12 relative overflow-hidden text-center text-dark shadow-sm">
-        <div class="relative z-10 flex flex-col items-center gap-4 max-w-xl">
-          <span class="text-xs font-sans uppercase tracking-widest text-primary font-semibold">
+      <div
+        class="w-full aspect-auto md:aspect-[16/9] min-h-[280px] sm:min-h-[340px] rounded-2xl sm:rounded-3xl bg-white border border-neutral-200 flex items-center justify-center p-6 sm:p-10 md:p-12 relative overflow-hidden text-center text-dark shadow-xs"
+      >
+        <!-- Subtle ambient accents -->
+        <div
+          class="absolute -top-16 -right-16 w-48 h-48 rounded-full bg-primary/10 blur-2xl pointer-events-none"
+        />
+        <div
+          class="absolute -bottom-16 -left-16 w-48 h-48 rounded-full bg-primary/10 blur-2xl pointer-events-none"
+        />
+
+        <div class="relative z-10 flex flex-col items-center gap-3 sm:gap-4 max-w-xl">
+          <span
+            class="text-[11px] sm:text-xs font-sans uppercase tracking-widest text-primary font-semibold"
+          >
             Interactive Showcase
           </span>
-          <h2 class="text-2xl sm:text-4xl font-bold tracking-tight text-dark">
+          <h2
+            class="text-xl sm:text-3xl md:text-4xl font-bold tracking-tight text-dark"
+          >
             {{ project.title }}
           </h2>
-          <p class="text-sm sm:text-base text-neutral-600">
+          <p
+            class="text-xs sm:text-sm md:text-base text-neutral-600 max-w-md sm:max-w-lg leading-relaxed"
+          >
             Designed with high-fidelity components, user-centric wireframes, and tested interactive prototypes.
           </p>
           <AppButton
@@ -129,7 +145,7 @@ useSeoMeta({
             :href="project.externalUrl"
             :external="true"
             variant="primary"
-            class="mt-2 !px-6 !py-3 font-semibold"
+            class="mt-2 w-full sm:w-auto !px-6 !py-3 text-xs sm:text-sm font-semibold justify-center text-center shadow-xs"
           >
             Explore Case Study on Behance
           </AppButton>
