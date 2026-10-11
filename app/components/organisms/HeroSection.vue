@@ -95,10 +95,10 @@
 
           <!-- Top Status Tag (Text Only with Pulse Indicator) -->
           <div
-            class="inline-flex items-center gap-1.5 pt-1 flex-shrink-0 text-[11px] sm:text-xs font-semibold text-neutral-700"
+            class="inline-flex items-start gap-1.5 pt-1 flex-shrink-0 text-[11px] sm:text-xs font-semibold text-neutral-700 text-right"
           >
-            <span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
-            <span>Let's make it happen</span>
+            <span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse mt-1" />
+            <span class="leading-tight">Let's make it<br />happen</span>
           </div>
         </div>
 
