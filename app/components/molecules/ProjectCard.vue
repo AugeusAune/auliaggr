@@ -104,19 +104,23 @@ const isHovered = ref(false)
         </NuxtLink>
 
         <div class="flex items-center gap-2">
-          <!-- Circular Prototype Button -->
+          <!-- Circular Figma Prototype Button -->
           <a
             v-if="project.prototypeUrl || project.externalUrl"
             :href="project.prototypeUrl || project.externalUrl || '#'"
             target="_blank"
             rel="noopener noreferrer"
-            class="prototype-btn w-9 h-9 rounded-full inline-flex items-center justify-center bg-white border border-neutral-200 text-dark hover:border-primary hover:text-primary transition-all duration-200 shadow-2xs select-none active:scale-95"
-            title="Interactive Prototype"
-            aria-label="View interactive prototype"
+            class="prototype-btn w-9 h-9 rounded-full inline-flex items-center justify-center bg-white border border-neutral-200 text-dark hover:border-primary hover:text-primary transition-all duration-200 shadow-2xs select-none active:scale-95 p-2"
+            title="Figma Prototype"
+            aria-label="View Figma prototype"
           >
-            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
-              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/>
-            </svg>
+            <img
+              src="/images/framer/figma_logo.svg"
+              alt="Figma"
+              class="w-3.5 h-3.5 object-contain"
+              loading="lazy"
+              decoding="async"
+            />
           </a>
 
           <!-- Circular Behance Button -->

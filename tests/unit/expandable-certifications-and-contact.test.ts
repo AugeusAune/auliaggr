@@ -16,7 +16,7 @@ describe('Expandable Certifications & Contact Photo', () => {
 
   it('FooterSection includes photo of Aulia in contact section', () => {
     const footer = readFileSync('app/components/organisms/FooterSection.vue', 'utf-8')
-    expect(footer).toContain('/images/framer/aulia.png')
+    expect(footer).toContain('/images/framer/aulia.webp')
     expect(footer).toContain('loading="lazy"')
   })
 })

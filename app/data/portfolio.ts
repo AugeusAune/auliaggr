@@ -374,6 +374,7 @@ export const journeyData: Milestone[] = [
     period: '2021',
     logoUrl: '/images/framer/certificaye_korpolairud.webp',
     skills: [
+      'Figma',
       'UI Design',
       'Information Architecture',
       'User Flows',

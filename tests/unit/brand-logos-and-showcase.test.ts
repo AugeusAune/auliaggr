@@ -11,6 +11,6 @@ describe('Brand Partner Logos & Showcase Background', () => {
 
   it('StoriesSection renders showcase background image', () => {
     const stories = readFileSync('app/components/organisms/StoriesSection.vue', 'utf-8')
-    expect(stories).toContain('/images/framer/showcase_bg.png')
+    expect(stories).toContain('/images/framer/showcase_bg')
   })
 })

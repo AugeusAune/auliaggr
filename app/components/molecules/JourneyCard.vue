@@ -114,34 +114,18 @@
       </span>
     </div>
 
-    <!-- Tier 3: Skills / Tech Tags -->
+    <!-- Tier 3: Skills / Tech Tags (Text only) -->
     <div
       v-if="milestone.skills && milestone.skills.length > 0"
-      class="flex items-start gap-2 pt-0.5"
+      class="flex items-center gap-1.5 flex-wrap pt-0.5"
     >
-      <svg
-        class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-neutral-400 flex-shrink-0 mt-0.5"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        aria-hidden="true"
+      <span
+        v-for="skill in milestone.skills"
+        :key="skill"
+        class="inline-block px-2 sm:px-2.5 py-0.5 rounded-md text-[10px] sm:text-[11px] font-medium bg-neutral-100 text-neutral-700 border border-neutral-200/80 transition-colors group-hover:bg-neutral-50"
       >
-        <path
-          d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
-        />
-      </svg>
-      <div class="flex items-center gap-1.5 flex-wrap flex-1 min-w-0">
-        <span
-          v-for="skill in milestone.skills"
-          :key="skill"
-          class="inline-block px-2 sm:px-2.5 py-0.5 rounded-md text-[10px] sm:text-[11px] font-medium bg-neutral-100 text-neutral-700 border border-neutral-200/80 transition-colors group-hover:bg-neutral-50"
-        >
-          {{ skill }}
-        </span>
-      </div>
+        {{ skill }}
+      </span>
     </div>
 
     <!-- Tier 4 & 5: Key Achievement Highlight & Narrative Description in one single column -->

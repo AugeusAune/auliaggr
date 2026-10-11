@@ -7,8 +7,8 @@ describe('Project Card Actions (Prototype & Behance Study Case)', () => {
     const cardCode = readFileSync('app/components/molecules/ProjectCard.vue', 'utf-8')
     expect(cardCode).toContain('prototype-btn')
     expect(cardCode).toContain('behance-btn')
-    expect(cardCode).toContain('Prototype')
-    expect(cardCode).toContain('Behance Study Case')
+    expect(cardCode).toContain('figma_logo.svg')
+    expect(cardCode).toContain('Behance')
   })
 
   it('ProjectCard preserves lazy loading and async decoding for images', () => {

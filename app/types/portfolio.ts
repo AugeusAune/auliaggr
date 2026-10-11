@@ -22,6 +22,7 @@ export interface Milestone {
   year: string
   period?: string
   logoUrl?: string
+  tools?: string[]
   skills?: string[]
   highlight?: string
   description?: string

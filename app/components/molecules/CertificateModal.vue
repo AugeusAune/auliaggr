@@ -74,18 +74,18 @@ onUnmounted(() => {
       <div class="relative w-full max-w-4xl bg-white rounded-3xl overflow-hidden shadow-2xl flex flex-col max-h-[92vh]">
         <!-- Top Navigation / Info Bar -->
         <div class="flex items-center justify-between px-5 py-4 border-b border-neutral-100 bg-neutral-50/70">
-          <div class="flex items-center gap-3 min-w-0 pr-4">
-            <span class="px-2.5 py-1 rounded-full bg-primary/15 text-primary text-xs font-sans font-bold flex-shrink-0">
-              {{ currentIndex + 1 }} / {{ certifications.length }}
-            </span>
-            <div class="flex flex-col min-w-0">
-              <h3 class="text-sm sm:text-base font-bold text-dark truncate">
+          <div class="flex flex-col min-w-0 pr-4">
+            <div class="flex items-center gap-2.5 min-w-0">
+              <h3 class="text-sm sm:text-base font-bold text-dark text-left truncate">
                 {{ currentCert.title }}
               </h3>
-              <p class="text-xs text-neutral-500 font-medium truncate">
-                {{ currentCert.issuer }}
-              </p>
+              <span class="px-2.5 py-0.5 rounded-full bg-primary/15 text-primary text-xs font-sans font-bold flex-shrink-0">
+                {{ currentIndex + 1 }} / {{ certifications.length }}
+              </span>
             </div>
+            <p class="text-xs text-neutral-500 font-medium text-left truncate mt-0.5">
+              {{ currentCert.issuer }}
+            </p>
           </div>
 
           <button

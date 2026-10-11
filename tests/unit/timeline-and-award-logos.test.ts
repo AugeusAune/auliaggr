@@ -4,7 +4,8 @@ import { readFileSync } from 'node:fs'
 describe('Connected Timeline & Award Logos', () => {
   it('JourneySection contains a continuous timeline track line', () => {
     const section = readFileSync('app/components/organisms/JourneySection.vue', 'utf-8')
-    expect(section).toContain('border-l-2')
+    expect(section).toContain('timelineRef')
+    expect(section).toContain('bg-neutral-200')
   })
 
   it('JourneyCard has milestone node dot and year indicator', () => {
