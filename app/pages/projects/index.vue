@@ -29,52 +29,25 @@
     'Mobile App',
   ]);
 
+  const CATEGORY_KEYWORDS: Record<string, string[]> = {
+    ilustrasi: ['ilustra', 'illustrat'],
+    illustration: ['ilustra', 'illustrat'],
+    'magazine/guidebook': ['magazine', 'guidebook', 'editorial', 'magazie'],
+    game: ['game', 'gamifi', 'esport'],
+    logo: ['logo'],
+  };
+
   const matchesCategory = (project: Project, categoryName: string): boolean => {
     if (categoryName === 'All') return true;
 
     const catLower = categoryName.toLowerCase();
     const projectCategory = (project.category || '').toLowerCase();
     const projectTags = (project.tags || []).map((t) => t.toLowerCase());
+    const searchTerms = CATEGORY_KEYWORDS[catLower] || [catLower];
 
-    if (
-      projectCategory.includes(catLower) ||
-      projectTags.some((tag) => tag.includes(catLower))
-    ) {
-      return true;
-    }
-
-    if (catLower === 'ilustrasi' || catLower === 'illustration') {
-      return (
-        projectCategory.includes('ilustra') ||
-        projectCategory.includes('illustrat') ||
-        projectTags.some((t) => t.includes('illustrat') || t.includes('ilustra'))
-      );
-    }
-
-    if (catLower.includes('magazine') || catLower.includes('guidebook') || catLower.includes('magazie')) {
-      return (
-        projectCategory.includes('magazine') ||
-        projectCategory.includes('guidebook') ||
-        projectCategory.includes('editorial') ||
-        projectTags.some((t) => t.includes('magazine') || t.includes('guidebook') || t.includes('editorial'))
-      );
-    }
-
-    if (catLower === 'game') {
-      return (
-        projectCategory.includes('game') ||
-        projectTags.some((t) => t.includes('game') || t.includes('gamifi') || t.includes('esport'))
-      );
-    }
-
-    if (catLower === 'logo') {
-      return (
-        projectCategory.includes('logo') ||
-        projectTags.some((t) => t.includes('logo'))
-      );
-    }
-
-    return false;
+    return searchTerms.some(
+      (term) => projectCategory.includes(term) || projectTags.some((tag) => tag.includes(term))
+    );
   };
 
   const filteredProjects = computed(() => {

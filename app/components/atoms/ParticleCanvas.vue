@@ -17,7 +17,15 @@ let mouse = { x: -1000, y: -1000, active: false }
 
 const PARTICLE_COLOR = '236, 143, 141'
 const CONNECTION_DISTANCE = 90
+const CONNECTION_MAX_ALPHA = 0.18
+const CONNECTION_LINE_WIDTH = 0.75
 const MOUSE_RADIUS = 100
+const MOUSE_REPULSE_FACTOR = 1.2
+const MAX_SPEED = 0.45
+const MIN_RADIUS = 1
+const RADIUS_SPREAD = 1.5
+const MIN_ALPHA = 0.2
+const ALPHA_SPREAD = 0.45
 
 const getParticleCount = (): number => {
   if (typeof window === 'undefined') return 40
@@ -38,13 +46,17 @@ const createParticle = (width: number, height: number): Particle => {
   return {
     x: Math.random() * width,
     y: Math.random() * height,
-    vx: (Math.random() - 0.5) * 0.45,
-    vy: (Math.random() - 0.5) * 0.45,
-    radius: Math.random() * 1.5 + 1,
-    baseAlpha: Math.random() * 0.45 + 0.2
+    vx: (Math.random() - 0.5) * MAX_SPEED,
+    vy: (Math.random() - 0.5) * MAX_SPEED,
+    radius: Math.random() * RADIUS_SPREAD + MIN_RADIUS,
+    baseAlpha: Math.random() * ALPHA_SPREAD + MIN_ALPHA
   }
 }
 
+/**
+ * In-place mutation of particle coordinates is intentional here to prevent
+ * excessive GC pauses and allocations in the 60fps requestAnimationFrame loop.
+ */
 const updateParticle = (p: Particle, width: number, height: number) => {
   p.x += p.vx
   p.y += p.vy
@@ -60,8 +72,8 @@ const updateParticle = (p: Particle, width: number, height: number) => {
   const dist = Math.sqrt(dx * dx + dy * dy)
   if (dist < MOUSE_RADIUS && dist > 0) {
     const force = (MOUSE_RADIUS - dist) / MOUSE_RADIUS
-    p.x -= (dx / dist) * force * 1.2
-    p.y -= (dy / dist) * force * 1.2
+    p.x -= (dx / dist) * force * MOUSE_REPULSE_FACTOR
+    p.y -= (dy / dist) * force * MOUSE_REPULSE_FACTOR
   }
 }
 
@@ -77,9 +89,9 @@ const drawConnections = (ctx: CanvasRenderingContext2D) => {
       const dist = Math.sqrt(dx * dx + dy * dy)
 
       if (dist < CONNECTION_DISTANCE) {
-        const alpha = (1 - dist / CONNECTION_DISTANCE) * 0.18
+        const alpha = (1 - dist / CONNECTION_DISTANCE) * CONNECTION_MAX_ALPHA
         ctx.strokeStyle = `rgba(${PARTICLE_COLOR}, ${alpha})`
-        ctx.lineWidth = 0.75
+        ctx.lineWidth = CONNECTION_LINE_WIDTH
         ctx.beginPath()
         ctx.moveTo(p1.x, p1.y)
         ctx.lineTo(p2.x, p2.y)

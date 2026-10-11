@@ -22,7 +22,7 @@ export function escapeHtml(str: string): string {
     .replace(/'/g, '&#39;')
 }
 
-export function validateContactPayload(body: any): ContactInput {
+export function validateContactPayload(body: unknown): ContactInput {
   if (!body || typeof body !== 'object') {
     throw createError({
       statusCode: 400,
@@ -30,7 +30,8 @@ export function validateContactPayload(body: any): ContactInput {
     })
   }
 
-  const name = typeof body.name === 'string' ? body.name.trim() : ''
+  const record = body as Record<string, unknown>
+  const name = typeof record.name === 'string' ? record.name.trim() : ''
   if (!name) {
     throw createError({
       statusCode: 400,
@@ -44,7 +45,7 @@ export function validateContactPayload(body: any): ContactInput {
     })
   }
 
-  const email = typeof body.email === 'string' ? body.email.trim() : ''
+  const email = typeof record.email === 'string' ? record.email.trim() : ''
   if (!email || email.length > 254 || !EMAIL_REGEX.test(email)) {
     throw createError({
       statusCode: 400,
@@ -52,7 +53,7 @@ export function validateContactPayload(body: any): ContactInput {
     })
   }
 
-  const message = typeof body.message === 'string' ? body.message.trim() : ''
+  const message = typeof record.message === 'string' ? record.message.trim() : ''
   if (!message || message.length < 3) {
     throw createError({
       statusCode: 400,
@@ -66,7 +67,7 @@ export function validateContactPayload(body: any): ContactInput {
     })
   }
 
-  const honeypot = typeof body.honeypot === 'string' ? body.honeypot.trim() : undefined
+  const honeypot = typeof record.honeypot === 'string' ? record.honeypot.trim() : undefined
 
   return { name, email, message, honeypot }
 }
@@ -176,7 +177,7 @@ export default defineEventHandler(async (event) => {
       success: true,
       message: 'Your message has been sent successfully! I will get back to you within 24 hours.'
     }
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error('Nodemailer send error:', error)
     throw createError({
       statusCode: 500,

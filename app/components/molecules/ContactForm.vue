@@ -37,8 +37,9 @@ const handleSubmit = async () => {
     name.value = ''
     email.value = ''
     message.value = ''
-  } catch (err: any) {
-    errorMessage.value = err?.data?.statusMessage || err?.statusMessage || err?.message || 'Failed to send message. Please try again later.'
+  } catch (err: unknown) {
+    const fetchError = err as { data?: { statusMessage?: string }; statusMessage?: string; message?: string } | null
+    errorMessage.value = fetchError?.data?.statusMessage || fetchError?.statusMessage || fetchError?.message || 'Failed to send message. Please try again later.'
   } finally {
     isSubmitting.value = false
   }

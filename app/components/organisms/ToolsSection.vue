@@ -2,6 +2,7 @@
 import { ref, computed } from 'vue'
 import type { ToolSkill } from '../../types/portfolio'
 import AppHeading from '../atoms/AppHeading.vue'
+import ToolGroupCard from '../molecules/ToolGroupCard.vue'
 
 interface Props {
   tools: ToolSkill[]
@@ -59,102 +60,26 @@ const devTools = computed(() => props.tools.filter(t => isDev(t)))
       <!-- Grouped Skill Domains -->
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 sm:gap-6">
         <!-- Group 1: Product & Visual Design -->
-        <div
+        <ToolGroupCard
           v-if="activeTab === 'All' || activeTab === 'Design'"
-          class="flex flex-col gap-4 p-5 sm:p-6 rounded-3xl bg-neutral-50/70 border border-neutral-200/80 shadow-2xs transition-all"
-        >
-          <div class="flex items-center justify-between pb-3 border-b border-neutral-200/60">
-            <div class="flex items-center gap-2.5">
-              <span class="w-2.5 h-2.5 rounded-full bg-primary" />
-              <h3 class="font-bold text-dark text-base sm:text-lg">
-                Design & Creative Systems
-              </h3>
-            </div>
-            <span class="text-xs font-sans font-semibold text-neutral-400">
-              {{ designTools.length }} tools
-            </span>
-          </div>
-
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-            <div
-              v-for="tool in designTools"
-              :key="tool.name"
-              class="group flex items-center gap-3 p-3 rounded-2xl bg-white border border-neutral-200/70 hover:border-primary/50 hover:shadow-xs transition-all duration-200"
-            >
-              <div class="w-9 h-9 rounded-xl bg-neutral-50 border border-neutral-200/80 flex items-center justify-center p-1.5 flex-shrink-0 group-hover:scale-105 transition-transform">
-                <img
-                  v-if="tool.iconUrl"
-                  :src="tool.iconUrl"
-                  :alt="tool.name"
-                  class="w-full h-full object-contain"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <span v-else class="text-xs font-bold text-dark font-sans">
-                  {{ tool.name.substring(0, 2) }}
-                </span>
-              </div>
-
-              <div class="flex flex-col min-w-0">
-                <span class="font-bold text-dark text-xs sm:text-sm truncate group-hover:text-primary transition-colors">
-                  {{ tool.name }}
-                </span>
-                <span class="text-[11px] text-neutral-500 font-medium truncate">
-                  {{ tool.category }}
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
+          title="Design & Creative Systems"
+          :count-label="`${designTools.length} tools`"
+          :tools="designTools"
+          dot-color-class="bg-primary"
+          hover-border-class="hover:border-primary/50"
+          hover-text-class="group-hover:text-primary"
+        />
 
         <!-- Group 2: Engineering & Tech -->
-        <div
+        <ToolGroupCard
           v-if="activeTab === 'All' || activeTab === 'Development'"
-          class="flex flex-col gap-4 p-5 sm:p-6 rounded-3xl bg-neutral-50/70 border border-neutral-200/80 shadow-2xs transition-all"
-        >
-          <div class="flex items-center justify-between pb-3 border-b border-neutral-200/60">
-            <div class="flex items-center gap-2.5">
-              <span class="w-2.5 h-2.5 rounded-full bg-emerald-500" />
-              <h3 class="font-bold text-dark text-base sm:text-lg">
-                Engineering & Development
-              </h3>
-            </div>
-            <span class="text-xs font-sans font-semibold text-neutral-400">
-              {{ devTools.length }} skills
-            </span>
-          </div>
-
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-            <div
-              v-for="tool in devTools"
-              :key="tool.name"
-              class="group flex items-center gap-3 p-3 rounded-2xl bg-white border border-neutral-200/70 hover:border-emerald-500/50 hover:shadow-xs transition-all duration-200"
-            >
-              <div class="w-9 h-9 rounded-xl bg-neutral-50 border border-neutral-200/80 flex items-center justify-center p-1.5 flex-shrink-0 group-hover:scale-105 transition-transform">
-                <img
-                  v-if="tool.iconUrl"
-                  :src="tool.iconUrl"
-                  :alt="tool.name"
-                  class="w-full h-full object-contain"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <span v-else class="text-xs font-bold text-dark font-sans">
-                  {{ tool.name.substring(0, 2) }}
-                </span>
-              </div>
-
-              <div class="flex flex-col min-w-0">
-                <span class="font-bold text-dark text-xs sm:text-sm truncate group-hover:text-emerald-600 transition-colors">
-                  {{ tool.name }}
-                </span>
-                <span class="text-[11px] text-neutral-500 font-medium truncate">
-                  {{ tool.category }}
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
+          title="Engineering & Development"
+          :count-label="`${devTools.length} skills`"
+          :tools="devTools"
+          dot-color-class="bg-emerald-500"
+          hover-border-class="hover:border-emerald-500/50"
+          hover-text-class="group-hover:text-emerald-600"
+        />
       </div>
     </div>
   </section>
