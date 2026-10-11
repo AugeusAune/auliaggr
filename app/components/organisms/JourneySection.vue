@@ -38,8 +38,9 @@ const updateLineDimensions = () => {
   const isDesktop = window.innerWidth >= 640
   const topExtensionPx = isDesktop ? 80 : 56
 
-  // Exactly level with the bottom of the last milestone's content
-  lineEndPx.value = lastCard.offsetTop + lastCard.offsetHeight + topExtensionPx
+  // Exactly level with the last milestone number (05) - stops right at the number
+  const numberOffsetPx = 24
+  lineEndPx.value = lastCard.offsetTop + numberOffsetPx + topExtensionPx
 }
 
 const activeLinePx = computed((): number => {
