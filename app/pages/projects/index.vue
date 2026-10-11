@@ -1,4 +1,5 @@
 <script setup lang="ts">
+  import type { Project } from '../../types/portfolio';
   import { portfolioData } from '../../data/portfolio';
   import AppHeading from '../../components/atoms/AppHeading.vue';
   import ProjectCard from '../../components/molecules/ProjectCard.vue';
@@ -18,22 +19,70 @@
 
   const categories = computed(() => [
     'All',
+    'Social Media',
+    'Ilustrasi',
+    'Logo',
+    'Magazine/Guidebook',
+    'Game',
     'UI/UX',
     'Graphic Design',
     'Mobile App',
-    'AR & 3D',
-    'E-Commerce',
   ]);
+
+  const matchesCategory = (project: Project, categoryName: string): boolean => {
+    if (categoryName === 'All') return true;
+
+    const catLower = categoryName.toLowerCase();
+    const projectCategory = (project.category || '').toLowerCase();
+    const projectTags = (project.tags || []).map((t) => t.toLowerCase());
+
+    if (
+      projectCategory.includes(catLower) ||
+      projectTags.some((tag) => tag.includes(catLower))
+    ) {
+      return true;
+    }
+
+    if (catLower === 'ilustrasi' || catLower === 'illustration') {
+      return (
+        projectCategory.includes('ilustra') ||
+        projectCategory.includes('illustrat') ||
+        projectTags.some((t) => t.includes('illustrat') || t.includes('ilustra'))
+      );
+    }
+
+    if (catLower.includes('magazine') || catLower.includes('guidebook') || catLower.includes('magazie')) {
+      return (
+        projectCategory.includes('magazine') ||
+        projectCategory.includes('guidebook') ||
+        projectCategory.includes('editorial') ||
+        projectTags.some((t) => t.includes('magazine') || t.includes('guidebook') || t.includes('editorial'))
+      );
+    }
+
+    if (catLower === 'game') {
+      return (
+        projectCategory.includes('game') ||
+        projectTags.some((t) => t.includes('game') || t.includes('gamifi') || t.includes('esport'))
+      );
+    }
+
+    if (catLower === 'logo') {
+      return (
+        projectCategory.includes('logo') ||
+        projectTags.some((t) => t.includes('logo'))
+      );
+    }
+
+    return false;
+  };
 
   const filteredProjects = computed(() => {
     if (selectedCategory.value === 'All') {
       return portfolioData.projects;
     }
-    const query = selectedCategory.value.toLowerCase();
-    return portfolioData.projects.filter(
-      (p) =>
-        p.category.toLowerCase().includes(query) ||
-        p.tags?.some((tag) => tag.toLowerCase().includes(query)),
+    return portfolioData.projects.filter((p) =>
+      matchesCategory(p, selectedCategory.value)
     );
   });
 </script>

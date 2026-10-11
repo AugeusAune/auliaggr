@@ -57,7 +57,7 @@ export const projectsData: Project[] = [
     description:
       'An AR-based educational game that brings the Roro Jonggrang legend to life through interactive storytelling, gamified cultural learning, and immersive 3D elements.',
     client: 'IPB University',
-    category: 'UI/UX, App, Graphic Design',
+    category: 'Game, UI/UX, AR Design',
     date: 'Jun 23, 2025',
     externalUrl:
       'https://www.behance.net/gallery/244060707/RORO-JONGGRANG-AR-INTERACTIVE-FOLKLORE-LEARNING',
@@ -65,7 +65,7 @@ export const projectsData: Project[] = [
       'https://www.behance.net/gallery/244060707/RORO-JONGGRANG-AR-INTERACTIVE-FOLKLORE-LEARNING',
     prototypeUrl: 'https://www.figma.com/@auliaggr',
     coverImage: '/images/framer/rorojongrang.webp',
-    tags: ['Augmented Reality', 'Education', 'Mobile App', 'Gamification'],
+    tags: ['Game', 'Augmented Reality', 'Education', 'Mobile App', 'Gamification', 'Ilustrasi'],
   },
   {
     slug: 'hyperaid',
@@ -134,13 +134,13 @@ export const projectsData: Project[] = [
     description:
       'Streamlined online seat reservation and community management platform for esports hubs and internet cafes.',
     client: 'Gaming Hub',
-    category: 'UI/UX, Web & Mobile',
+    category: 'Game, UI/UX, Web & Mobile',
     date: '2024',
     externalUrl: 'https://www.behance.net/auliaggr',
     behanceUrl: 'https://www.behance.net/auliaggr',
     prototypeUrl: 'https://www.figma.com/@auliaggr',
     coverImage: '/images/framer/gamebuddy.webp',
-    tags: ['Booking', 'Esports', 'Platform'],
+    tags: ['Game', 'Esports', 'Booking', 'Platform'],
   },
   {
     slug: 'ndrey-kitchen',
@@ -179,13 +179,13 @@ export const projectsData: Project[] = [
     description:
       'A style discovery mobile application combining algorithmic curation with visual search for modern women fashion.',
     client: 'Fashion Retail',
-    category: 'UI/UX, Fashion App',
+    category: 'Logo, UI/UX, Fashion App',
     date: '2024',
     externalUrl: 'https://www.behance.net/auliaggr',
     behanceUrl: 'https://www.behance.net/auliaggr',
     prototypeUrl: 'https://www.figma.com/@auliaggr',
     coverImage: '/images/framer/dreeze_logo.webp',
-    tags: ['Fashion', 'Discovery'],
+    tags: ['Logo', 'Fashion', 'Discovery', 'UI/UX'],
   },
   {
     slug: 'mentalup',
@@ -269,12 +269,12 @@ export const projectsData: Project[] = [
     description:
       'A comprehensive branding identity kit including custom logo marks, typography pairings, packaging concepts, and product illustration guidelines.',
     client: 'Nuansart Studio',
-    category: 'Graphic Design, Branding',
+    category: 'Logo, Ilustrasi, Branding',
     date: '2024',
     externalUrl: 'https://www.behance.net/auliaggr',
     behanceUrl: 'https://www.behance.net/auliaggr',
     coverImage: '/images/framer/showcase_bg.webp',
-    tags: ['Graphic Design', 'Branding', 'Visual Identity', 'Packaging'],
+    tags: ['Logo', 'Ilustrasi', 'Branding', 'Visual Identity', 'Packaging'],
   },
   {
     slug: 'aiti-media-campaign',
@@ -283,12 +283,40 @@ export const projectsData: Project[] = [
     description:
       'Creative social media campaign visual kit designed to boost engagement and brand awareness across digital marketing channels.',
     client: 'Aiti Media',
-    category: 'Graphic Design, Marketing',
+    category: 'Social Media, Graphic Design',
     date: '2025',
     externalUrl: 'https://www.behance.net/auliaggr',
     behanceUrl: 'https://www.behance.net/auliaggr',
     coverImage: '/images/framer/clotie_hp.webp',
-    tags: ['Graphic Design', 'Social Media', 'Marketing', 'Editorial'],
+    tags: ['Social Media', 'Marketing', 'Editorial', 'Graphic Design'],
+  },
+  {
+    slug: 'astromorph-guidebook',
+    title: 'Astromorph Sikrab Guidebook',
+    subtitle: 'Event guide & editorial magazine design',
+    description:
+      'A comprehensive event guidebook and editorial magazine publication crafted for IPB University, featuring layout design, custom typography, and creative art direction.',
+    client: 'SV IPB University',
+    category: 'Magazine/Guidebook, Graphic Design',
+    date: '2024',
+    externalUrl: 'https://www.behance.net/auliaggr',
+    behanceUrl: 'https://www.behance.net/auliaggr',
+    coverImage: '/images/framer/astromoprh_sikrab.webp',
+    tags: ['Magazine/Guidebook', 'Editorial', 'Graphic Design', 'Ilustrasi'],
+  },
+  {
+    slug: 'sikrab-poster-illustration',
+    title: 'Sikrab Creative Poster & Illustration',
+    subtitle: 'Character illustration & promotional poster design',
+    description:
+      'Engaging visual character illustrations and promotional poster design with vibrant colors, custom graphic assets, and playful visual storytelling.',
+    client: 'Creative Campaign',
+    category: 'Ilustrasi, Graphic Design',
+    date: '2024',
+    externalUrl: 'https://www.behance.net/auliaggr',
+    behanceUrl: 'https://www.behance.net/auliaggr',
+    coverImage: '/images/framer/mentor_poster.webp',
+    tags: ['Ilustrasi', 'Graphic Design', 'Poster', 'Visual Art'],
   },
 ];
 
