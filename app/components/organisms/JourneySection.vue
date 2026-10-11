@@ -21,10 +21,12 @@ const setCardRef = (el: any, index: number) => {
 }
 
 const isMilestoneActive = (index: number): boolean => {
+  if (index === 0) {
+    return scrollProgress.value > 0
+  }
   const card = cardEls.value[index]
   if (!card) return false
-  // Dot is positioned at top ~20px inside the card
-  const dotTop = card.offsetTop + 20
+  const dotTop = card.offsetTop + 10
   return currentScrollPx.value >= dotTop
 }
 
@@ -33,9 +35,9 @@ const calculateScrollProgress = () => {
   const rect = timelineRef.value.getBoundingClientRect()
   const windowHeight = window.innerHeight
   // Trigger line animation as user scrolls into the timeline
-  const triggerPoint = windowHeight * 0.75
+  const triggerPoint = windowHeight * 0.85
   const currentScroll = triggerPoint - rect.top
-  const totalHeight = rect.height - 30
+  const totalHeight = rect.height - 20
 
   if (currentScroll <= 0) {
     currentScrollPx.value = 0
@@ -43,8 +45,12 @@ const calculateScrollProgress = () => {
     return
   }
 
-  currentScrollPx.value = currentScroll
-  const percentage = Math.min(100, Math.max(0, (currentScroll / totalHeight) * 100))
+  // Ensure the vertical line leading down to milestone 1 is colored as soon as timeline enters view
+  const firstCardTop = cardEls.value[0]?.offsetTop || 40
+  const activePx = Math.max(firstCardTop + 10, currentScroll)
+  currentScrollPx.value = activePx
+
+  const percentage = Math.min(100, Math.max(5, (activePx / totalHeight) * 100))
   scrollProgress.value = percentage
 }
 
@@ -73,22 +79,17 @@ onUnmounted(() => {
         </p>
       </div>
 
-      <!-- Connected Timeline with Scroll Animated Line & Origin Cap -->
+      <!-- Connected Timeline with Scroll Animated Line -->
       <div
         ref="timelineRef"
-        class="relative pl-8 sm:pl-10 space-y-6 sm:space-y-8 ml-2 sm:ml-4"
+        class="relative pl-12 sm:pl-16 pt-8 sm:pt-12 space-y-14 sm:space-y-20 ml-2 sm:ml-4"
       >
-        <!-- Origin Node Cap at Top of Timeline -->
-        <div class="absolute -left-[5px] top-1 w-3.5 h-3.5 rounded-full bg-white border-2 border-primary shadow-xs z-10 flex items-center justify-center">
-          <span class="w-1.5 h-1.5 rounded-full bg-primary" />
-        </div>
-
         <!-- Static background track line -->
-        <div class="absolute left-0 top-3 bottom-6 w-[3px] bg-neutral-200 rounded-full" />
+        <div class="absolute left-0 top-0 bottom-6 w-[2px] bg-neutral-200 rounded-full" />
 
         <!-- Scroll-driven illuminated active fill line with radiant glow -->
         <div
-          class="absolute left-0 top-3 w-[3px] bg-gradient-to-b from-primary via-primary to-primary-hover rounded-full transition-all duration-150 ease-out shadow-[0_0_10px_rgba(235,94,85,0.4)]"
+          class="absolute left-0 top-0 w-[2px] bg-gradient-to-b from-primary via-primary to-primary-hover rounded-full transition-all duration-150 ease-out shadow-[0_0_8px_rgba(235,94,85,0.4)]"
           :style="{ height: `${scrollProgress}%` }"
         />
 
@@ -97,6 +98,7 @@ onUnmounted(() => {
           :key="`${item.company}-${item.year}`"
           :ref="(el) => setCardRef(el, idx)"
           :milestone="item"
+          :index="idx + 1"
           :is-active="isMilestoneActive(idx)"
         />
       </div>

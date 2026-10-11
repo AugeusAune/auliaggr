@@ -20,8 +20,11 @@ export interface Milestone {
   role: string
   company: string
   year: string
-  description?: string
+  period?: string
   logoUrl?: string
+  skills?: string[]
+  highlight?: string
+  description?: string
 }
 
 export interface Award {

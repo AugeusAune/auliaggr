@@ -1,51 +1,52 @@
 <script setup lang="ts">
+import { computed } from 'vue'
 import type { Milestone } from '../../types/portfolio'
-import AppBadge from '../atoms/AppBadge.vue'
 
 interface Props {
   milestone: Milestone
+  index?: number
   isActive?: boolean
 }
 
-withDefaults(defineProps<Props>(), {
+const props = withDefaults(defineProps<Props>(), {
+  index: 0,
   isActive: false
+})
+
+const formattedIndex = computed((): string => {
+  if (!props.index) return ''
+  return String(props.index).padStart(2, '0')
+})
+
+const displayPeriod = computed((): string => {
+  return props.milestone.period || props.milestone.year
+})
+
+const isPresent = computed((): boolean => {
+  const periodText = (props.milestone.period || props.milestone.year || '').toLowerCase()
+  return periodText.includes('present')
 })
 </script>
 
 <template>
-  <div
-    class="relative flex flex-col sm:flex-row sm:items-start justify-between gap-4 p-5 sm:p-6 rounded-2xl bg-light border transition-all duration-300 group shadow-2xs"
-    :class="[
-      isActive
-        ? 'border-neutral-300 bg-white shadow-xs'
-        : 'border-neutral-200 hover:border-primary/40 hover:bg-white'
-    ]"
-  >
-    <!-- Concentric milestone node anchor centered on the timeline spine -->
+  <article class="relative flex flex-col gap-4 sm:gap-5 pb-6 sm:pb-8 transition-all duration-300 group">
+    <!-- Sequence index centered on timeline spine with clean line gap -->
     <div
-      class="absolute -left-[42px] sm:-left-[50px] top-[18px] w-5 h-5 rounded-full bg-white border-2 flex items-center justify-center shadow-xs transition-all duration-300 z-10"
-      :class="[
-        isActive
-          ? 'border-primary shadow-[0_0_10px_rgba(235,94,85,0.35)] scale-110'
-          : 'border-neutral-300 group-hover:border-primary group-hover:scale-110'
-      ]"
-      aria-hidden="true"
+      class="absolute -left-[48px] sm:-left-[64px] -translate-x-1/2 top-1 z-10 select-none"
     >
       <span
-        class="w-2 h-2 rounded-full transition-all duration-300"
-        :class="[
-          isActive
-            ? 'bg-primary'
-            : 'bg-neutral-300 group-hover:bg-primary'
-        ]"
-      />
+        v-if="formattedIndex"
+        class="text-sm sm:text-base font-semibold italic font-serif transition-colors duration-300 bg-white py-1 px-1 rounded block"
+        :class="isActive ? 'text-primary' : 'text-neutral-400 group-hover:text-dark'"
+      >
+        {{ formattedIndex }}
+      </span>
     </div>
 
-    <div class="flex items-start gap-3.5 sm:gap-4 flex-grow">
-      <!-- Company Logo / Initials Badge -->
+    <!-- Tier 1: Logo & Company / Role Title -->
+    <div class="flex items-start gap-3.5 sm:gap-4">
       <div
-        class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-white border flex items-center justify-center p-2 flex-shrink-0 shadow-2xs overflow-hidden transition-colors"
-        :class="isActive ? 'border-primary/30' : 'border-neutral-200 group-hover:border-primary/30'"
+        class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-light border border-neutral-200 flex items-center justify-center p-2 flex-shrink-0 shadow-2xs overflow-hidden transition-colors group-hover:border-primary/40"
       >
         <img
           v-if="milestone.logoUrl"
@@ -60,38 +61,103 @@ withDefaults(defineProps<Props>(), {
         </span>
       </div>
 
-      <div class="flex flex-col gap-1 flex-grow">
-        <div class="flex items-center justify-between gap-2 sm:hidden">
-          <span class="text-xs text-primary font-semibold">{{ milestone.company }}</span>
-          <AppBadge variant="default" class="font-sans font-semibold text-xs !px-2.5 !py-0.5 !bg-white !border-neutral-200">
-            {{ milestone.year }}
-          </AppBadge>
-        </div>
-
-        <h4 class="font-bold text-dark text-base sm:text-lg group-hover:text-black transition-colors leading-snug">
-          {{ milestone.role }}
-        </h4>
-
-        <p class="hidden sm:block text-neutral-500 text-xs sm:text-sm font-semibold">
+      <div class="flex flex-col min-w-0">
+        <span class="text-xs font-semibold uppercase tracking-wider text-primary">
           {{ milestone.company }}
-        </p>
+        </span>
+        <h3 class="font-bold text-dark text-base sm:text-lg group-hover:text-black transition-colors leading-snug">
+          {{ milestone.role }}
+        </h3>
+      </div>
+    </div>
 
-        <!-- Outcome / Result Description -->
-        <p v-if="milestone.description" class="text-xs sm:text-sm text-neutral-600 font-normal leading-relaxed pt-1">
+    <!-- Tier 2: Date Period & Active Indicator -->
+    <div class="flex items-center gap-2 text-xs sm:text-sm text-neutral-600 font-medium">
+      <svg
+        class="w-4 h-4 text-neutral-400 flex-shrink-0"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+      >
+        <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+        <line x1="16" y1="2" x2="16" y2="6" />
+        <line x1="8" y1="2" x2="8" y2="6" />
+        <line x1="3" y1="10" x2="21" y2="10" />
+      </svg>
+      <span>{{ displayPeriod }}</span>
+      <span
+        v-if="isPresent"
+        class="inline-flex items-center gap-1 ml-1 px-2 py-0.5 rounded-full text-[11px] font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200"
+      >
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+        Active
+      </span>
+    </div>
+
+    <!-- Tier 3: Skills / Tech Tags -->
+    <div
+      v-if="milestone.skills && milestone.skills.length > 0"
+      class="flex items-center gap-2 flex-wrap pt-0.5"
+    >
+      <svg
+        class="w-4 h-4 text-neutral-400 flex-shrink-0"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+      >
+        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+      </svg>
+      <div class="flex items-center gap-1.5 flex-wrap">
+        <span
+          v-for="skill in milestone.skills"
+          :key="skill"
+          class="inline-block px-2.5 py-0.5 rounded-md text-[11px] sm:text-xs font-medium bg-neutral-100 text-neutral-700 border border-neutral-200/80 transition-colors group-hover:bg-neutral-50"
+        >
+          {{ skill }}
+        </span>
+      </div>
+    </div>
+
+    <!-- Tier 4 & 5: Key Achievement Highlight & Narrative Description in one single column -->
+    <div
+      v-if="milestone.highlight || milestone.description"
+      class="flex items-start gap-2.5 pt-0.5"
+    >
+      <svg
+        v-if="milestone.highlight"
+        class="w-4 h-4 text-primary flex-shrink-0 mt-0.5"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+      >
+        <path d="M3 11l19-9-9 19-2-8-8-2z" />
+      </svg>
+      <div class="flex flex-col gap-1.5 flex-grow">
+        <h4
+          v-if="milestone.highlight"
+          class="text-xs sm:text-sm font-semibold text-dark leading-snug"
+        >
+          {{ milestone.highlight }}
+        </h4>
+        <p
+          v-if="milestone.description"
+          class="text-xs sm:text-sm text-neutral-600 font-normal leading-relaxed"
+        >
           {{ milestone.description }}
         </p>
       </div>
     </div>
-
-    <!-- Desktop Year Badge -->
-    <div class="hidden sm:flex items-center flex-shrink-0 ml-4">
-      <AppBadge
-        variant="default"
-        class="font-sans font-semibold text-xs sm:text-sm !px-3 !py-1 !bg-white border transition-colors"
-        :class="isActive ? '!border-primary/40 !text-primary' : '!border-neutral-200 group-hover:!border-primary/30'"
-      >
-        {{ milestone.year }}
-      </AppBadge>
-    </div>
-  </div>
+  </article>
 </template>

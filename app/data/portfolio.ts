@@ -5,8 +5,8 @@ import type {
   Award,
   ToolSkill,
   Certification,
-  BrandPartner
-} from '../types/portfolio'
+  BrandPartner,
+} from '../types/portfolio';
 
 export const profileData: PortfolioProfile = {
   name: 'Aulia Anggraeni',
@@ -14,43 +14,65 @@ export const profileData: PortfolioProfile = {
   subheadline: "Let's make it happen",
   bioHighlight: "Good design is invisible. — Mine isn't.",
   location: 'Located in Jakarta, available worldwide.',
-  stats: '20+ projects · Visuals that stop the scroll. Interfaces that keep them there.',
+  stats:
+    '20+ projects · Visuals that stop the scroll. Interfaces that keep them there.',
   whatsappUrl: 'https://wa.me/62895330188539',
   behanceUrl: 'https://www.behance.net/auliaggr',
-  cvUrl: 'https://drive.google.com/file/d/1h7JciFN7T6Ba0N-62YUKiEn5ubLRL3U_/view?usp=sharing',
+  cvUrl:
+    'https://drive.google.com/file/d/1h7JciFN7T6Ba0N-62YUKiEn5ubLRL3U_/view?usp=sharing',
   email: 'auliaggrr@gmail.com',
   phone: '(+62) 895330188539',
   copyright: '© Copyright 2026. All rights Reserved.',
   avatarUrl: '/images/framer/aulia.webp',
   portraitUrl: '/images/framer/aulia.webp',
   socialLinks: [
-    { name: 'LinkedIn', url: 'https://www.linkedin.com/in/auliaggr/', icon: 'linkedin' },
-    { name: 'Behance', url: 'https://www.behance.net/auliaggr', icon: 'behance' },
-    { name: 'Dribbble', url: 'https://dribbble.com/auliaggr', icon: 'dribbble' },
-    { name: 'Instagram', url: 'https://instagram.com/auliaggr', icon: 'instagram' }
-  ]
-}
+    {
+      name: 'LinkedIn',
+      url: 'https://www.linkedin.com/in/auliaggr/',
+      icon: 'linkedin',
+    },
+    {
+      name: 'Behance',
+      url: 'https://www.behance.net/auliaggr',
+      icon: 'behance',
+    },
+    {
+      name: 'Dribbble',
+      url: 'https://dribbble.com/auliaggr',
+      icon: 'dribbble',
+    },
+    {
+      name: 'Instagram',
+      url: 'https://instagram.com/auliaggr',
+      icon: 'instagram',
+    },
+  ],
+};
 
 export const projectsData: Project[] = [
   {
     slug: 'rorojonggrang',
     title: 'Kisah Roro Jonggrang',
     subtitle: 'Discover the Magic of Nusantara.',
-    description: 'An AR-based educational game that brings the Roro Jonggrang legend to life through interactive storytelling, gamified cultural learning, and immersive 3D elements.',
+    description:
+      'An AR-based educational game that brings the Roro Jonggrang legend to life through interactive storytelling, gamified cultural learning, and immersive 3D elements.',
     client: 'IPB University',
     category: 'UI/UX, App, Graphic Design',
     date: 'Jun 23, 2025',
-    externalUrl: 'https://www.behance.net/gallery/244060707/RORO-JONGGRANG-AR-INTERACTIVE-FOLKLORE-LEARNING',
-    behanceUrl: 'https://www.behance.net/gallery/244060707/RORO-JONGGRANG-AR-INTERACTIVE-FOLKLORE-LEARNING',
+    externalUrl:
+      'https://www.behance.net/gallery/244060707/RORO-JONGGRANG-AR-INTERACTIVE-FOLKLORE-LEARNING',
+    behanceUrl:
+      'https://www.behance.net/gallery/244060707/RORO-JONGGRANG-AR-INTERACTIVE-FOLKLORE-LEARNING',
     prototypeUrl: 'https://www.figma.com/@auliaggr',
     coverImage: '/images/framer/rorojongrang.webp',
-    tags: ['Augmented Reality', 'Education', 'Mobile App', 'Gamification']
+    tags: ['Augmented Reality', 'Education', 'Mobile App', 'Gamification'],
   },
   {
     slug: 'hyperaid',
     title: 'HyperAid',
     subtitle: 'Hypertension Monitoring Application',
-    description: 'A proactive healthcare monitoring application designed to help patients monitor hypertension symptoms, track daily health metrics, and easily communicate with specialists.',
+    description:
+      'A proactive healthcare monitoring application designed to help patients monitor hypertension symptoms, track daily health metrics, and easily communicate with specialists.',
     client: 'Health Tech Research',
     category: 'UI/UX, Mobile App',
     date: '2025',
@@ -58,13 +80,14 @@ export const projectsData: Project[] = [
     behanceUrl: 'https://www.behance.net/auliaggr',
     prototypeUrl: 'https://www.figma.com/@auliaggr',
     coverImage: '/images/framer/hperaid.webp',
-    tags: ['Healthcare', 'Mobile App', 'UI/UX']
+    tags: ['Healthcare', 'Mobile App', 'UI/UX'],
   },
   {
     slug: 'voxplore',
     title: 'Voxplore',
     subtitle: 'Interactive 3D AR Campus Map for SV IPB University',
-    description: 'An interactive 3D augmented reality campus map navigation tool crafted to help students, visitors, and faculty explore campus facilities seamlessly.',
+    description:
+      'An interactive 3D augmented reality campus map navigation tool crafted to help students, visitors, and faculty explore campus facilities seamlessly.',
     client: 'SV IPB University',
     category: 'UI/UX, 3D AR Design',
     date: '2025',
@@ -72,13 +95,14 @@ export const projectsData: Project[] = [
     behanceUrl: 'https://www.behance.net/auliaggr',
     prototypeUrl: 'https://www.figma.com/@auliaggr',
     coverImage: '/images/framer/voxplore.webp',
-    tags: ['3D', 'AR', 'Campus Map', 'Interactive']
+    tags: ['3D', 'AR', 'Campus Map', 'Interactive'],
   },
   {
     slug: 'foody',
     title: 'Foody',
     subtitle: 'AI nutrition for BMI, meal tracking & personalized food picks.',
-    description: 'An AI-powered nutritional companion offering real-time BMI tracking, intelligent meal recommendations, and customized meal planning based on dietary preferences.',
+    description:
+      'An AI-powered nutritional companion offering real-time BMI tracking, intelligent meal recommendations, and customized meal planning based on dietary preferences.',
     client: 'FoodTech',
     category: 'UI/UX, AI Product Design',
     date: '2024',
@@ -86,13 +110,14 @@ export const projectsData: Project[] = [
     behanceUrl: 'https://www.behance.net/auliaggr',
     prototypeUrl: 'https://www.figma.com/@auliaggr',
     coverImage: '/images/framer/foody.webp',
-    tags: ['AI', 'Nutrition', 'Mobile App']
+    tags: ['AI', 'Nutrition', 'Mobile App'],
   },
   {
     slug: 'bidthrift',
     title: 'BidThrift+',
     subtitle: 'Curated Thrifting & Auction Marketplace',
-    description: 'A digital marketplace enabling eco-conscious fashion lovers to bid, buy, and trade vintage goods securely.',
+    description:
+      'A digital marketplace enabling eco-conscious fashion lovers to bid, buy, and trade vintage goods securely.',
     client: 'E-Commerce Venture',
     category: 'UI/UX, E-Commerce',
     date: '2024',
@@ -100,13 +125,14 @@ export const projectsData: Project[] = [
     behanceUrl: 'https://www.behance.net/auliaggr',
     prototypeUrl: 'https://www.figma.com/@auliaggr',
     coverImage: '/images/framer/birthrift.webp',
-    tags: ['Marketplace', 'Auction', 'E-commerce']
+    tags: ['Marketplace', 'Auction', 'E-commerce'],
   },
   {
     slug: 'gamebuddy',
     title: 'Gamebuddy',
     subtitle: 'Internet Cafe Booking Platform',
-    description: 'Streamlined online seat reservation and community management platform for esports hubs and internet cafes.',
+    description:
+      'Streamlined online seat reservation and community management platform for esports hubs and internet cafes.',
     client: 'Gaming Hub',
     category: 'UI/UX, Web & Mobile',
     date: '2024',
@@ -114,13 +140,14 @@ export const projectsData: Project[] = [
     behanceUrl: 'https://www.behance.net/auliaggr',
     prototypeUrl: 'https://www.figma.com/@auliaggr',
     coverImage: '/images/framer/gamebuddy.webp',
-    tags: ['Booking', 'Esports', 'Platform']
+    tags: ['Booking', 'Esports', 'Platform'],
   },
   {
     slug: 'ndrey-kitchen',
     title: 'Ndrey Kitchen',
     subtitle: 'Online Food Ordering App',
-    description: 'A high-converting online food ordering experience tailored for local culinary delights with seamless delivery tracking.',
+    description:
+      'A high-converting online food ordering experience tailored for local culinary delights with seamless delivery tracking.',
     client: 'Ndrey Kitchen',
     category: 'UI/UX, Food Delivery',
     date: '2024',
@@ -128,13 +155,14 @@ export const projectsData: Project[] = [
     behanceUrl: 'https://www.behance.net/auliaggr',
     prototypeUrl: 'https://www.figma.com/@auliaggr',
     coverImage: '/images/framer/ndrey_kitchen.webp',
-    tags: ['Food Delivery', 'Mobile App']
+    tags: ['Food Delivery', 'Mobile App'],
   },
   {
     slug: 'traspotter',
     title: 'Traspotter',
     subtitle: 'Waste detection app for smarter sorting.',
-    description: 'An AI-assisted environmental utility helping communities classify recyclable materials accurately via smartphone cameras.',
+    description:
+      'An AI-assisted environmental utility helping communities classify recyclable materials accurately via smartphone cameras.',
     client: 'Green Initiative',
     category: 'UI/UX, AI Utility',
     date: '2024',
@@ -142,13 +170,14 @@ export const projectsData: Project[] = [
     behanceUrl: 'https://www.behance.net/auliaggr',
     prototypeUrl: 'https://www.figma.com/@auliaggr',
     coverImage: '/images/framer/transporter.webp',
-    tags: ['Sustainability', 'Computer Vision']
+    tags: ['Sustainability', 'Computer Vision'],
   },
   {
     slug: 'drezzle',
     title: 'Drezzle',
     subtitle: 'Women’s dress app for discovering styles.',
-    description: 'A style discovery mobile application combining algorithmic curation with visual search for modern women fashion.',
+    description:
+      'A style discovery mobile application combining algorithmic curation with visual search for modern women fashion.',
     client: 'Fashion Retail',
     category: 'UI/UX, Fashion App',
     date: '2024',
@@ -156,13 +185,14 @@ export const projectsData: Project[] = [
     behanceUrl: 'https://www.behance.net/auliaggr',
     prototypeUrl: 'https://www.figma.com/@auliaggr',
     coverImage: '/images/framer/dreeze_logo.webp',
-    tags: ['Fashion', 'Discovery']
+    tags: ['Fashion', 'Discovery'],
   },
   {
     slug: 'mentalup',
     title: 'MentalUp',
     subtitle: 'Mental Health Consultation App with a Psychologist',
-    description: 'A confidential, empathetic telehealth platform connecting certified psychologists with individuals seeking mental wellness support.',
+    description:
+      'A confidential, empathetic telehealth platform connecting certified psychologists with individuals seeking mental wellness support.',
     client: 'Wellness Hub',
     category: 'UI/UX, Healthcare',
     date: '2024',
@@ -170,13 +200,14 @@ export const projectsData: Project[] = [
     behanceUrl: 'https://www.behance.net/auliaggr',
     prototypeUrl: 'https://www.figma.com/@auliaggr',
     coverImage: '/images/framer/mentalup.webp',
-    tags: ['Telehealth', 'Mental Health']
+    tags: ['Telehealth', 'Mental Health'],
   },
   {
     slug: 'clotie',
     title: 'Clotie',
     subtitle: 'Women’s fashion e-commerce.',
-    description: 'An elegant apparel e-commerce store with smooth micro-interactions and quick checkout flows.',
+    description:
+      'An elegant apparel e-commerce store with smooth micro-interactions and quick checkout flows.',
     client: 'Fashion Brand',
     category: 'UI/UX, E-Commerce',
     date: '2023',
@@ -184,13 +215,14 @@ export const projectsData: Project[] = [
     behanceUrl: 'https://www.behance.net/auliaggr',
     prototypeUrl: 'https://www.figma.com/@auliaggr',
     coverImage: '/images/framer/clotie.webp',
-    tags: ['E-commerce', 'Minimalist']
+    tags: ['E-commerce', 'Minimalist'],
   },
   {
     slug: 'ousean-pay',
     title: 'Ousean Pay',
     subtitle: 'Digital wallet app',
-    description: 'A modern fintech mobile application supporting peer-to-peer transfers, bill settlements, and financial budgeting.',
+    description:
+      'A modern fintech mobile application supporting peer-to-peer transfers, bill settlements, and financial budgeting.',
     client: 'Fintech Studio',
     category: 'UI/UX, Fintech',
     date: '2023',
@@ -198,13 +230,14 @@ export const projectsData: Project[] = [
     behanceUrl: 'https://www.behance.net/auliaggr',
     prototypeUrl: 'https://www.figma.com/@auliaggr',
     coverImage: '/images/framer/ousean_pay.webp',
-    tags: ['Fintech', 'Mobile Wallet']
+    tags: ['Fintech', 'Mobile Wallet'],
   },
   {
     slug: 'ontravel',
     title: 'Ontravel',
     subtitle: 'App for finding routes, hotels, and trips easily.',
-    description: 'An all-in-one travel companion designed to simplify itinerary organization, flight tracking, and boutique hotel bookings.',
+    description:
+      'An all-in-one travel companion designed to simplify itinerary organization, flight tracking, and boutique hotel bookings.',
     client: 'Travel Agency',
     category: 'UI/UX, Travel',
     date: '2023',
@@ -212,13 +245,14 @@ export const projectsData: Project[] = [
     behanceUrl: 'https://www.behance.net/auliaggr',
     prototypeUrl: 'https://www.figma.com/@auliaggr',
     coverImage: '/images/framer/ontravel.webp',
-    tags: ['Travel', 'Booking']
+    tags: ['Travel', 'Booking'],
   },
   {
     slug: 'morker',
     title: 'Morker',
     subtitle: 'Interactive company dashboard.',
-    description: 'An analytical corporate portal featuring real-time data visualizations, team KPI tracking, and operational dashboards.',
+    description:
+      'An analytical corporate portal featuring real-time data visualizations, team KPI tracking, and operational dashboards.',
     client: 'Enterprise Client',
     category: 'UI/UX, Dashboard',
     date: '2023',
@@ -226,73 +260,102 @@ export const projectsData: Project[] = [
     behanceUrl: 'https://www.behance.net/auliaggr',
     prototypeUrl: 'https://www.figma.com/@auliaggr',
     coverImage: '/images/framer/morker.webp',
-    tags: ['B2B', 'SaaS', 'Dashboard']
+    tags: ['B2B', 'SaaS', 'Dashboard'],
   },
   {
     slug: 'nuansart-branding',
     title: 'Nuansart Brand Identity',
     subtitle: 'Visual identity system & custom packaging design',
-    description: 'A comprehensive branding identity kit including custom logo marks, typography pairings, packaging concepts, and product illustration guidelines.',
+    description:
+      'A comprehensive branding identity kit including custom logo marks, typography pairings, packaging concepts, and product illustration guidelines.',
     client: 'Nuansart Studio',
     category: 'Graphic Design, Branding',
     date: '2024',
     externalUrl: 'https://www.behance.net/auliaggr',
     behanceUrl: 'https://www.behance.net/auliaggr',
     coverImage: '/images/framer/showcase_bg.webp',
-    tags: ['Graphic Design', 'Branding', 'Visual Identity', 'Packaging']
+    tags: ['Graphic Design', 'Branding', 'Visual Identity', 'Packaging'],
   },
   {
     slug: 'aiti-media-campaign',
     title: 'Aiti Media Social Campaign',
     subtitle: 'Editorial graphics & digital marketing design',
-    description: 'Creative social media campaign visual kit designed to boost engagement and brand awareness across digital marketing channels.',
+    description:
+      'Creative social media campaign visual kit designed to boost engagement and brand awareness across digital marketing channels.',
     client: 'Aiti Media',
     category: 'Graphic Design, Marketing',
     date: '2025',
     externalUrl: 'https://www.behance.net/auliaggr',
     behanceUrl: 'https://www.behance.net/auliaggr',
     coverImage: '/images/framer/clotie_hp.webp',
-    tags: ['Graphic Design', 'Social Media', 'Marketing', 'Editorial']
-  }
-]
+    tags: ['Graphic Design', 'Social Media', 'Marketing', 'Editorial'],
+  },
+];
 
 export const journeyData: Milestone[] = [
   {
     role: 'Graphic Designer Intern',
     company: 'Aiti Media',
     year: '2026',
+    period: '2026',
     logoUrl: '/images/framer/logo.png',
-    description: 'Designed promotional graphics, social media campaigns, and brand visuals that elevated content reach and viewer engagement.'
+    skills: ['Graphic Design', 'Visual Identity', 'Social Media', 'Photoshop'],
+    highlight:
+      'Boosted brand visual engagement across high-impact promotional campaigns',
+    description:
+      'Designed promotional graphics, social media campaigns, and brand visuals that elevated content reach and viewer engagement.',
   },
   {
     role: 'UI/UX Designer Mentor',
     company: 'Ousean School',
     year: '2026',
+    period: '2026',
     logoUrl: '/images/framer/ousenpay_logo.png',
-    description: 'Guided 40+ students through foundational design thinking, user research, wireframing, and Figma prototyping.'
+    skills: ['Figma', 'Design System', 'Prototyping', 'Design Thinking'],
+    highlight: 'Mentored 40+ aspiring designers with 100% prototype completion',
+    description:
+      'Guided 40+ students through foundational design thinking, user research, wireframing, and Figma prototyping.',
   },
   {
     role: 'Fullstack Developer',
     company: 'PLN Icon Plus',
     year: '2025',
+    period: '2025',
     logoUrl: '/images/framer/certificate_iconplus.webp',
-    description: 'Developed internal web features and interactive dashboards using modern JavaScript frameworks and integrated backend services.'
+    skills: ['Vue.js', 'Laravel', 'REST API', 'Tailwind CSS'],
+    highlight: 'Delivered operational web modules and interactive dashboards',
+    description:
+      'Developed internal web features and interactive dashboards using modern JavaScript frameworks and integrated backend services.',
   },
   {
     role: 'Graphic Designer',
     company: 'Nuansart.Keychain',
     year: '2024',
+    period: '2024',
     logoUrl: '/images/framer/showcase_bg.webp',
-    description: 'Produced creative merchandise design, brand identity guidelines, and high-converting marketing collateral.'
+    skills: ['Brand Identity', 'Merchandise', 'Illustrator', 'Print Design'],
+    highlight:
+      'Created complete merchandise branding guidelines and marketing assets',
+    description:
+      'Produced creative merchandise design, brand identity guidelines, and high-converting marketing collateral.',
   },
   {
     role: 'UI/UX Designer',
     company: 'Polairud',
     year: '2021',
+    period: '2021',
     logoUrl: '/images/framer/certificaye_korpolairud.webp',
-    description: 'Designed user-friendly internal administration interfaces and tested information architectures for operational efficiency.'
-  }
-]
+    skills: [
+      'UI Design',
+      'Information Architecture',
+      'User Flows',
+      'Wireframing',
+    ],
+    highlight: 'Engineered streamlined internal management portal workflows',
+    description:
+      'Designed user-friendly internal administration interfaces and tested information architectures for operational efficiency.',
+  },
+];
 
 export const awardsData: Award[] = [
   {
@@ -300,174 +363,175 @@ export const awardsData: Award[] = [
     date: 'Sep 9, 2024',
     organization: 'UIN Walisongo',
     logoUrl: '/images/framer/logo_walisongo.webp',
-    imageUrl: '/images/framer/certificate_walisongo.webp'
+    imageUrl: '/images/framer/certificate_walisongo.webp',
   },
   {
     title: '3rd Place Winner in UI/UX Design at Techsprint',
     date: 'Mar 3, 2024',
     organization: 'Reclas Technology',
     logoUrl: '/images/framer/reclas_logo.webp',
-    imageUrl: '/images/framer/certificate_reclas.webp'
-  }
-]
+    imageUrl: '/images/framer/certificate_reclas.webp',
+  },
+];
 
 export const toolsData: ToolSkill[] = [
   {
     name: 'Figma',
     description: 'Leading design tool for UI/UX & systems',
     category: 'UI/UX Design',
-    iconUrl: '/images/framer/figma_logo.svg'
+    iconUrl: '/images/framer/figma_logo.svg',
   },
   {
     name: 'Framer',
     description: 'Interactive responsive website builder',
     category: 'No-Code & Motion',
-    iconUrl: '/images/framer/frammer.svg'
+    iconUrl: '/images/framer/frammer.svg',
   },
   {
     name: 'Adobe Photoshop',
     description: 'Raster graphics & photo manipulation',
     category: 'Visual Design',
-    iconUrl: '/images/framer/ps.svg'
+    iconUrl: '/images/framer/ps.svg',
   },
   {
     name: 'Adobe Illustrator',
     description: 'Vector design & brand identity systems',
     category: 'Graphic Design',
-    iconUrl: '/images/framer/ai.svg'
+    iconUrl: '/images/framer/ai.svg',
   },
   {
     name: 'Adobe After Effects',
     description: 'Motion design & video animations',
     category: 'Motion & Effects',
-    iconUrl: '/images/framer/ae.svg'
+    iconUrl: '/images/framer/ae.svg',
   },
   {
     name: 'Canva',
     description: 'Visual presentations & quick assets',
     category: 'Graphic Design',
-    iconUrl: '/images/framer/canva.webp'
+    iconUrl: '/images/framer/canva.webp',
   },
   {
     name: 'Laravel',
     description: 'Robust PHP framework for scalable backends & RESTful APIs',
     category: 'Backend & Dev',
-    iconUrl: '/images/tools/laravel.svg'
+    iconUrl: '/images/tools/laravel.svg',
   },
   {
     name: 'Vue.js & Nuxt',
     description: 'Component architecture, SSR, & reactive web applications',
     category: 'Frontend & Dev',
-    iconUrl: '/images/tools/vue.svg'
+    iconUrl: '/images/tools/vue.svg',
   },
   {
     name: 'Tailwind CSS',
-    description: 'Utility-first modern design system styling & micro-animations',
+    description:
+      'Utility-first modern design system styling & micro-animations',
     category: 'Frontend & Dev',
-    iconUrl: '/images/tools/tailwind.svg'
+    iconUrl: '/images/tools/tailwind.svg',
   },
   {
     name: 'TypeScript',
     description: 'Type-safe robust frontend & fullstack codebases',
     category: 'Frontend & Dev',
-    iconUrl: '/images/tools/typescript.svg'
+    iconUrl: '/images/tools/typescript.svg',
   },
   {
     name: 'REST API & MySQL',
     description: 'Database modeling, secure endpoints & data architecture',
     category: 'Backend & Dev',
-    iconUrl: '/images/tools/mysql.svg'
+    iconUrl: '/images/tools/mysql.svg',
   },
   {
     name: 'Git & GitHub',
     description: 'Version control, team workflows & seamless CI/CD releases',
     category: 'Tools & DevOps',
-    iconUrl: '/images/tools/git.svg'
-  }
-]
+    iconUrl: '/images/tools/git.svg',
+  },
+];
 
 export const certificationsData: Certification[] = [
   {
     title: '1st Place Winner in UI/UX Design',
     issuer: 'Switchfest, UIN Walisongo',
-    imageUrl: '/images/framer/certificate_walisongo.webp'
+    imageUrl: '/images/framer/certificate_walisongo.webp',
   },
   {
     title: '3rd Place Winner in UI/UX Design',
     issuer: 'Techsprint, Reclas Technology',
-    imageUrl: '/images/framer/certificate_reclas.webp'
+    imageUrl: '/images/framer/certificate_reclas.webp',
   },
   {
     title: 'UI/UX Design Mastery',
     issuer: 'Skilvul',
-    imageUrl: '/images/framer/certificated_skilvul.webp'
+    imageUrl: '/images/framer/certificated_skilvul.webp',
   },
   {
     title: 'Complete UI Designer',
     issuer: 'BuildWithAngga',
-    imageUrl: '/images/framer/certificate_bwa.webp'
+    imageUrl: '/images/framer/certificate_bwa.webp',
   },
   {
     title: 'Software Engineer',
     issuer: 'LSP Vokasi IPB (BNSP)',
-    imageUrl: '/images/framer/bnsp_ipb.webp'
+    imageUrl: '/images/framer/bnsp_ipb.webp',
   },
   {
     title: 'Computer Programming',
     issuer: 'BNSP / LSP SMK Negeri 12 Jakarta',
-    imageUrl: '/images/framer/certificate_bnsp_smk.webp'
+    imageUrl: '/images/framer/certificate_bnsp_smk.webp',
   },
   {
     title: 'Software & Game Development',
     issuer: 'PLN Icon Plus (Internship)',
-    imageUrl: '/images/framer/certificate_iconplus.webp'
+    imageUrl: '/images/framer/certificate_iconplus.webp',
   },
   {
     title: 'Software Engineering',
     issuer: 'IPB University',
-    imageUrl: '/images/framer/skl.webp'
+    imageUrl: '/images/framer/skl.webp',
   },
   {
     title: 'Design, Documentation & Branding',
     issuer: 'MPKMB 60, Sekolah Vokasi IPB',
-    imageUrl: '/images/framer/certificate_mpkmb_ddb.webp'
+    imageUrl: '/images/framer/certificate_mpkmb_ddb.webp',
   },
   {
     title: 'UI/UX Designer Web COMPRO',
     issuer: 'PT Buatin Creative Group',
-    imageUrl: '/images/framer/certificate_buatin_kamu.webp'
+    imageUrl: '/images/framer/certificate_buatin_kamu.webp',
   },
   {
     title: 'Mentor Poster Prestasi Goes To You',
     issuer: 'IPB University / Ditmawa',
-    imageUrl: '/images/framer/mentor_poster.webp'
+    imageUrl: '/images/framer/mentor_poster.webp',
   },
   {
     title: 'Design, Decoration & Branding',
     issuer: 'Scholarship for Reach a Dream',
-    imageUrl: '/images/framer/certificate_srd.webp'
+    imageUrl: '/images/framer/certificate_srd.webp',
   },
   {
     title: 'Front End Web Development',
     issuer: 'Udemy',
-    imageUrl: '/images/framer/certificate_udemy.webp'
+    imageUrl: '/images/framer/certificate_udemy.webp',
   },
   {
     title: 'Pemrograman Dengan Python',
     issuer: 'Dicoding Academy',
-    imageUrl: '/images/framer/certificate_py_dicoding.webp'
+    imageUrl: '/images/framer/certificate_py_dicoding.webp',
   },
   {
     title: 'MPKMB (Student Orientation)',
     issuer: 'IPB University',
-    imageUrl: '/images/framer/certificate_mpkmb.webp'
+    imageUrl: '/images/framer/certificate_mpkmb.webp',
   },
   {
     title: 'Field Work Practice (PKL)',
     issuer: 'Korpolairud Baharkam Polri',
-    imageUrl: '/images/framer/certificaye_korpolairud.webp'
-  }
-]
+    imageUrl: '/images/framer/certificaye_korpolairud.webp',
+  },
+];
 
 export const brandPartners: BrandPartner[] = [
   { name: 'Birthrift', logoUrl: '/images/framer/birthrift_logo.png' },
@@ -483,8 +547,8 @@ export const brandPartners: BrandPartner[] = [
   { name: 'Reclas', logoUrl: '/images/framer/reclas_logo.webp' },
   { name: 'Roro Jonggrang', logoUrl: '/images/framer/rorojongrang_logo.webp' },
   { name: 'Traspotter', logoUrl: '/images/framer/traspoter_logo.png' },
-  { name: 'Voxplore', logoUrl: '/images/framer/voxplore_logo.png' }
-]
+  { name: 'Voxplore', logoUrl: '/images/framer/voxplore_logo.png' },
+];
 
 export const portfolioData = {
   profile: profileData,
@@ -493,5 +557,5 @@ export const portfolioData = {
   awards: awardsData,
   tools: toolsData,
   certifications: certificationsData,
-  brands: brandPartners
-}
+  brands: brandPartners,
+};
