@@ -13,7 +13,7 @@
 
 <template>
   <header
-    class="relative overflow-hidden w-full pt-16 sm:pt-20 pb-12 sm:pb-16 border-b border-neutral-200 bg-white"
+    class="relative overflow-hidden w-full pt-0 pb-12 sm:pb-16 border-b border-neutral-200 bg-white"
   >
     <ClientOnly>
       <ParticleCanvas />
@@ -22,11 +22,11 @@
     <div
       class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 flex flex-col items-center w-full"
     >
-      <!-- ID Card Lanyard Strap & Clip Hanging from Top -->
+      <!-- ID Card Lanyard Strap & Clip Hanging from Top 0 -->
       <div class="flex flex-col items-center select-none w-full">
-        <!-- Lanyard Ribbon -->
+        <!-- Lanyard Ribbon touching top 0 -->
         <div
-          class="w-9 sm:w-11 h-8 sm:h-10 bg-primary rounded-t-md shadow-xs relative overflow-hidden flex items-center justify-center"
+          class="w-9 sm:w-11 h-24 sm:h-28 bg-primary shadow-xs relative overflow-hidden flex items-center justify-center"
         >
           <!-- Strap stitch lines -->
           <div class="absolute inset-y-0 left-1 w-px bg-white/40" />
