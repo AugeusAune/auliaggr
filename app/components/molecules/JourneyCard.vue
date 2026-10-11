@@ -1,43 +1,51 @@
 <script setup lang="ts">
-import { computed } from 'vue'
-import type { Milestone } from '../../types/portfolio'
+  import { computed } from 'vue';
+  import type { Milestone } from '../../types/portfolio';
 
-interface Props {
-  milestone: Milestone
-  index?: number
-  isActive?: boolean
-}
+  interface Props {
+    milestone: Milestone;
+    index?: number;
+    isActive?: boolean;
+  }
 
-const props = withDefaults(defineProps<Props>(), {
-  index: 0,
-  isActive: false
-})
+  const props = withDefaults(defineProps<Props>(), {
+    index: 0,
+    isActive: false,
+  });
 
-const formattedIndex = computed((): string => {
-  if (!props.index) return ''
-  return String(props.index).padStart(2, '0')
-})
+  const formattedIndex = computed((): string => {
+    if (!props.index) return '';
+    return String(props.index).padStart(2, '0');
+  });
 
-const displayPeriod = computed((): string => {
-  return props.milestone.period || props.milestone.year
-})
+  const displayPeriod = computed((): string => {
+    return props.milestone.period || props.milestone.year;
+  });
 
-const isPresent = computed((): boolean => {
-  const periodText = (props.milestone.period || props.milestone.year || '').toLowerCase()
-  return periodText.includes('present')
-})
+  const isPresent = computed((): boolean => {
+    const periodText = (
+      props.milestone.period ||
+      props.milestone.year ||
+      ''
+    ).toLowerCase();
+    return periodText.includes('present');
+  });
 </script>
 
 <template>
-  <article class="relative flex flex-col gap-4 sm:gap-5 pb-6 sm:pb-8 transition-all duration-300 group">
+  <article
+    class="relative flex flex-col gap-4 sm:gap-5 pb-6 sm:pb-8 last:pb-0 transition-all duration-300 group"
+  >
     <!-- Sequence index centered on timeline spine with clean line gap -->
     <div
-      class="absolute -left-[48px] sm:-left-[64px] -translate-x-1/2 top-1 z-10 select-none"
+      class="absolute -left-[40px] sm:-left-[56px] -translate-x-1/2 top-1 z-10 select-none"
     >
       <span
         v-if="formattedIndex"
         class="text-sm sm:text-base font-semibold italic font-serif transition-colors duration-300 bg-white py-1 px-1 rounded block"
-        :class="isActive ? 'text-primary' : 'text-neutral-400 group-hover:text-dark'"
+        :class="
+          isActive ? 'text-primary' : 'text-neutral-400 group-hover:text-dark'
+        "
       >
         {{ formattedIndex }}
       </span>
@@ -62,17 +70,22 @@ const isPresent = computed((): boolean => {
       </div>
 
       <div class="flex flex-col min-w-0">
-        <span class="text-xs font-semibold uppercase tracking-wider text-primary">
+        <span
+          class="text-xs font-semibold uppercase tracking-wider text-primary"
+        >
           {{ milestone.company }}
         </span>
-        <h3 class="font-bold text-dark text-base sm:text-lg group-hover:text-black transition-colors leading-snug">
+        <h3
+          class="font-bold text-dark text-base sm:text-lg group-hover:text-black transition-colors leading-snug"
+        >
           {{ milestone.role }}
         </h3>
       </div>
     </div>
-
     <!-- Tier 2: Date Period & Active Indicator -->
-    <div class="flex items-center gap-2 text-xs sm:text-sm text-neutral-600 font-medium">
+    <div
+      class="flex items-center gap-2 text-xs sm:text-sm text-neutral-600 font-medium"
+    >
       <svg
         class="w-4 h-4 text-neutral-400 flex-shrink-0"
         viewBox="0 0 24 24"
@@ -113,7 +126,9 @@ const isPresent = computed((): boolean => {
         stroke-linejoin="round"
         aria-hidden="true"
       >
-        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+        <path
+          d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+        />
       </svg>
       <div class="flex items-center gap-1.5 flex-wrap">
         <span
