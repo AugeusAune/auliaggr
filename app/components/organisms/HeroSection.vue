@@ -43,24 +43,12 @@
 
       <!-- Main ID Card Container with 3D Flip-Drop Entrance -->
       <div
-        class="hero-card-entrance relative w-full max-w-[420px] sm:max-w-[440px] mx-auto -mt-3 pt-4 pb-5 sm:pb-6 px-5 sm:px-7 bg-white rounded-[32px] sm:rounded-[40px] border border-neutral-200/90 shadow-xl flex flex-col gap-4 sm:gap-5 transition-all duration-300"
+        class="hero-card-entrance relative w-full max-w-[400px] sm:max-w-[400px] mx-auto -mt-3 pt-4 pb-5 sm:pb-6 px-5 sm:px-7 bg-white rounded-[32px] sm:rounded-[40px] border border-neutral-200/90 shadow-xl flex flex-col gap-4 sm:gap-5 transition-all duration-300"
       >
         <!-- Card Cutout Hole for Lanyard Clip -->
         <div
           class="w-10 h-2 rounded-full bg-neutral-200 mx-auto -mt-1 shadow-inner border border-neutral-300/40"
         />
-
-        <!-- Top Status Tag placed at the very top of the card -->
-        <div class="flex justify-center -mt-1">
-          <div
-            class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 border border-primary/20"
-          >
-            <span class="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            <span class="text-[11px] sm:text-xs font-semibold text-neutral-800">
-              Let's make it happen
-            </span>
-          </div>
-        </div>
 
         <!-- Top Accent 3-Colored Indicator Bar -->
         <div class="grid grid-cols-3 gap-2 w-full">
@@ -70,49 +58,59 @@
         </div>
 
         <!-- Profile Row -->
-        <div class="flex items-center gap-3.5 sm:gap-4">
-          <img
-            v-if="profile.portraitUrl || profile.avatarUrl"
-            :src="profile.portraitUrl || profile.avatarUrl"
-            :alt="profile.name"
-            width="60"
-            height="60"
-            fetchpriority="high"
-            class="w-13 h-13 sm:w-14 sm:h-14 rounded-full object-cover border-2 border-white shadow-sm flex-shrink-0"
-          />
-          <div class="flex flex-col min-w-0">
-            <h2
-              class="text-base sm:text-lg font-bold text-dark tracking-tight leading-tight truncate"
-            >
-              {{ profile.name }}
-            </h2>
-            <p class="text-xs text-neutral-500 font-medium truncate">
-              {{ profile.headline }}
-            </p>
+        <div class="flex items-start justify-between gap-3">
+          <div class="flex items-center gap-3.5 sm:gap-4 min-w-0">
+            <img
+              v-if="profile.portraitUrl || profile.avatarUrl"
+              :src="profile.portraitUrl || profile.avatarUrl"
+              :alt="profile.name"
+              width="60"
+              height="60"
+              fetchpriority="high"
+              class="w-13 h-13 sm:w-14 sm:h-14 rounded-full object-cover border-2 border-white shadow-sm flex-shrink-0"
+            />
+            <div class="flex flex-col min-w-0">
+              <h2
+                class="text-base sm:text-lg font-bold text-dark tracking-tight leading-tight truncate"
+              >
+                {{ profile.name }}
+              </h2>
+              <p class="text-xs text-neutral-500 font-medium truncate">
+                {{ profile.headline }}
+              </p>
 
-            <!-- Social Links -->
-            <div class="flex items-center gap-1 pt-1">
-              <AppSocialIcon
-                v-for="social in profile.socialLinks"
-                :key="social.name"
-                :name="social.icon"
-                :url="social.url"
-                :label="`Link to ${social.name}`"
-                class="!w-5 !h-5 !text-neutral-400 hover:!text-dark transition-colors"
-              />
+              <!-- Social Links -->
+              <div class="flex items-center gap-1 pt-1">
+                <AppSocialIcon
+                  v-for="social in profile.socialLinks"
+                  :key="social.name"
+                  :name="social.icon"
+                  :url="social.url"
+                  :label="`Link to ${social.name}`"
+                  class="!w-5 !h-5 !text-neutral-400 hover:!text-dark transition-colors"
+                />
+              </div>
             </div>
+          </div>
+
+          <!-- Top Status Tag (Text Only with Pulse Indicator) -->
+          <div
+            class="inline-flex items-center gap-1.5 pt-1 flex-shrink-0 text-[11px] sm:text-xs font-semibold text-neutral-700"
+          >
+            <span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
+            <span>Let's make it happen</span>
           </div>
         </div>
 
         <!-- Main Headline -->
         <div class="flex flex-col gap-1.5 pt-0.5 text-left">
           <h1
-            class="text-3xl sm:text-4xl font-extrabold text-dark tracking-tight leading-[1.1]"
+            class="text-3xl sm:text-5xl font-bold text-dark tracking-tight leading-[1.1]"
           >
             Good design<br />
             is invisible.<br />
             <span
-              class="inline-block my-1 w-10 sm:w-12 h-1 bg-dark rounded-full"
+              class="inline-block my-1 w-10 sm:w-12 h-0.5 bg-dark rounded-full"
             /><br />
             Mine isn't.
           </h1>
@@ -129,7 +127,9 @@
           <p
             class="text-xs sm:text-sm text-neutral-600 font-medium leading-relaxed"
           >
-            Visuals that stop the scroll. Interfaces that keep them there.
+            Visuals that stop the scroll.
+            <br />
+            Interfaces that keep them there.
           </p>
         </div>
 
@@ -169,9 +169,22 @@
             :href="profile.whatsappUrl"
             target="_blank"
             rel="noopener noreferrer"
-            class="font-semibold text-dark hover:text-primary transition-colors inline-flex items-center gap-1 flex-shrink-0"
+            class="group font-semibold text-dark hover:text-primary transition-colors inline-flex items-center gap-1.5 flex-shrink-0 active:scale-95"
           >
-            Hire me! →
+            <span>Hire me!</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              class="w-3.5 h-3.5 transition-transform duration-200 ease-out group-hover:translate-x-1"
+              aria-hidden="true"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3 10a.75.75 0 0 1 .75-.75h10.638L10.23 5.29a.75.75 0 1 1 1.04-1.08l5.5 5.25a.75.75 0 0 1 0 1.08l-5.5 5.25a.75.75 0 1 1-1.04-1.08l4.158-3.96H3.75A.75.75 0 0 1 3 10Z"
+                clip-rule="evenodd"
+              />
+            </svg>
           </a>
         </div>
       </div>
