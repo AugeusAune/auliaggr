@@ -1,6 +1,6 @@
 # Gemini / Antigravity Entry Point
 
-Refer to [AGENTS.md](file:///home/farhan/program/bun/awull-porto/AGENTS.md) for the complete AI-assisted workflow, skill registry, and coding conventions.
+Refer to [AGENTS.md](file:///home/farhan/program/bun/awull-porto/AGENTS.md) and [.agents/rules/engineering-standards.md](file:///home/farhan/program/bun/awull-porto/.agents/rules/engineering-standards.md) for the complete AI-assisted workflow, skill registry, architecture specifications, API standards, and coding conventions.
 
 <!-- antislop:start -->
 ## antislop
