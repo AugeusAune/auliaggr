@@ -104,7 +104,7 @@
               class="w-full !py-2.5 inline-flex items-center justify-center gap-2 !bg-white"
             >
               <img
-                src="/images/framer/figma_logo.svg"
+                src="/logo/figma.svg"
                 alt="Figma"
                 class="w-4 h-4 object-contain"
                 loading="lazy"
@@ -121,11 +121,13 @@
               variant="primary"
               class="w-full !py-2.5 inline-flex items-center justify-center gap-2"
             >
-              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
-                <path
-                  d="M22 7h-7v-2h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-4.084 0-6.625-2.879-6.625-6.966 0-4.425 2.875-7.034 6.75-7.034 4.095 0 6.25 2.766 6.25 6.441 0 .614-.078 1.348-.156 1.75h-9.922c.156 2.375 1.625 3.844 3.906 3.844 1.703 0 2.891-.766 3.422-1.945l1.466.91zm-9.062-4.75h6.984c-.141-2.125-1.484-3.234-3.469-3.234-2.188 0-3.328 1.266-3.515 3.234zm-8.664-9.25h4.984c2.25 0 3.75 1.078 3.75 2.922 0 1.234-.734 2.156-1.797 2.547 1.484.453 2.297 1.625 2.297 3.094 0 2.297-1.859 3.437-4.234 3.437h-5v-12zm3 4.875h1.797c.922 0 1.5-.453 1.5-1.25 0-.781-.578-1.219-1.5-1.219h-1.797v2.469zm0 4.719h1.984c1.078 0 1.75-.484 1.75-1.375 0-.906-.672-1.422-1.75-1.422h-1.984v2.797z"
-                />
-              </svg>
+              <img
+                src="/logo/behance_white.svg"
+                alt="Behance"
+                class="w-4 h-4 object-contain brightness-0 invert"
+                loading="lazy"
+                decoding="async"
+              />
               <span>Case Study</span>
             </AppButton>
           </div>
@@ -202,7 +204,7 @@
               class="w-full sm:w-auto !px-6 !bg-white !py-3 text-xs sm:text-sm font-semibold justify-center text-center shadow-xs inline-flex items-center gap-2"
             >
               <img
-                src="/images/framer/figma_logo.svg"
+                src="/logo/figma.svg"
                 alt="Figma"
                 class="w-4 h-4 object-contain"
                 loading="lazy"
@@ -219,11 +221,13 @@
               variant="primary"
               class="w-full sm:w-auto !px-6 !py-3 text-xs sm:text-sm font-semibold justify-center text-center shadow-xs inline-flex items-center gap-2"
             >
-              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
-                <path
-                  d="M22 7h-7v-2h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-4.084 0-6.625-2.879-6.625-6.966 0-4.425 2.875-7.034 6.75-7.034 4.095 0 6.25 2.766 6.25 6.441 0 .614-.078 1.348-.156 1.75h-9.922c.156 2.375 1.625 3.844 3.906 3.844 1.703 0 2.891-.766 3.422-1.945l1.466.91zm-9.062-4.75h6.984c-.141-2.125-1.484-3.234-3.469-3.234-2.188 0-3.328 1.266-3.515 3.234zm-8.664-9.25h4.984c2.25 0 3.75 1.078 3.75 2.922 0 1.234-.734 2.156-1.797 2.547 1.484.453 2.297 1.625 2.297 3.094 0 2.297-1.859 3.437-4.234 3.437h-5v-12zm3 4.875h1.797c.922 0 1.5-.453 1.5-1.25 0-.781-.578-1.219-1.5-1.219h-1.797v2.469zm0 4.719h1.984c1.078 0 1.75-.484 1.75-1.375 0-.906-.672-1.422-1.75-1.422h-1.984v2.797z"
-                />
-              </svg>
+              <img
+                src="/logo/behance_white.svg"
+                alt="Behance"
+                class="w-4 h-4 object-contain brightness-0 invert"
+                loading="lazy"
+                decoding="async"
+              />
               <span>Explore on Behance</span>
             </AppButton>
           </div>

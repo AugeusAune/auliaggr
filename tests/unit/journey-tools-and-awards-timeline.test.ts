@@ -26,12 +26,22 @@ describe('Journey Tools Icons and Awards Timeline', () => {
     expect(awardCardCode).toContain('award.date')
   })
 
-  it('Project detail page separates external links into Prototype and Behance buttons', () => {
+  it('Project detail page separates external links into Prototype and Behance buttons with /logo/ icons', () => {
     const detailCode = readFileSync('app/pages/projects/[slug].vue', 'utf-8')
-    expect(detailCode).toContain('View Prototype')
-    expect(detailCode).toContain('Behance Case Study')
+    expect(detailCode).toContain('Prototype')
+    expect(detailCode).toContain('Case Study')
     expect(detailCode).toContain('project.prototypeUrl')
     expect(detailCode).toContain('project.behanceUrl')
-    expect(detailCode).toContain('figma_logo.svg')
+    expect(detailCode).toContain('/logo/figma.svg')
+    expect(detailCode).toContain('/logo/behance_white.svg')
+  })
+
+  it('AppSocialIcon loads outline icons from /logo/ without hardcoded SVGs', () => {
+    const socialCode = readFileSync('app/components/atoms/AppSocialIcon.vue', 'utf-8')
+    expect(socialCode).toContain('/logo/ig.svg')
+    expect(socialCode).toContain('/logo/linkedin.svg')
+    expect(socialCode).toContain('/logo/behance.svg')
+    expect(socialCode).toContain('/logo/dribbble.svg')
+    expect(socialCode).not.toContain('<svg')
   })
 })
