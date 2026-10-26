@@ -107,12 +107,12 @@
           <h1
             class="text-3xl sm:text-5xl font-bold text-dark tracking-tight leading-[1.1]"
           >
-            Good design<br />
-            is invisible.<br />
+            Creativity makes things happen.<br />
+            <!-- with intention.<br /> -->
             <span
               class="inline-block my-1 w-10 sm:w-12 h-0.5 bg-dark rounded-full"
             /><br />
-            Mine isn't.
+            <!-- Create with impact. -->
           </h1>
         </div>
 
