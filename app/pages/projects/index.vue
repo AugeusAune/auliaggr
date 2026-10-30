@@ -19,14 +19,8 @@
 
   const categories = computed(() => [
     'All',
-    'Social Media',
-    'Ilustrasi',
-    'Logo',
-    'Magazine/Guidebook',
-    'Game',
     'UI/UX',
     'Graphic Design',
-    'Mobile App',
   ]);
 
   const CATEGORY_KEYWORDS: Record<string, string[]> = {

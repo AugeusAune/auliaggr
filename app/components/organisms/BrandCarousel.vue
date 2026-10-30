@@ -40,7 +40,7 @@
             <img
               :src="brand.logoUrl"
               :alt="brand.name"
-              class="max-h-7 max-w-[100px] object-contain transition-all duration-300 opacity-75 group-hover:opacity-100"
+              class="max-h-7 max-w-[180px] object-contain transition-all duration-300 opacity-75 group-hover:opacity-100"
               loading="lazy"
               decoding="async"
             />
