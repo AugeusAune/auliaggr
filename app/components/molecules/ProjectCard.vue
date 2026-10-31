@@ -86,7 +86,7 @@ const isHovered = ref(false)
             {{ project.title }}
           </h4>
           <span class="text-neutral-400 group-hover:text-dark group-hover:translate-x-1 transition-all text-sm font-semibold">
-            →
+            
           </span>
         </div>
         <p class="text-neutral-600 text-sm line-clamp-2">
@@ -94,55 +94,59 @@ const isHovered = ref(false)
         </p>
       </NuxtLink>
 
-      <!-- Action Row: Round Prototype & Behance Buttons + Case Study Link -->
+      
+      <!-- Action Row: Prototype & Behance Buttons + Case Study Link -->
       <div class="flex items-center justify-between gap-2 pt-3 border-t border-neutral-200/70">
         <NuxtLink
           :to="`/projects/${project.slug}`"
           class="text-xs font-semibold text-neutral-600 hover:text-dark transition-colors inline-flex items-center gap-1"
         >
-          View Case Study
+          View
         </NuxtLink>
 
         <div class="flex items-center gap-2">
-          <!-- Circular Figma Prototype Button -->
+          <!-- Figma Prototype Button -->
           <a
             v-if="project.prototypeUrl || project.externalUrl"
             :href="project.prototypeUrl || project.externalUrl || '#'"
             target="_blank"
             rel="noopener noreferrer"
-            class="prototype-btn w-9 h-9 rounded-full inline-flex items-center justify-center bg-white border border-neutral-200 text-dark hover:border-primary hover:text-primary transition-all duration-200 shadow-2xs select-none active:scale-95 p-2"
+            class="inline-flex items-center gap-2 px-3 py-2 rounded-full bg-white border border-neutral-200 text-dark hover:border-primary hover:text-primary transition-all duration-200 shadow-2xs active:scale-95"
             title="Figma Prototype"
             aria-label="View Figma prototype"
           >
             <img
               src="/logo/figma.svg"
-              alt="Figma"
-              class="w-3.5 h-3.5 object-contain"
+              alt=""
+              class="w-4 h-4 object-contain"
               loading="lazy"
               decoding="async"
             />
+            <span class="text-xs font-semibold">Prototype</span>
           </a>
 
-          <!-- Circular Behance Button -->
+          <!-- Behance Button -->
           <a
-            v-if="project.behanceUrl || project.externalUrl"
-            :href="project.behanceUrl || project.externalUrl"
+            v-if="project.behanceUrl"
+            :href="project.behanceUrl"
             target="_blank"
             rel="noopener noreferrer"
-            class="behance-btn w-9 h-9 rounded-full inline-flex items-center justify-center bg-white border border-neutral-200 text-dark hover:border-primary transition-all duration-200 shadow-2xs select-none active:scale-95 p-2"
+            class="inline-flex items-center gap-2 px-3 py-2 rounded-full bg-white border border-neutral-200 text-dark hover:border-primary hover:text-primary transition-all duration-200 shadow-2xs active:scale-95"
             title="Behance Case Study"
-            aria-label="View Behance study case"
+            aria-label="View Behance case study"
           >
             <img
-              src="/logo/behance.svg"
-              alt="Behance"
-              class="w-3.5 h-3.5 object-contain"
+              src="/logo/behance.png"
+              alt=""
+              class="w-6 h-6 object-contain"
               loading="lazy"
               decoding="async"
             />
+            <span class="text-xs font-semibold">Behance</span>
           </a>
         </div>
       </div>
+
     </div>
   </div>
 </template>

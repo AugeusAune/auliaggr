@@ -44,7 +44,7 @@
             variant="primary"
             class="!px-6 !py-3 font-semibold"
           >
-            Graphic Design →
+            Graphic Design
           </AppButton>
         </div>
       </div>
@@ -54,7 +54,7 @@
         class="group relative w-full max-w-md aspect-[4/3] rounded-3xl bg-neutral-900 border border-neutral-200 overflow-hidden flex items-end p-6 sm:p-8 shadow-xs"
       >
         <img
-          src="/images/framer/showcase_bg.webp"
+          src="/images/framer/cover_porto.png"
           alt="Curated Visuals & Graphic Design Showcase"
           class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
           loading="lazy"

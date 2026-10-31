@@ -53,6 +53,7 @@ export interface Certification {
   issuer: string
   credentialUrl?: string
   imageUrl?: string
+  year?: string
 }
 
 export interface SocialLink {

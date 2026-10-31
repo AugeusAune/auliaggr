@@ -51,7 +51,7 @@ export default defineNuxtConfig({
           rel: 'preload',
           as: 'image',
           type: 'image/webp',
-          href: '/images/framer/aulia.webp'
+          href: '/images/framer/pp_aulia.png'
         }
       ]
     }

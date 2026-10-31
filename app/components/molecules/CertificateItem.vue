@@ -48,7 +48,7 @@ defineEmits<{
     </div>
 
     <span class="text-xs font-sans font-medium text-neutral-400 flex-shrink-0 ml-2">
-      Verified
+      {{ cert.year }}
     </span>
   </div>
 </template>

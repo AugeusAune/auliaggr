@@ -37,7 +37,7 @@
         to="/projects"
         class="inline-flex items-center gap-2 text-xs font-sans font-medium text-neutral-500 hover:text-dark transition-colors"
       >
-        ← Back to all projects
+        ◂ Back to all projects
       </NuxtLink>
     </div>
 
