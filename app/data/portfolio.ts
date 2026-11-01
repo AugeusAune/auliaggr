@@ -19,7 +19,7 @@ export const profileData: PortfolioProfile = {
   whatsappUrl: 'https://wa.me/62895330188539',
   behanceUrl: 'https://www.behance.net/auliaggr',
   cvUrl:
-    'https://drive.google.com/file/d/1h7JciFN7T6Ba0N-62YUKiEn5ubLRL3U_/view?usp=sharing',
+    'https://drive.google.com/file/d/17sUci0SMJ2BQ5lAdKwyQbfwpo7rtewTg/view?usp=sharing',
   email: 'auliaggrr@gmail.com',
   phone: '(+62) 895330188539',
   copyright: '© Copyright 2026. All rights Reserved.',
@@ -57,7 +57,7 @@ export const projectsData: Project[] = [
     description:
       'An AR-based educational game that brings the Roro Jonggrang legend to life through interactive storytelling, gamified cultural learning, and immersive 3D elements.',
     client: 'IPB University',
-    category: 'UI/UX, AR Design',
+    category: 'AR Game, UI/UX, AR Design',
     date: 'Jun 23, 2025',
     externalUrl:
       'https://www.behance.net/gallery/244060707/RORO-JONGGRANG-AR-INTERACTIVE-FOLKLORE-LEARNING',
@@ -74,7 +74,7 @@ export const projectsData: Project[] = [
     description:
       'A proactive healthcare monitoring application designed to help patients monitor hypertension symptoms, track daily health metrics, and easily communicate with specialists.',
     client: 'Health Tech Research',
-    category: 'UI/UX, Mobile App',
+    category: 'Health Tech, UI/UX, Mobile App',
     date: '2025',
     externalUrl: 'https://www.behance.net/gallery/244014873/HYPERAID-HYPERTENSION-MONITORING-APP',
     behanceUrl: 'https://www.behance.net/gallery/244014873/HYPERAID-HYPERTENSION-MONITORING-APP',
@@ -89,7 +89,7 @@ export const projectsData: Project[] = [
     description:
       'An interactive 3D augmented reality campus map navigation tool crafted to help students, visitors, and faculty explore campus facilities seamlessly.',
     client: 'SV IPB University',
-    category: 'UI/UX, 3D AR Design',
+    category: '3D | AR Maps, UI/UX, 3D AR Design',
     date: '2025',
     externalUrl: 'https://www.behance.net/gallery/243938017/VOXPLORE-INTERACTIVE-MAPS-3D-AR',
     behanceUrl: 'https://www.behance.net/gallery/243938017/VOXPLORE-INTERACTIVE-MAPS-3D-AR',
@@ -104,7 +104,7 @@ export const projectsData: Project[] = [
     description:
       'An AI-powered nutritional companion offering real-time BMI tracking, intelligent meal recommendations, and customized meal planning based on dietary preferences.',
     client: 'FoodTech',
-    category: 'UI/UX, AI Product Design',
+    category: 'AI | Food Tech, UI/UX, AI Product Design',
     date: '2024',
     externalUrl: 'https://www.behance.net/gallery/187781269/FOODY-WEBSITE',
     behanceUrl: 'https://www.behance.net/gallery/187781269/FOODY-WEBSITE',
@@ -119,7 +119,7 @@ export const projectsData: Project[] = [
     description:
       'A digital marketplace enabling eco-conscious fashion lovers to bid, buy, and trade vintage goods securely.',
     client: 'E-Commerce Venture',
-    category: 'UI/UX, E-Commerce',
+    category: 'Thrifting & Auction, UI/UX, E-Commerce',
     date: '2024',
     externalUrl: 'https://www.behance.net/gallery/241074027/BIDTHRIFT-APP',
     behanceUrl: 'https://www.behance.net/gallery/241074027/BIDTHRIFT-APP',
@@ -134,7 +134,7 @@ export const projectsData: Project[] = [
     description:
       'Streamlined online seat reservation and community management platform for esports hubs and internet cafes.',
     client: 'Gaming Hub',
-    category: 'UI/UX, Web & Mobile',
+    category: 'Booking Platform, UI/UX, Web & Mobile',
     date: '2024',
     externalUrl: 'https://www.behance.net/gallery/244035945/GAMEBUDDY-GAMING-RENTAL-BOOKING-PLATFORM',
     behanceUrl: 'https://www.behance.net/gallery/244035945/GAMEBUDDY-GAMING-RENTAL-BOOKING-PLATFORM',
@@ -164,7 +164,7 @@ export const projectsData: Project[] = [
     description:
       'An AI-assisted environmental utility helping communities classify recyclable materials accurately via smartphone cameras.',
     client: 'Green Initiative',
-    category: 'UI/UX, AI Utility',
+    category: 'AI Detection, UI/UX, AI Utility',
     date: '2024',
     externalUrl: 'https://www.behance.net/gallery/257782873/Traspoter-AI-Powered-Waste-Detection-App',
     behanceUrl: 'https://www.behance.net/gallery/257782873/Traspoter-AI-Powered-Waste-Detection-App',
@@ -179,7 +179,7 @@ export const projectsData: Project[] = [
     description:
       'A style discovery mobile application combining algorithmic curation with visual search for modern women fashion.',
     client: 'Fashion Retail',
-    category: 'UI/UX, Fashion App',
+    category: 'E-commerce, UI/UX, Fashion App',
     date: '2024',
     externalUrl: 'https://www.behance.net/gallery/257780585/Drezzle-Fashion-Shopping-App-for-Womens-Dresses',
     behanceUrl: 'https://www.behance.net/gallery/257780585/Drezzle-Fashion-Shopping-App-for-Womens-Dresses',
@@ -194,7 +194,7 @@ export const projectsData: Project[] = [
     description:
       'A confidential, empathetic telehealth platform connecting certified psychologists with individuals seeking mental wellness support.',
     client: 'Wellness Hub',
-    category: 'UI/UX, Healthcare',
+    category: 'Mental Health, UI/UX, Healthcare',
     date: '2024',
     externalUrl: 'https://www.behance.net/gallery/257764555/MentalUp-Mental-Health-Consultation-App-UIUX-Design',
     behanceUrl: 'https://www.behance.net/gallery/257764555/MentalUp-Mental-Health-Consultation-App-UIUX-Design',
@@ -209,7 +209,7 @@ export const projectsData: Project[] = [
     description:
       'An elegant apparel e-commerce store with smooth micro-interactions and quick checkout flows.',
     client: 'Fashion Brand',
-    category: 'UI/UX, E-Commerce',
+    category: 'E-Commerce, UI/UX',
     date: '2023',
     externalUrl: 'https://www.behance.net/gallery/130334655/CLOTIE-LANDING-PAGE',
     behanceUrl: 'https://www.behance.net/gallery/130334655/CLOTIE-LANDING-PAGE',
@@ -224,7 +224,7 @@ export const projectsData: Project[] = [
     description:
       'A modern fintech mobile application supporting peer-to-peer transfers, bill settlements, and financial budgeting.',
     client: 'Fintech Studio',
-    category: 'UI/UX, Fintech',
+    category: 'E-wallet, UI/UX, Fintech',
     date: '2023',
     externalUrl: 'https://www.behance.net/gallery/257766629/Ousean-Pay-Mobile-Payment-App-UIUX-Case-Study',
     behanceUrl: 'https://www.behance.net/gallery/257766629/Ousean-Pay-Mobile-Payment-App-UIUX-Case-Study',
@@ -239,7 +239,7 @@ export const projectsData: Project[] = [
     description:
       'An all-in-one travel companion designed to simplify itinerary organization, flight tracking, and boutique hotel bookings.',
     client: 'Travel Agency',
-    category: 'UI/UX, Travel',
+    category: 'Travel, UI/UX',
     date: '2023',
     externalUrl: 'https://www.behance.net/gallery/130335081/ONTRAVEL-LANDING-PAGE',
     behanceUrl: 'https://www.behance.net/gallery/130335081/ONTRAVEL-LANDING-PAGE',
@@ -400,7 +400,7 @@ export const journeyData: Milestone[] = [
     role: 'UI/UX Design Mentor',
     company: 'PT Ousean Global Digital',
     year: '2026',
-    period: 'Feb – Apr 2026',
+    period: 'Feb – Aug 2026',
     logoUrl: '/logo/ousean.svg',
     skills: [
       'UI/UX Design',
