@@ -378,6 +378,25 @@ export const projectsData: Project[] = [
 
 export const journeyData: Milestone[] = [
   {
+    role: 'UI/UX & Multimedia Design Intern',
+    company: 'NT Corp',
+    year: '2026',
+    period: 'Nov 2026 – Present',
+    logoUrl: '/logo/nt.png',
+    skills: [
+      'UI/UX Design',
+      'Design Thinking',
+      'Wireframing',
+      'Prototyping',
+      'Motion Graphics',
+      'Multimedia Design',
+    ],
+    highlight:
+      'Designed and developed user interfaces for web and mobile applications, while creating engaging multimedia content for NT Corp.',
+    description:
+      'Collaborated with cross-functional teams to design and develop user interfaces for web and mobile applications, ensuring a seamless user experience. Created engaging multimedia content, including motion graphics and interactive elements, to enhance the overall user experience and brand presence of NT Corp.',
+  },
+  {
     role: 'Graphic Design Intern',
     company: 'Aiti Media',
     year: '2026',
